@@ -1,5 +1,5 @@
 ---
-title: Kanaal Gent <-> Terneuzen
+title: Kanaal Gent Terneuzen
 abstract: Test
 ---
 
