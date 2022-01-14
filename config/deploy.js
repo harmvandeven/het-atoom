@@ -1,10 +1,17 @@
 /* eslint-env node */
 'use strict';
 
-module.exports = function(deployTarget) {
+module.exports = function (deployTarget) {
   let ENV = {
     build: {}
     // include other plugin configuration that applies to all deploy targets here
+  };
+
+  ENV.git = {
+    repo: 'git@github.com:harmvandeven/het-atoom.git',
+    branch: 'github-pages',
+    worktreePath: '/tmp/het-atoom-deploy',
+    commitMessage: 'Deployed %@'
   };
 
   if (deployTarget === 'development') {
