@@ -4,14 +4,14 @@ allmaps:
   title: Verbetering van het Kanaal van Gent naar Ter Neuzen (1902)
   sourceUrl: https://commons.wikimedia.org/wiki/File:KAARTEN_SGD_-_Verbetering_van_het_Kanaal_van_Gent_naar_Ter_Neuzen,_bedoeld_bij_de_overeenkomst_met_Belgie_van_den_29_juni_1895,_goedgekeurd_bij_de_wet_van_29_januari_1897_(Staatsblad_no._62)_en_de_addit.jpeg
   sourceTitle: Wikipedia
-title: Kanaal Gent&#8209;Terneuzen
+title: Kanaal Gent <-> Terneuzen
 abstract: |
   De stad Gent wilde graag een zeestad zijn; probleem was wel dat de Westerschelde op Nederlands grondgebied ligt en het eeuwenlang tussen wat wel werd genoemd de Noordelijke Nederlanden en de Zuidelijke Nederlanden niet boterde. Daar kwam in 1815 verandering in: Willem I was koning over zowel Nederland als België. Onder zijn regiem kwam er een nieuw kanaal tot stand. De vereniging tussen beide Nederland duurde maar kort. Pas on 1871 kwam het tot onderhandelingen die slaagden; er werd een verbetering afgesproken.
 ---
 
 {% include iiif-image.html idno="TRG-9302-A-01" uuid="9673b868-ebc7-41c5-83de-7e6dd5d87100" canvas="10" caption="Verbetering van het kanaal van Gent naar Ter Neuzen. Sluishoofden beoosten Sas van Gent (5 october 1904)" region="pct:20,24,60,53" %}
 
-# Markdown is cool!
+# Markdown is working
 
 ![Reuzenarbeid](https://allmaps.org/reuzenarbeid/images/cover.jpg "Cover van Reuzenarbeid") 
 

@@ -4,8 +4,8 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'het-atoom',
     environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '/het-atoom',
+    locationType: 'hash',
     showdown: {
       metadata: true,
     },
