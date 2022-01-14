@@ -10,7 +10,6 @@ module.exports = function (deployTarget) {
   ENV.git = {
     repo: 'git@github.com:harmvandeven/het-atoom.git',
     branch: 'github-pages',
-    worktreePath: '/tmp/het-atoom-deploy',
     commitMessage: 'Deployed %@'
   };
 
