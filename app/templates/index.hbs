@@ -1,8 +1,30 @@
-{{page-title @model.title}}
+{{page-title @model.catalogue.firstObject.title}}
 
 <h1>
-  {{@model.title}}
+  Het Atoom
 </h1>
-{{markdown-to-html markdown=@model.md extensions='showdownCaption'}}
+<h2>
+  Catalogue
+</h2>
+
+{{#each @model.catalogue as |item|}}
+  <h3>
+    {{item.title}}
+  </h3>
+  {{markdown-to-html markdown=item.description extensions='showdownCaption'}}
+  <hr />
+{{/each}}
+
+<h2>
+  Stories
+</h2>
+
+{{#each @model.stories as |item|}}
+  <h3>
+    {{item.title}}
+  </h3>
+  {{markdown-to-html markdown=item.description extensions='showdownCaption'}}
+  <hr />
+{{/each}}
 
 {{outlet}}
