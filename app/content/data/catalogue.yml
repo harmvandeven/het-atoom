@@ -1,0 +1,249 @@
+- id: a
+  title: Ingang
+  description: |
+    # Atoomenergie - Onze toekomst
+    ## Duizenden jaren lang beschikte de mens slechts over één energiebron: zijn spierkracht
+    Om zijn spierkracht doelmatiger te gebruiken vond de mens werktuigen uit. Hij bouwde molens, die door de wind werden aangedreven; hij maakte gebruik van de kracht van het stromende water en tweehonderd jaar geleden deed hij een grote ontdekking: de stoommachine.
+    De explosiemotor verdrong de stoommachine, de electriciteit betekende wéér een nieuwe vorm van energie, maar voor de brandstof, die al deze machines in beweging moet houden, was het noodzakelijk de wel zeer grote, maar niet onuitputtelijke voorraden steenkolen en aardolie, diep verborgen in de schoot der aarde, te exploiteren. Nog slechts korte tijd en die voorraden zullen zijn uitgeput. Het einde is in zicht. En wat dan?
+  parts:
+    - id: a-1
+      title: "Wandschildering \"de Oerelementen\""
+      description: 
+      credit: 
+- id: b
+  title: Historie Energie Voorziening
+  description: |
+    ## Wij zijn aan het "potverteren!"
+    De wereldbevolking groeit, de behoeften nemen toe en koortsachtig zoekt de mens naar nieuwe energiebronnen. De zon kan hem helpen, maar zij staat te ver van de aarde af. De maan, die door haar aantrekkingskracht op de aarde de zeeën in rusteloze beweging houdt, kan ons eveneens helpen, maar de bijdrage is uiterst gering.
+    Is er dan niets, dat ons redden kan?
+    Ja! Want de menselijke geest heeft een geheel nieuwe, onvoorstelbaar grote energiebron ontdekt: de atoomkernenergie!
+    De atoomkernenergie luidt een nieuw tijdperk van de menselijke beschaving in:
+    - méér energie;
+    - grotere productie;
+    - méér voedsel;
+    - méér welvaart.
+  parts:
+    - id: b-1
+      title: "Draaimolen \"de Mens\""
+      description: Eeuwenlang beschikte de mens slechts over zijn spierkracht
+      credit: 
+    - id: b-2
+      title: "Spierkracht"
+      description:
+      credit: "foto: Nat Farbman; met toestemming van het tijdschrift \"Life\""
+    - id: b-3a
+      title: Oude werktuigen
+      description: 
+      credit: "bruikleen: \"Het Openlucht Museum\", Arnhem"
+    - id: b-3b
+      title: Exotische werktuigen
+      description: "bruikleen: Koninklijk Instituut voor de Tropen, Amsterdam"
+    - id: b-4
+      title: Tredrad
+      description: "O.a. gebruikt in mijnen om water te pompen voordat machines deze taak overnamen."
+    - id: b-5
+      title: Kaapstander
+      description: Werd op zeilschepen gebruikt voor het lichten van het zware anker.
+      credit: "bruikleen: \"Het Openlucht Museum\", Arnhem"
+    - id: b-6
+      title: Hijsbok met katrol
+      description: Stelt in staat met een geringe kracht een grote last op te tillen
+      credit: "bruikleen: \"Het Openlucht Museum\", Arnhem"
+    - id: b-7
+      title: Moderne takel
+      description: 
+      credit: "buikleen: Tools, Amsterdam"
+    - id: b-8
+      title: Waterrad
+      description: 
+      credit: 
+    - id: b-9
+      title: Primitieve brandspuit
+      description: 
+      credit: "bruikleen: \"Het Openlucht Museum\", Arnhem"
+    - id: b-10
+      title: Watermolen
+      description: 
+      credit: 
+    - id: b-11
+      title: Oude draaibank met voetaandrijving
+      description: 
+      credit: "bruikleen: \"Het Openlucht Museum\", Arnhem"
+    - id: b-12
+      title: "Stoomautomobiel, merk \"Serpollet\", anno 1900"
+      description: 
+      credit: "bruikleen: Alec Hodsdon, Lavenham, Suffolk, England"
+    - id: b-13
+      title: Stoommachine anno 1851
+      description: 
+      credit: "bruikleen: Museum \"De Cruquius\", Vijfhuizen"
+    - id: b-14
+      title: Electromotor anno 1895
+      description: 
+      credit: "bruikleen: \"KEMA\", Arnhem"
+    - id: b-16
+      title: Moderne-opengewerkte-electromotor
+      description: 
+      credit: Heemaf, Hengelo (O.)
+    - id: b-17
+      title: Van fiets tot scooter
+      description: 
+      credit: |
+        bruikleen fiets: \"Het Openlucht Museum\", Arnhem"
+        bruikleen scooter: \"De Tweetact\", Amsterdam"
+    - id: b-18
+      title: "\"Spijker\" automobiel, Nederlands fabrikant anno 1906"
+      description: 
+      credit: "bruikleen: \"Nationaal Museum van de Automobiel\", Driebergen"
+    - id: b-19
+      title: "\"A-frame\" dieselmotor anno 1905"
+      description: 
+      credit: "bruikleen: N.V. Werkspoor, Amsterdam"
+    - id: b-20
+      title: Moderne Dieselmotor, opengewerkt
+      description: 
+      credit: "bruikleen: N.V. Kromhout Motorenfabriek, D. Goedkoop Jr., Amsterdam"
+    - id: b-21
+      title: Zonneoven
+      description: De maquette toont de reusachtige parabolische spiegel die te St. Louis in de Pyreneeën (Frankrijk) is opgesteld om de zonnestralen op te vangen en te concentreren. In het brandpunt van de spiegel is een smeltkroes opgesteld waarin temperaturen van enkele duizenden graden Celsius bereikt kunnen worden zonder de hinderlijke invloeden van verbrandingsgassen, die in gewone ovens vaak storen.
+      credit: "bruikleen: Centre National de la Recherche Scientifique, Parijs"
+    - id: b-22
+      title: Zonnekooktoestel
+      description: |
+        De spiegel concentreert de zonnewarmte op een kookpot, waarin bijv. rijst kan worden gekookt.
+        Het toestel is bedoeld voor de Birmaanse dorpsbewoner, die een groot tekort aan brandstof voor voedselbereiding heeft.
+      credit: "bruikleen: Union of Burma Atomic Energy Centre, Rangoon"
+    - id: b-23
+      title: Eb- en Vloedcentrale
+      description: Twee maquettes van de electrische centrale die zal worden gebouwd in de monding van de rivier de Rance bij St. Malo. Het verschil tussen eb en vloed is daar zo groot (meer dan 10 meter), dat er op economisch verantwoorde wijze electrische energie mee kan worden opgewekt.
+      credit: "bruikleen: Electricité de France, Parijs"
+    - id: b-24
+      title: "Uranium: Steenkool"
+      description: "Splijting van één gram uranium kan evenveel hitte 2500 kg steenkool."
+      credit: 
+    - id: b-25
+      title: Potverteren
+      description: |
+        Grafische voorstelling van de toename in de loop der jaren van: de wereldbevolking,
+        het wereldenergieverbruik en van
+        de energie beschikbaar uit kolen, aardolie en waterkracht. Slechts één conclusie is hieruit te trekken: "wij zijn aan het potverteren"; alleen de toepassing van kernenergie kan uitkomst brengen.
+      credit: 
+- id: c
+  title: Moleculen en Atomen
+  description: 
+  parts: 
+- id: d
+  title: De Atoomkern, Isotopen
+  description: 
+  parts: 
+- id: e
+  title: Historie der wetenschap
+  description: 
+  parts: 
+- id: f
+  title: Natuurlijke en kunstmatige radioactiviteit
+  description: 
+  parts: 
+- id: g
+  title: "\"Kolossale\" hulpmiddelen"
+  description: 
+  parts: 
+- id: h
+  title: Radioactiviteit, zichtbaar voor iedereen
+  description: 
+  parts: 
+- id: i
+  title: Uitzicht op de energiebronnen van de toekomst
+  description: 
+  parts: 
+- id: j
+  title: Filmzaal
+  description: Vertoning van korte documentaire films
+  parts: 
+- id: k
+  title: Kernsplijting, hoe en hoever
+  description: |
+    De grote uranium-235-kernen kunnen splijten, d.w.z. uiteenvallen in twee nieuwe elementen van ongeveer gelijke massa. Deze splijting treedt op, als een uranium-235-kern getroffen wordt door een neutron. Bovendien zendt de splijtende kern zelf óók weer twee of drie neutronen uit, die op hun beurt weer nieuwe kernen kunnen splijten: _de kettingreactie_. De kettingreactie kan ongecontroleerd verlopen (een explosie) of beheerst: in de kernreactor.
+  parts: 
+- id: l
+  title: Uranium, de grondstof
+  description:
+  parts: 
+- id: m
+  title: Bibliotheek en leeszaal
+  description: Boeken en tijdschriften over het onderwerp van de tentoonstelling.
+  credit: "bruikleen: N.V. de Weduwe J. Ahrend & Zoon's Amsterdamse Handelsvereniging, Amsterdam"
+  parts: 
+- id: n
+  title: Een werkende kernreactor
+  description: |
+    ## De eerste kernreactor in Nederland
+    Deze reactor, aangeschaft door het Ministerie van Onderwijs, Kunsten en Wetenschappen, zal worden opgesteld in Delft voor hoger onderwijs doeleinden.
+    Dank zij de welwillende medewerking van dit Ministerie, de Technische Hogeschool en het Reactor Centrum Nederland wordt deze reactor eerst aan de bezoekers van deze tentoonstelling in volle werking getoond.
+    Het personeel controleert de reactor met de vele instrumenten op het controle paneel, maar ook de bezoekers zullen zelf het effect van de atoomsplijtingen direct kunnen waarnemen. Onder in het waterbassin zien zij de splijtstofelementen, gehuld in een geheimzinnige blauwe gloed: het oplichten van het water onder de inwerking van de intensieve straling, welke in de reactor wordt opgewekt, De wachtenden nemen dit verschijnsel bovendien waar op de televisie-apparaten, welke bij de voet van de reactor zijn opgesteld; de televisie-camera bevindt zich onder in het waterbassin naast het pakket splijtstofelementen.
+    Om bezoekers en personeel te beschermen tegen de straling, is de reactor geplaatst in een ca 7 meter diep waterbassin, vandaar de naam bassin-reactor. Deze waterlaag reduceert de straling aan het oppervlak tot ver beneden de sterkte, die voor de mens toelaatbaar is, ook bij voortdurend verblijf bovenop; de dikke betonnen mantel geeft eenzelfde bescherming bij de, voet. Het bassin is gevuld met ongeveer 50 m3 zeer zuiver water, dat voortdurend (1 x per 10 uur) wordt rondgepompt door een reinigingsinstallatie. Hierdoor behoudt het water een zuiverheid die 1O tot 100 maal beter is dan het gedestilleerde water, dat bijv. door apothekers wordt gebruikt.
+    De splijtstof bestaat uit 17 kilogram uranium, verrijkt tot 20%, met het splijtbare 235-isotoop. Deze splijtstof is ondergebracht in ca 20 langwerpige splijtstofelementen in dunne, evenwijdige platen van een uranium-aluminium legering. Tussen deze platen circuleert het water voor de afvoer van de ontwikkelde warmte. Het in deze splijtstofelementen verwerkte verrijkte uranium is door de Amerikaanse Atomic Energy Commission in bruikleen ter beschikking gesteld als uitvloeisel van een in 1955 tussen de Amerikaanse en Nederlandse regeringen gesloten bilaterale overeenkomst; Nederland was één der eerste landen in de wereld dat een dergelijke overeenkomst afsloot.
+    Het vermogen van de reactor bedraagt tijdens de tentoonstelling 10 kW, maar zal te zijner tijd in Delft bij opstelling in een groter bassin en met meer splijtstof tot 100 kW worden opgevoerd.
+    De regeling geschiedt vol-automatisch met regelstaven, terwijl stopstaven de reactor direct tot stilstand kunnen brengen. Onder geen enkele voorstelbare mogelijkheid kan deze reactor ooit tot gevaarlijke situaties aanleiding geven; een temperatuurverhoging van het water van enige tientallen graden is reeds voldoende om de kettingreactie te onderbreken.
+    Behalve de bovengenoemde functies van bescherming en warmteafvoer, dient het water ook nog voor het afremmen (modereren) van de gevormde snelle neutronen tot snelheden, waarbij de splijtingen zelfstandig voortgang kunnen vinden.
+    Deze reactor is ontworpen door de American Machine & Foundry Company (A.M.F.) te New York; als Nederlanders mogen wij er ons over verheugen, dat deze firma een zodanig vertrouwen in onze Nederlandse industrie heeft gehad, dat zij erin toegestemd heeft, dat onder hun supervisie de N.V. Comprimo te Amsterdam en de N.V. Philips te Eindhoven deze reactor hier te lande hebben mogen vervaardigen. Alleen een aantal bijzondere onderdelen, als de splijtstofelementen, vervaardigd door Babcock & Wilcox Corp. te New York en delen der regelapparatuur, van A.M.F. zijn uit de U.S.A. betrokken.
+  credits: "bruikleen: Ministerie van Onderwijs, Kunsten en Wetenschappen, bediening: Reactor Centrum Nederland, 's-Gravenhage, in samenwerking met de Technische Hogeschool, Delft"
+  parts: 
+- id: o
+  title: Modellen van kernreactoren
+  description:
+  parts: 
+- id: p
+  title: Isotopen in de praktijk
+  description:
+  parts: 
+- id: q
+  title: Buitenlandse inzendingen (begane grond)
+  description: Een tentoonstelling als deze mag niet voorbij gaan aan het vele, dat de atoomenergie-commissies in diverse landen hebben gedaan of op hun programma hebben staan. Daarom zijn de desbetreffende instanties in de Verenigde Staten, Engeland, Frankrijk, België, Noorwegen en Nederland uitgenodigd om in nationale stands op hun eigen wijze een overzicht te geven van de vorderingen op dit gebied in hun landen.
+  parts: 
+- id: r
+  title: Electronica, een wonderland
+  description:
+  parts: 
+- id: s
+  title: De Keuken van de Toekomst
+  description: |
+    Wat is de afstand, die de huisvrouw per dag aflegt?
+    Hoeveel malen per dag moet de huisvrouw zich bukken?
+    In "de Keuken van de Toekomst" behoeft deze vraag niet meer te worden gesteld. Immers, bukken komt daar niet meer voor en gelopen zal er practisch niet meer worden.
+    Dit is wat te Detroit de ingenieurs van het Technical Center van General Motors tot stand brachten in opdracht van de Frigidaire Division. Een aantal vernuftige apparaten, bediend met behulp van drukknoppen, zal het leven van de huisvrouw veraangenamen. Kastjes, die omhoogkomen, een recepten-automaat, die à la minute het gewenste recept te voorschijn tovert, een gecombineerd telefoon-televisie apparaat, een automatische vaatwasmachine, enz., enz., dit alles is een demonstratie van de mogelijkheden der hedendaagse techniek, die zeker niet alleen de vrouwelijke bezoekers zal interesseren.
+  credits: "bruikleen: General Motors, U.S.A., Frigidaire Division"
+  parts: 
+- id: t
+  title: Demonstratie-podium
+  description: |
+    Electronische 5-kamp
+    Bezoekers zullen hier elkaar de eerste plaats betwisten en feilloos zal, langs electronische weg, de winnaar worden aangewezen.
+  credits: "bruikleen: N.V. Philips, Eindhoven"
+  parts: 
+- id: u
+  title: Jules Verne's visioenen
+  description: |
+    Jules Verne's held, kapitein Nemo, leefde met zijn bemanning voorgoed in de onderzeeër "Nautilus": nimmer behoefde zijn schip te bunkeren.
+    Heeft hij ooit vermoed, dat 80 jaar later een kernreactor een moderne "Nautilus" tienduizenden mijlen laat varen zonder zijn bunkervoorraad aan te vullen?
+    Wat kapitein Nemo zag, kunt U hier zien, ook de zeeschelp "Nautilus", waaraan Nemo's schip zijn naam ontleende. Bovendien ziet U het model van de Amerikaanse duikboot "Nautilus", die dit Jules Verne's visioen tot werkelijkheid bracht.
+  parts: 
+- id: v
+  title: Levende onderzeeërs
+  description:
+  parts:
+- id: w
+  title: Een mensenleeftijd luchtvaarthistorie
+  description:
+  parts: 
+- id: x
+  title: De wenteling der tijden
+  description:
+  parts: 
+- id: y
+  title: Bioscoop- en lezingenzaal
+  description:
+  parts: 
+- id: z
+  title: Uitgang
+  description:

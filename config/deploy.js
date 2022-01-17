@@ -3,14 +3,14 @@
 
 module.exports = function (deployTarget) {
   let ENV = {
-    build: {}
+    build: {},
     // include other plugin configuration that applies to all deploy targets here
   };
 
   ENV.git = {
     repo: 'git@github.com:harmvandeven/het-atoom.git',
     branch: 'github-pages',
-    commitMessage: 'Deployed %@'
+    commitMessage: 'Deployed %@',
   };
 
   if (deployTarget === 'development') {
