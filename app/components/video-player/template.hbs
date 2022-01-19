@@ -1,0 +1,24 @@
+<div class='player'>
+  <video controls {{play-when this.isPlaying}} {{on 'timeupdate' this.setTime}}>
+    <source src='video/sintel-short.mp4' type='video/mp4' />
+    <source src='video/sintel-short.mp4' type='video/webm' />
+    <!-- fallback content here -->
+  </video>
+
+  <div class='controls'>
+    <button type='button' {{on 'click' this.play}}>
+      Play
+    </button>
+    <button type='button' {{on 'click' this.pause}}>
+      Pause
+    </button>
+    <div class='timer'>
+      <div></div>
+      <span aria-label='timer'>
+        {{this.time}}
+      </span>
+    </div>
+  </div>
+</div>
+
+{{yield}}

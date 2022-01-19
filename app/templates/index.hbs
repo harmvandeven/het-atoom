@@ -1,3 +1,5 @@
+<VideoPlayer />
+
 <h1>
   Het Atoom
 </h1>
@@ -6,9 +8,11 @@
 </h2>
 
 <ol>
-{{#each @model.frames as |frame|}}
-  <li>{{frame}}</li>
-{{/each}}
+  {{#each @model.frames as |frame|}}
+    <li>
+      {{frame}}
+    </li>
+  {{/each}}
 </ol>
 
 {{#each @model.catalogue as |item|}}

@@ -10,22 +10,24 @@ export function initialize() {
     var imgRegex =
       /(?:<p>)?<img.*?src="(.+?)".*?alt="(.*?)".*?title="(.*?)"(.*?)\/?>(?:<\/p>)?/gi;
 
-    return [{
-      type: 'output',
-      filter: function (text, converter, options) {
-        var tag = fig;
-        return text.replace(
-          imgRegex,
-          function (match, url, alt, title, rest) {
-            return tag
-              .replaceAll('%1', url)
-              .replaceAll('%2', alt)
-              .replaceAll('%3', title)
-              .replaceAll('%4', rest);
-          }
-        );
+    return [
+      {
+        type: 'output',
+        filter: function (text, converter, options) {
+          var tag = fig;
+          return text.replace(
+            imgRegex,
+            function (match, url, alt, title, rest) {
+              return tag
+                .replaceAll('%1', url)
+                .replaceAll('%2', alt)
+                .replaceAll('%3', title)
+                .replaceAll('%4', rest);
+            }
+          );
+        },
       },
-    }, ];
+    ];
   });
 }
 
