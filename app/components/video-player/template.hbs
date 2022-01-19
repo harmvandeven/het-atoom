@@ -4,9 +4,12 @@
     {{play-when this.isPlaying}}
     {{on 'timeupdate' this.setTime}}
     {{did-insert this.didInsert}}
+    {{will-destroy this.willDestroy}}
   >
-    <source src='video/sintel-short.mp4' type='video/mp4' />
-    <source src='video/sintel-short.mp4' type='video/webm' />
+    <source
+      src='https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4'
+      type='video/mp4'
+    />
     <!-- fallback content here -->
   </video>
 </div>
