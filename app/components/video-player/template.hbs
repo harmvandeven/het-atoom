@@ -1,5 +1,10 @@
 <div class='player'>
-  <video controls {{play-when this.isPlaying}} {{on 'timeupdate' this.setTime}}>
+  <video
+    controls
+    {{play-when this.isPlaying}}
+    {{on 'timeupdate' this.setTime}}
+    {{did-insert this.didInsert}}
+  >
     <source src='video/sintel-short.mp4' type='video/mp4' />
     <source src='video/sintel-short.mp4' type='video/webm' />
     <!-- fallback content here -->

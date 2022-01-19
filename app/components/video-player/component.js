@@ -12,6 +12,11 @@ export default class VideoPlayerComponent extends Component {
   @tracked isPlaying = false;
 
   @action
+  didInsert(element) {
+    element.removeAttribute('controls');
+  }
+
+  @action
   play() {
     this.isPlaying = true;
   }
