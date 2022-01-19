@@ -11,7 +11,8 @@ export default class IndexRoute extends Route {
   async model() {
     return {
       catalogue: this.content.getCatalogue(),
-      stories: this.content.getStories()
+      stories: this.content.getStories(),
+      frames: this.content.getFrames(),
     };
   }
 }

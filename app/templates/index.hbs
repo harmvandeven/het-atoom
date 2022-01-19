@@ -1,11 +1,15 @@
-{{page-title @model.catalogue.firstObject.title}}
-
 <h1>
   Het Atoom
 </h1>
 <h2>
   Catalogue
 </h2>
+
+<ol>
+{{#each @model.frames as |frame|}}
+  <li>{{frame}}</li>
+{{/each}}
+</ol>
 
 {{#each @model.catalogue as |item|}}
   <h3>

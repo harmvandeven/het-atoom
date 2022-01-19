@@ -16,4 +16,15 @@ export default class ContentService extends Service {
     return A([story0, storyA]);
   }
 
+
+  getFrames() {
+    let array = A([]);
+    this.getCatalogue().forEach((item) => {
+      if (item.frame != null) {
+        array.push(item.frame);
+      }
+    });
+    return array;
+  }
+
 }
