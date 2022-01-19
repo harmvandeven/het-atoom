@@ -14,6 +14,7 @@ export default class VideoPlayerComponent extends Component {
   @action
   didInsert(element) {
     element.removeAttribute('controls');
+    element.muted = "muted";
   }
 
   @action

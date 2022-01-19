@@ -1,4 +1,4 @@
-<div class='player'>
+<div class='video-player'>
   <video
     controls
     {{play-when this.isPlaying}}
@@ -9,20 +9,23 @@
     <source src='video/sintel-short.mp4' type='video/webm' />
     <!-- fallback content here -->
   </video>
+</div>
 
-  <div class='controls'>
-    <button type='button' {{on 'click' this.play}}>
-      Play
-    </button>
+<div class='controls'>
+  {{#if this.isPlaying}}
     <button type='button' {{on 'click' this.pause}}>
       Pause
     </button>
-    <div class='timer'>
-      <div></div>
-      <span aria-label='timer'>
-        {{this.time}}
-      </span>
-    </div>
+  {{else}}
+    <button type='button' {{on 'click' this.play}}>
+      Play
+    </button>
+  {{/if}}
+  <div class='timer'>
+    <div></div>
+    <span aria-label='timer'>
+      {{this.time}}
+    </span>
   </div>
 </div>
 
