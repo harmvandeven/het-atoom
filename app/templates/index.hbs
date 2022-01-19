@@ -12,6 +12,17 @@
     {{item.title}}
   </h3>
   {{markdown-to-html markdown=item.description extensions='showdownCaption'}}
+
+  <ul>
+    {{#each item.parts as |part|}}
+      <h4>
+        {{part.id}}: {{part.title}}
+      </h4>
+      {{markdown-to-html markdown=part.description extensions='showdownCaption'
+      }}
+    {{/each}}
+  </ul>
+
   <hr />
 {{/each}}
 
