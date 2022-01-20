@@ -1,8 +1,11 @@
 <div class='video-player'>
   <video
-    controls
-    {{play-when this.isPlaying}}
+    autoplay
+    muted
+    playsinline
     {{on 'timeupdate' this.setTime}}
+    {{on 'play' this.onPlay}}
+    {{on 'pause' this.onPause}}
     {{did-insert this.didInsert}}
     {{will-destroy this.willDestroy}}
   >
@@ -12,24 +15,6 @@
     />
     <!-- fallback content here -->
   </video>
-</div>
-
-<div class='controls'>
-  {{#if this.isPlaying}}
-    <button type='button' {{on 'click' this.pause}}>
-      Pause
-    </button>
-  {{else}}
-    <button type='button' {{on 'click' this.play}}>
-      Play
-    </button>
-  {{/if}}
-  <div class='timer'>
-    <div></div>
-    <span aria-label='timer'>
-      {{this.time}}
-    </span>
-  </div>
 </div>
 
 {{yield}}

@@ -25,6 +25,31 @@ export default class VideoPlayerComponent extends Component {
     this.player = element;
     this.player.removeAttribute('controls');
     this.player.muted = "muted";
+    this.player.autoplay = true;
+    this.player.preload = "auto";
+
+    this.player.playsinline = true;
+    this.player.disableRemotePlayback = true;
+    this.player.setAttribute("playsinline", true);
+    this.player.setAttribute("autoplay", true);
+    this.player.setAttribute("disableRemotePlayback", true);
+
+    let canPlay = () => {
+      this.player.pause();
+      this.player.removeEventListener('canplay', canPlay);
+    }
+    this.player.addEventListener('canplay', canPlay);
+
+    let playOnce = () => {
+      this.player.play();
+      this.player.pause();
+      document.body.removeEventListener("touchstart", playOnce);
+      document.body.removeEventListener("mousemove", playOnce);
+      window.removeEventListener("scroll", playOnce);
+    };
+    document.body.addEventListener("touchstart", playOnce);
+    document.body.addEventListener("mousemove", playOnce);
+    window.addEventListener("scroll", playOnce);
 
     // Setup the request for syncing frames
     this.raf = window.requestAnimationFrame(() => {
@@ -40,12 +65,12 @@ export default class VideoPlayerComponent extends Component {
   }
 
   @action
-  play() {
+  onPlay() {
     this.isPlaying = true;
   }
 
   @action
-  pause() {
+  onPause() {
     this.isPlaying = false;
   }
 
@@ -94,7 +119,7 @@ export default class VideoPlayerComponent extends Component {
           if (frame != this.frame) {
             context.readyForUpdate = false;
             this.frame = frame;
-            player.pause();
+            if (this.isPlaying) player.pause();
             player.currentTime = this.frame / 30.0;
           }
         }
@@ -106,5 +131,6 @@ export default class VideoPlayerComponent extends Component {
       context.setFrame(player, context);
     });
   }
+
 
 }
