@@ -15,9 +15,18 @@ export default class VideoPlayerComponent extends Component {
   @tracked innerHeight = -1;
   @tracked documentHeight = -1;
   @tracked frame = 0;
+  @tracked fps = 30;
 
   @tracked player = null;
   @tracked readyForUpdate = true;
+
+  get currentTime() {
+    // Set the currentTime on the player if it exists  
+    if (this.player) {
+      this.player.currentTime = this.frame / this.fps;
+    }
+    return this.frame / this.fps;
+  }
 
   @action
   didInsert(element) {
@@ -116,11 +125,10 @@ export default class VideoPlayerComponent extends Component {
         if (context.duration > -1) {
           let frames = Math.floor(context.duration * 30.0);
           let frame = Math.floor((frames / (this.documentHeight - this.innerHeight)) * this.scrollY);
-          if (frame != this.frame) {
+          if (frame != context.frame) {
             context.readyForUpdate = false;
-            this.frame = frame;
+            context.frame = frame;
             if (this.isPlaying) player.pause();
-            player.currentTime = this.frame / 30.0;
           }
         }
       }
