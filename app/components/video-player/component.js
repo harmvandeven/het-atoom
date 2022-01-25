@@ -5,72 +5,68 @@ import {
 import {
   action
 } from '@ember/object';
+import {
+  next
+} from '@ember/runloop';
 
 export default class VideoPlayerComponent extends Component {
-
-  @tracked time = "00:00";
-  @tracked duration = -1;
+  
   @tracked isPlaying = false;
-  @tracked scrollY = -1;
-  @tracked innerHeight = -1;
-  @tracked documentHeight = -1;
-  @tracked frame = 0;
   @tracked fps = 30;
 
   @tracked player = null;
   @tracked readyForUpdate = true;
 
+  // Get and update the current time based on the frame coming in
   get currentTime() {
-    // Set the currentTime on the player if it exists  
-    if (this.player) {
-      this.player.currentTime = this.frame / this.fps;
-    }
-    return this.frame / this.fps;
+    // Set the currentTime on the player if it exists
+    let time = this.args.frame / this.fps;
+
+    // Run it on the next frame to make sure we don't do a double take
+    next(this, () => {
+      if (this.player) {
+        if (this.player.currentTime != time && this.readyForUpdate) {
+          this.readyForUpdate = false;
+          this.player.currentTime = time;
+          if (this.isPlaying) this.player.pause();
+        }
+      }
+    });
+    return time;
   }
 
   @action
   didInsert(element) {
+
     // Setup the video player
     this.player = element;
     this.player.removeAttribute('controls');
-    this.player.muted = "muted";
+    this.player.muted = 'muted';
     this.player.autoplay = true;
-    this.player.preload = "auto";
+    this.player.preload = 'auto';
 
     this.player.playsinline = true;
     this.player.disableRemotePlayback = true;
-    this.player.setAttribute("playsinline", true);
-    this.player.setAttribute("autoplay", true);
-    this.player.setAttribute("disableRemotePlayback", true);
+    this.player.setAttribute('playsinline', true);
+    this.player.setAttribute('autoplay', true);
+    this.player.setAttribute('disableRemotePlayback', true);
 
     let canPlay = () => {
       this.player.pause();
       this.player.removeEventListener('canplay', canPlay);
-    }
+    };
     this.player.addEventListener('canplay', canPlay);
 
     let playOnce = () => {
       this.player.play();
       this.player.pause();
-      document.body.removeEventListener("touchstart", playOnce);
-      document.body.removeEventListener("mousemove", playOnce);
-      window.removeEventListener("scroll", playOnce);
+      document.body.removeEventListener('touchstart', playOnce);
+      document.body.removeEventListener('mousemove', playOnce);
+      window.removeEventListener('scroll', playOnce);
     };
-    document.body.addEventListener("touchstart", playOnce);
-    document.body.addEventListener("mousemove", playOnce);
-    window.addEventListener("scroll", playOnce);
-
-    // Setup the request for syncing frames
-    this.raf = window.requestAnimationFrame(() => {
-      this.setFrame(this.player, this);
-    });
-  }
-
-  @action
-  willDestroy(element) {
-    if (this.raf) {
-      window.cancelAnimationFrame(this.raf);
-    }
+    document.body.addEventListener('touchstart', playOnce);
+    document.body.addEventListener('mousemove', playOnce);
+    window.addEventListener('scroll', playOnce);
   }
 
   @action
@@ -84,60 +80,9 @@ export default class VideoPlayerComponent extends Component {
   }
 
   @action
-  setTime(evt) {
-
-    let minutes = Math.floor(evt.target.currentTime / 60);
-    let seconds = Math.floor(evt.target.currentTime - minutes * 60);
-    let minuteValue;
-    let secondValue;
-
-    if (minutes < 10) {
-      minuteValue = '0' + minutes;
-    } else {
-      minuteValue = minutes;
-    }
-
-    if (seconds < 10) {
-      secondValue = '0' + seconds;
-    } else {
-      secondValue = seconds;
-    }
-    this.duration = evt.target.duration;
-    this.time = minuteValue + ':' + secondValue;
-
+  setReadyForUpdate(evt) {
     // Set can update
     this.readyForUpdate = true;
-
-    // let barLength = timerWrapper.clientWidth * (evt.target.currentTime / evt.target.duration);
-    // timerBar.style.width = barLength + 'px';
-
-  }
-
-  setFrame(player, context) {
-    if (context.isDestroying || context.isDestroyed) return;
-
-    if (context.readyForUpdate) {
-      if (window.scrollY != this.scrollY || window.innerHeight != this.innerHeight || document.body.clientHeight != this.documentHeight) {
-        this.scrollY = window.scrollY;
-        this.innerHeight = window.innerHeight;
-        this.documentHeight = document.body.clientHeight;
-
-        if (context.duration > -1) {
-          let frames = Math.floor(context.duration * 30.0);
-          let frame = Math.floor((frames / (this.documentHeight - this.innerHeight)) * this.scrollY);
-          if (frame != context.frame) {
-            context.readyForUpdate = false;
-            context.frame = frame;
-            if (this.isPlaying) player.pause();
-          }
-        }
-      }
-    }
-
-    // Add a new requestAnimationFrame
-    this.raf = window.requestAnimationFrame(() => {
-      context.setFrame(player, context);
-    });
   }
 
 

@@ -1,13 +1,12 @@
-<div class='video-player'>
+<div class='video-player' data-currentTime={{this.currentTime}}>
   <video
     autoplay
     muted
     playsinline
-    {{on 'timeupdate' this.setTime}}
+    {{on 'timeupdate' this.setReadyForUpdate}}
     {{on 'play' this.onPlay}}
     {{on 'pause' this.onPause}}
     {{did-insert this.didInsert}}
-    {{will-destroy this.willDestroy}}
   >
     <source
       src='https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4'
@@ -15,12 +14,6 @@
     />
     <!-- fallback content here -->
   </video>
-
-  <div
-    style='font-size:64px;color:yellow;position:fixed;z-index:100;top:0;left:0;'
-  >
-    {{this.currentTime}}
-  </div>
 </div>
 
 {{yield}}

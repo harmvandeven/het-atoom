@@ -1,2 +1,11 @@
-<TimelineSegment />
+<div
+  class='timeline'
+  {{did-insert this.didInsert}}
+  {{will-destroy this.willDestroy}}
+>
+  <h1>
+    Timeline
+  </h1>
+  <TimelineSegment @frame={{this.frame}} />
+</div>
 {{yield}}
