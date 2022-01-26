@@ -9,7 +9,7 @@ import {
 export default class TimelineComponent extends Component {
   // Store the current frame
   @tracked frame = 0;
-  @tracked length = 271;
+  @tracked length = 400;
 
   // Store the scroll position + document size
   @tracked scrollY = -1;

@@ -1,6 +1,7 @@
-<h2>
-  FRAME: {{@this.frame}}
-</h2>
-<VideoPlayer @frame={{@this.frame}} />
+<div data-frame={{this.computedFrame}}>
+  {{#if this.visible}}
+    <VideoPlayer @frame={{this.computedFrame}} />
+  {{/if}}
+</div>
 
 {{yield}}

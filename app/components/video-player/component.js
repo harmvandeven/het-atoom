@@ -10,9 +10,11 @@ import {
 } from '@ember/runloop';
 
 export default class VideoPlayerComponent extends Component {
-  
+
   @tracked isPlaying = false;
-  @tracked fps = 30;
+
+  @tracked defaultLength = 100;
+  @tracked defautlFps = 30;
 
   @tracked player = null;
   @tracked readyForUpdate = true;
@@ -33,6 +35,16 @@ export default class VideoPlayerComponent extends Component {
       }
     });
     return time;
+  }
+
+  get fps() {
+    if (this.args.fps) return this.args.fps;
+    return this.defautlFps;
+  }
+
+  get length() {
+    if (this.args.length) return this.args.length;
+    return this.defaultLength;
   }
 
   @action

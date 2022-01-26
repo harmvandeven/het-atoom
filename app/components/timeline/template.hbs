@@ -6,6 +6,11 @@
   <h1>
     Timeline
   </h1>
-  <TimelineSegment @frame={{this.frame}} />
+  <div
+    style='position:fixed;top:0;left:0;font-size:42px;color:yellow;z-index:100'
+  >
+    {{this.frame}}
+  </div>
+  <TimelineSegment @frame={{this.frame}} @start='10' @length='271' />
 </div>
 {{yield}}
