@@ -1,16 +1,9 @@
 import Component from '@glimmer/component';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  action
-} from '@ember/object';
-import {
-  next
-} from '@ember/runloop';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
+import { next } from '@ember/runloop';
 
 export default class VideoPlayerComponent extends Component {
-
   @tracked isPlaying = false;
 
   @tracked defaultLength = 100;
@@ -49,7 +42,6 @@ export default class VideoPlayerComponent extends Component {
 
   @action
   didInsert(element) {
-
     // Setup the video player
     this.player = element;
     this.player.removeAttribute('controls');
@@ -96,6 +88,4 @@ export default class VideoPlayerComponent extends Component {
     // Set can update
     this.readyForUpdate = true;
   }
-
-
 }

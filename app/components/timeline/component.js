@@ -1,10 +1,6 @@
 import Component from '@glimmer/component';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  action
-} from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class TimelineComponent extends Component {
   // Store the current frame
@@ -50,7 +46,7 @@ export default class TimelineComponent extends Component {
       // Calculate the current frame
       let frame = Math.floor(
         (context.length / (context.documentHeight - context.innerHeight)) *
-        context.scrollY
+          context.scrollY
       );
       if (frame != context.frame) {
         context.frame = frame;

@@ -3,14 +3,22 @@
   {{did-insert this.didInsert}}
   {{will-destroy this.willDestroy}}
 >
-  <h1>
-    Timeline
-  </h1>
   <div
     style='position:fixed;top:0;left:0;font-size:42px;color:yellow;z-index:100'
   >
     {{this.frame}}
   </div>
-  <TimelineSegment @frame={{this.frame}} @start='10' @length='271' />
+  <TimelineSegment
+    @tempId='1'
+    @frame={{this.frame}}
+    @start='10'
+    @length='271'
+  />
+  <TimelineSegment
+    @tempId='2'
+    @frame={{this.frame}}
+    @start='281'
+    @length='20'
+  />
 </div>
 {{yield}}

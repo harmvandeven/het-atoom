@@ -1,13 +1,12 @@
 import Component from '@glimmer/component';
 
 export default class TimelineSegmentComponent extends Component {
-
   get visible() {
     let start = 0;
     let end = -1;
     if (this.args.start) start = parseFloat(this.args.start);
-    if (this.args.end) end = parseFloat(this.args.end);
-    if (this.args.length) end = start + parseFloat(this.args.length);
+    if (this.args.end) end = parseFloat(this.args.end) - start;
+    if (this.args.length) end = parseFloat(this.args.length);
     let currentFrame = parseFloat(this.args.frame) - start;
     if (currentFrame < 0) return false;
     if (end > -1 && currentFrame > end) return false;
@@ -21,5 +20,4 @@ export default class TimelineSegmentComponent extends Component {
     }
     return parseFloat(this.args.frame) - start;
   }
-
 }
