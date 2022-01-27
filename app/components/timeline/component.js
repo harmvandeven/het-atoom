@@ -1,5 +1,8 @@
 import Component from '@glimmer/component';
 import {
+  htmlSafe
+} from '@ember/template';
+import {
   tracked
 } from '@glimmer/tracking';
 import {
@@ -67,6 +70,14 @@ export default class TimelineComponent extends Component {
 
   get progress() {
     return Math.min(100, Math.max(0, (this.frame / this.length) * 100));
+  }
+
+  get scrollHeightStyle() {
+    return htmlSafe('height:' + this.height + 'px;');
+  }
+
+  get progressStyle() {
+    return htmlSafe('top:' + this.progress + '%;');
   }
 
 }
