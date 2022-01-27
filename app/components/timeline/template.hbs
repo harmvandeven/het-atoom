@@ -3,24 +3,23 @@
   {{did-insert this.didInsert}}
   {{will-destroy this.willDestroy}}
 >
-  <div
-    style='position:fixed;top:0;left:0;font-size:42px;color:yellow;z-index:100'
-  >
-    {{this.frame}}
-  </div>
   <TimelineSegment
     @tempId='1'
     @frame={{this.frame}}
     @start='10'
     @length='271'
   />
-  <TimelineSegment
-    @tempId='2'
+  <TimelineSegment    @tempId='2'
     @frame={{this.frame}}
     @start='281'
     @length='20'
   />
 </div>
+
+<div class='timeline-debug'>
+  {{this.frame}}
+</div>
+
 <div class='timeline-progress'>
   <div class='indicator' style='top:{{this.progress}}%;'>
     &nbsp;
