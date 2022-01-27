@@ -32,6 +32,7 @@ export default class TimelineSegmentComponent extends Component {
           }
         });
       }
+
       // Run through the length of the segment + create keyframes for all
       let currentKey = 0;
       for (let i = 0; i < this.args.length; i++) {
@@ -50,15 +51,19 @@ export default class TimelineSegmentComponent extends Component {
                   k = this.args.keyframes.length + 1;
                 }
               }
-              perStepValue[prop] = (targetValue - currentValue) / targetFrames;
+              if (targetFrames < 1) {
+                perStepValue[prop] = 0;
+              } else {
+                perStepValue[prop] = (targetValue - currentValue) / targetFrames;
+              }
             });
+            currentKey++;
           } else {
             // End of the keyframes, maintain all keyframes
             props.forEach((prop) => {
               perStepValue[prop] = 0;
             });
           }
-          currentKey++;
         }
         this.keyframes[i] = [];
         props.forEach((prop) => {
@@ -150,6 +155,13 @@ export default class TimelineSegmentComponent extends Component {
       h = this.args.baseHeight;
     }
 
+    if (this.keyframes != null && this.keyframes[this.frame] != null) {
+      if (this.keyframes[this.frame]['scale'] != null) {
+        w = w * this.keyframes[this.frame]['scale'];
+        h = h * this.keyframes[this.frame]['scale'];
+      }
+    }
+
     if (w != null && h != null) {
       t = (window.innerHeight - h) * 0.5;
       l = (window.innerWidth - w) * 0.5;
@@ -158,7 +170,7 @@ export default class TimelineSegmentComponent extends Component {
         leftOffset = parseFloat(this.args.left);
       }
       if (this.args.top) {
-        topOffset * parseFloat(this.args.top);
+        topOffset = parseFloat(this.args.top);
       }
     }
 
