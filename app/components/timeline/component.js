@@ -11,9 +11,8 @@ import {
 
 export default class TimelineComponent extends Component {
 
-  // Store the current frame
-  // TODO: The length should be calculated using the 'timeline-segments'
-  @tracked length = 400;
+  // Store some variables
+  @tracked length = 0;
   @tracked pixelPerFrame = 12;
 
   // Store the scroll position + document size
@@ -25,6 +24,13 @@ export default class TimelineComponent extends Component {
   @tracked width = 960;
   @tracked height = 540;
 
+  // Constructor
+  constructor() {
+    super(...arguments);
+    this.length = this.calulateLength(this.args.segments);
+  }
+
+  // Create an requestAnimationFrame loop
   @action
   didInsert(element) {
     // Setup the request for syncing frames
@@ -33,6 +39,7 @@ export default class TimelineComponent extends Component {
     });
   }
 
+  // Destroy the requestAnimationFrame loop
   @action
   willDestroy(element) {
     super.willDestroy(...arguments);
@@ -42,7 +49,6 @@ export default class TimelineComponent extends Component {
   }
 
   setScrollY(context) {
-
     // Return when removed
     if (context.isDestroying || context.isDestroyed) return;
 
@@ -64,12 +70,9 @@ export default class TimelineComponent extends Component {
     });
   }
 
-
-
   get frame() {
     return Math.floor(
-      (this.length / (this.scrollHeight - this.innerHeight)) *
-      this.scrollY
+      (this.length / (this.scrollHeight - this.innerHeight)) * this.scrollY
     );
   }
 
@@ -91,7 +94,10 @@ export default class TimelineComponent extends Component {
 
   get baseRatio() {
     if (this.innerWidth < 0 || this.innerHeight < 0) return 1;
-    return Math.max(this.innerWidth / this.width, this.innerHeight / this.height);
+    return Math.max(
+      this.innerWidth / this.width,
+      this.innerHeight / this.height
+    );
   }
 
   get baseWidth() {
@@ -102,4 +108,16 @@ export default class TimelineComponent extends Component {
     return this.height * this.baseRatio;
   }
 
+  calulateLength(segments) {
+    console.log('calulateLength', segments);
+    let length = 0;
+    for (let i = 0; i < segments.length; i++) {
+      length = Math.max(
+        length,
+        parseFloat(segments[i]['start']) + parseFloat(segments[i]['length'])
+      );
+    }
+    console.log('length', length);
+    return length;
+  }
 }
