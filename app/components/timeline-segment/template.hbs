@@ -1,11 +1,13 @@
 <div class='timeline-segment' data-frame={{this.computedFrame}}>
-  {{#if this.visible}}
-    {{#if (eq @tempId '1')}}
-      <VideoPlayer @frame={{this.computedFrame}} />
-    {{else}}
-      <ImageElement @frame={{this.computedFrame}} />
+  <div class='container' style={{this.style}}>
+    {{#if this.visible}}
+      {{#if (eq @tempId '1')}}
+        <VideoPlayer @frame={{this.computedFrame}} />
+      {{else}}
+        <ImageElement @frame={{this.computedFrame}} />
+      {{/if}}
     {{/if}}
-  {{/if}}
+  </div>
 </div>
 
 {{yield}}

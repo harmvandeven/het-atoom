@@ -19,6 +19,11 @@ export default class TimelineComponent extends Component {
   // Store the scroll position + document size
   @tracked scrollY = -1;
   @tracked innerHeight = -1;
+  @tracked innerWidth = -1;
+
+  // Set the base width + height
+  @tracked width = 960;
+  @tracked height = 540;
 
   @action
   didInsert(element) {
@@ -44,10 +49,12 @@ export default class TimelineComponent extends Component {
     // Look for a new scroll position
     if (
       window.scrollY != context.scrollY ||
-      window.innerHeight != context.innerHeight
+      window.innerHeight != context.innerHeight ||
+      window.innerWidth != context.innerWidth
     ) {
       // Store the new found position + document size
       context.scrollY = window.scrollY;
+      context.innerWidth = window.innerWidth;
       context.innerHeight = window.innerHeight;
     }
 
@@ -57,13 +64,11 @@ export default class TimelineComponent extends Component {
     });
   }
 
-  get height() {
-    return this.length * this.pixelPerFrame;
-  }
+
 
   get frame() {
     return Math.floor(
-      (this.length / (this.height - this.innerHeight)) *
+      (this.length / (this.scrollHeight - this.innerHeight)) *
       this.scrollY
     );
   }
@@ -72,12 +77,29 @@ export default class TimelineComponent extends Component {
     return Math.min(100, Math.max(0, (this.frame / this.length) * 100));
   }
 
+  get scrollHeight() {
+    return parseFloat(this.length) * parseFloat(this.pixelPerFrame);
+  }
+
   get scrollHeightStyle() {
-    return htmlSafe('height:' + this.height + 'px;');
+    return htmlSafe('height:' + this.scrollHeight + 'px;');
   }
 
   get progressStyle() {
     return htmlSafe('top:' + this.progress + '%;');
+  }
+
+  get baseRatio() {
+    if (this.innerWidth < 0 || this.innerHeight < 0) return 1;
+    return Math.max(this.innerWidth / this.width, this.innerHeight / this.height);
+  }
+
+  get baseWidth() {
+    return this.width * this.baseRatio;
+  }
+
+  get baseHeight() {
+    return this.height * this.baseRatio;
   }
 
 }
