@@ -9,7 +9,8 @@
     @start='10'
     @length='271'
   />
-  <TimelineSegment    @tempId='2'
+  <TimelineSegment
+    @tempId='2'
     @frame={{this.frame}}
     @start='281'
     @length='20'
@@ -18,6 +19,10 @@
 
 <div class='timeline-debug'>
   {{this.frame}}
+</div>
+
+<div class='timeline-scrollheight' style='height:{{this.height}}px;'>
+  &nbsp;
 </div>
 
 <div class='timeline-progress'>

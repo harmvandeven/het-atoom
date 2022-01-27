@@ -7,9 +7,10 @@ import {
 } from '@ember/object';
 
 export default class TimelineComponent extends Component {
+
   // Store the current frame
-  @tracked frame = 0;
   @tracked length = 400;
+  @tracked pixelPerFrame = 12;
 
   // Store the scroll position + document size
   @tracked scrollY = -1;
@@ -20,7 +21,7 @@ export default class TimelineComponent extends Component {
   didInsert(element) {
     // Setup the request for syncing frames
     this.raf = window.requestAnimationFrame(() => {
-      this.setFrame(this);
+      this.setScrollY(this);
     });
   }
 
@@ -32,7 +33,8 @@ export default class TimelineComponent extends Component {
     }
   }
 
-  setFrame(context) {
+  setScrollY(context) {
+
     // Return when removed
     if (context.isDestroying || context.isDestroyed) return;
 
@@ -46,32 +48,27 @@ export default class TimelineComponent extends Component {
       context.scrollY = window.scrollY;
       context.innerHeight = window.innerHeight;
       context.documentHeight = document.body.clientHeight;
-
-      // Calculate the current frame
-      let frame = Math.floor(
-        (context.length / (context.documentHeight - context.innerHeight)) *
-        context.scrollY
-      );
-      if (frame != context.frame) {
-        context.frame = frame;
-      }
     }
 
     // Add a new requestAnimationFrame
     this.raf = window.requestAnimationFrame(() => {
-      context.setFrame(context);
+      context.setScrollY(context);
     });
   }
 
-  get computedFrame() {
+  get height() {
+    return this.length * this.pixelPerFrame;
+  }
+
+  get frame() {
     return Math.floor(
-      (this.length / (this.documentHeight - this.innerHeight)) *
+      (this.length / (this.height - this.innerHeight)) *
       this.scrollY
     );
   }
 
   get progress() {
-    return (this.computedFrame / this.length) * 100;
+    return Math.min(100, Math.max(0, (this.frame / this.length) * 100));
   }
 
 }
