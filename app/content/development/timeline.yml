@@ -1,4 +1,4 @@
-- id: '1'
+- id: 1
   title: Tulsa video
   src: https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4
   start: 10
@@ -14,4 +14,17 @@
   top: 0.05
   originWidth: 1664
   originHeight: 990
-  style: background-color:pink;transform:rotate(20deg);
+  keyframes:
+    - frame: 0
+      opacity: 0
+      top: -0.25
+      rotate: -1
+    - frame: 50
+      opacity: 1
+      rotate: 10
+    - frame: 250
+      opacity: 1
+    - frame: 300
+      top: 0.5
+      rotate: -100
+      opacity: 0

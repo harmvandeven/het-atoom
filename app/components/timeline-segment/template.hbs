@@ -1,17 +1,17 @@
-<div class='timeline-segment' data-frame={{this.computedFrame}}>
+<div class='timeline-segment' data-frame={{this.frame}}>
   <div class='container' style={{this.style}}>
     {{#if (eq this.type 'video/mp4')}}
       <VideoPlayer
         @src={{@src}}
         @type={{this.type}}
         @visible={{this.visible}}
-        @frame={{this.computedFrame}}
+        @frame={{this.frame}}
       />
     {{else if (eq this.type 'image')}}
       <ImageElement
         @src={{@src}}
         @visible={{this.visible}}
-        @frame={{this.computedFrame}}
+        @frame={{this.frame}}
       />
     {{else}}
       <h1>

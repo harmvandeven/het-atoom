@@ -5,6 +5,74 @@ import {
 
 export default class TimelineSegmentComponent extends Component {
 
+  keyframes = null;
+
+  constructor() {
+    super(...arguments);
+
+    // When we have keyframes, create a timeline from all those keyframes only once
+    if (this.args.keyframes) {
+
+      // create the keyframes array
+      this.keyframes = [];
+
+      // Get the properties and intialValues for those properties
+      let props = [];
+      let initialValue = [];
+      let perStepValue = [];
+      for (let k = 0; k < this.args.keyframes.length; k++) {
+        Object.keys(this.args.keyframes[k]).forEach((prop) => {
+          if (prop == 'frame') return;
+          if (initialValue[prop] == undefined) {
+            initialValue[prop] = this.args.keyframes[k][prop];
+            perStepValue[prop] = 0;
+          }
+          if (props.indexOf(prop) < 0) {
+            props.push(prop);
+          }
+        });
+      }
+      // Run through the length of the segment + create keyframes for all
+      let currentKey = 0;
+      for (let i = 0; i < this.args.length; i++) {
+        if (i > this.args.keyframes[currentKey].frame) {
+          if (this.args.keyframes.length > currentKey + 1) {
+            // per prop look for the next keyframe containing the prop and interpolate current value to then next target
+            props.forEach((prop) => {
+              let currentValue = this.keyframes[i - 1][prop];
+              let targetValue = currentValue;
+              let targetFrames = 0;
+              for (let k = currentKey + 1; k < this.args.keyframes.length; k++) {
+                if (this.args.keyframes[k][prop] != undefined) {
+                  targetValue = this.args.keyframes[k][prop];
+                  targetFrames = this.args.keyframes[k]['frame'] - i;
+                  // end the loop
+                  k = this.args.keyframes.length + 1;
+                }
+              }
+              perStepValue[prop] = (targetValue - currentValue) / targetFrames;
+            });
+          } else {
+            // End of the keyframes, maintain all keyframes
+            props.forEach((prop) => {
+              perStepValue[prop] = 0;
+            });
+          }
+          currentKey++;
+        }
+        this.keyframes[i] = [];
+        props.forEach((prop) => {
+          if (i > 0) {
+            this.keyframes[i][prop] = this.keyframes[i - 1][prop] + perStepValue[prop];
+          } else {
+            this.keyframes[i][prop] = initialValue[prop];
+          }
+        });
+      }
+
+    }
+  }
+
   get type() {
     if (this.args.src) {
       let period = this.args.src.lastIndexOf('.');
@@ -26,11 +94,11 @@ export default class TimelineSegmentComponent extends Component {
     if (this.args.length) end = parseFloat(this.args.length);
     let currentFrame = parseFloat(this.args.frame) - start;
     if (currentFrame < 0) return false;
-    if (end > -1 && currentFrame > end) return false;
+    if (end > -1 && currentFrame >= end) return false;
     return true;
   }
 
-  get computedFrame() {
+  get frame() {
     let start = 0;
     if (this.args.start) {
       start = parseFloat(this.args.start);
@@ -45,6 +113,7 @@ export default class TimelineSegmentComponent extends Component {
     if (this.args.style) {
       styles.push(this.args.style.replace(/^;+|;+$/g, ''));
     }
+
     // Add a transition to the facde when necessary
     if (this.args.fade) {
       styles.push('transition: opacity ' + this.args.fade + 's');
@@ -58,13 +127,16 @@ export default class TimelineSegmentComponent extends Component {
     if (!this.visible) {
       opacity = 0;
     }
-    if (opacity !== null) {
-      styles.push('opacity:' + opacity);
-    }
 
     // Do a placement calculation
     let w = null;
     let h = null;
+    let t = null;
+    let l = null;
+    let leftOffset = 0;
+    let topOffset = 0;
+    let rotate = null;
+
     if (this.args.width != null || this.args.height != null) {
       if (this.args.width != null) {
         w = parseFloat(this.args.width) * this.args.baseWidth;
@@ -79,23 +151,55 @@ export default class TimelineSegmentComponent extends Component {
     }
 
     if (w != null && h != null) {
-      let t = (window.innerHeight - h) * 0.5;
-      let l = (window.innerWidth - w) * 0.5;
+      t = (window.innerHeight - h) * 0.5;
+      l = (window.innerWidth - w) * 0.5;
+
       if (this.args.left) {
-        l += this.args.baseWidth * parseFloat(this.args.left);
+        leftOffset = parseFloat(this.args.left);
       }
       if (this.args.top) {
-        t += this.args.baseHeight * parseFloat(this.args.top);
+        topOffset * parseFloat(this.args.top);
       }
+    }
+
+    // Check for keyframes
+    if (this.keyframes != null && this.keyframes[this.frame] != null) {
+      if (this.keyframes[this.frame]['opacity'] != null) {
+        opacity = this.keyframes[this.frame]['opacity'];
+      }
+      if (this.keyframes[this.frame]['top'] != null) {
+        topOffset = this.keyframes[this.frame]['top'];
+      }
+      if (this.keyframes[this.frame]['left'] != null) {
+        leftOffset = this.keyframes[this.frame]['left'];
+      }
+      if (this.keyframes[this.frame]['rotate'] != null) {
+        rotate = this.keyframes[this.frame]['rotate'];
+      }
+    }
+
+    if (t != null && l != null) {
+      l += this.args.baseWidth * leftOffset;
+      t += this.args.baseHeight * topOffset;
       styles.push('left:' + l + 'px');
       styles.push('top:' + t + 'px');
+    }
 
-      if (w !== null) {
-        styles.push('width:' + w + 'px');
-      }
-      if (h !== null) {
-        styles.push('height:' + h + 'px');
-      }
+    if (w !== null) {
+      styles.push('width:' + w + 'px');
+    }
+    if (h !== null) {
+      styles.push('height:' + h + 'px');
+    }
+
+    // Push the rotation
+    if (rotate !== null) {
+      styles.push('transform:rotate(' + rotate + 'deg)');
+    }
+
+    // Push the opacity
+    if (opacity !== null) {
+      styles.push('opacity:' + opacity);
     }
 
     // Return the joined style
