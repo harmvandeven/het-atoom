@@ -27,9 +27,29 @@ export default class TimelineSegmentComponent extends Component {
 
   get style() {
     let styles = [];
-    if (this.args.opacity != null) {
-      styles.push('opacity:' + this.args.opacity);
+
+    // Push the default style
+    if (this.args.style) {
+      styles.push(this.args.style.replace(/^;+|;+$/g, ''));
     }
+    // Add a transition to the facde when necessary
+    if (this.args.fade) {
+      styles.push('transition: opacity ' + this.args.fade + 's');
+    }
+
+    // Check for the opacity based on the args or the visibility
+    let opacity = null;
+    if (this.args.opacity != null) {
+      opacity = this.args.opacity;
+    }
+    if (!this.visible) {
+      opacity = 0;
+    }
+    if (opacity !== null) {
+      styles.push('opacity:' + opacity);
+    }
+
+    // Do a placement calculation
     let w = null;
     let h = null;
     if (this.args.width != null || this.args.height != null) {
@@ -64,6 +84,8 @@ export default class TimelineSegmentComponent extends Component {
         styles.push('height:' + h + 'px');
       }
     }
+
+    // Return the joined style
     return htmlSafe(styles.join(';'));
   }
 
