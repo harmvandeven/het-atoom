@@ -8,10 +8,7 @@
     {{on 'pause' this.onPause}}
     {{did-insert this.didInsert}}
   >
-    <source
-      src='https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4'
-      type='video/mp4'
-    />
+    <source src={{@src}} type={{@type}} />
     <!-- fallback content here -->
   </video>
 </div>

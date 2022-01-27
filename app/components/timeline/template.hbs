@@ -3,31 +3,25 @@
   {{did-insert this.didInsert}}
   {{will-destroy this.willDestroy}}
 >
-  <TimelineSegment
-    @tempId='1'
-    @frame={{this.frame}}
-    @start='10'
-    @length='271'
-    @baseWidth={{this.baseWidth}}
-    @baseHeight={{this.baseHeight}}
-    @fade='0.33'
-  />
-  <TimelineSegment
-    @tempId='2'
-    @frame={{this.frame}}
-    @start='40'
-    @length='300'
-    @opacity='0.5'
-    @width='0.5'
-    @top='0.05'
-    @left='0.0'
-    @originWidth='1664'
-    @originHeight='990'
-    @baseWidth={{this.baseWidth}}
-    @baseHeight={{this.baseHeight}}
-    @fade='0.5'
-    @style='background-color:pink;transform:rotate(20deg);'
-  />
+  {{#each @segments as |item|}}
+    <TimelineSegment
+      @src={{item.src}}
+      @start={{item.start}}
+      @length={{item.length}}
+      @fade={{item.fade}}
+      @opacity={{item.opacity}}
+      @width={{item.width}}
+      @height={{item.height}}
+      @top={{item.top}}
+      @left={{item.left}}
+      @originWidth={{item.originWidth}}
+      @originHeight={{item.orginHeight}}
+      @style={{item.style}}
+      @baseWidth={{this.baseWidth}}
+      @baseHeight={{this.baseHeight}}
+      @frame={{this.frame}}
+    />
+  {{/each}}
 </div>
 
 <div class='timeline-debug'>

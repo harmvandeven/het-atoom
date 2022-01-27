@@ -5,6 +5,19 @@ import {
 
 export default class TimelineSegmentComponent extends Component {
 
+  get type() {
+    if (this.args.src) {
+      let period = this.args.src.lastIndexOf('.');
+      let ext = this.args.src.substring(period + 1).toLowerCase();
+      if (ext == 'jpg' || ext == 'gif' || ext == 'jpeg' || ext == 'png') {
+        return 'image';
+      } else if (ext == 'mp4') {
+        return 'video/' + ext;
+      }
+    }
+    return '';
+  }
+
   get visible() {
     let start = 0;
     let end = -1;

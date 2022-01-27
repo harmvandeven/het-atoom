@@ -1,0 +1,17 @@
+- id: '1'
+  title: Tulsa video
+  src: https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4
+  start: 10
+  length: 271
+  fade: 0.33
+- id: 2
+  title: Destruction in an image
+  src: https://static01.nyt.com/newsgraphics/2021/03/22/tulsa-massacre-centennial/47ebd8bc23cd5948bd03030e261d0e6dfec311f5/topper/top-destruction-v3-desktop.jpg
+  start: 40
+  length: 300
+  opacity: 0.5
+  width: 0.5
+  top: 0.05
+  originWidth: 1664
+  originHeight: 990
+  style: background-color:pink;transform:rotate(20deg);
