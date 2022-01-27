@@ -9,13 +9,13 @@ import {
 export default class TimelineComponent extends Component {
 
   // Store the current frame
+  // TODO: The length should be calculated using the 'timeline-segments'
   @tracked length = 400;
   @tracked pixelPerFrame = 12;
 
   // Store the scroll position + document size
   @tracked scrollY = -1;
   @tracked innerHeight = -1;
-  @tracked documentHeight = -1;
 
   @action
   didInsert(element) {
@@ -41,13 +41,11 @@ export default class TimelineComponent extends Component {
     // Look for a new scroll position
     if (
       window.scrollY != context.scrollY ||
-      window.innerHeight != context.innerHeight ||
-      document.body.clientHeight != context.documentHeight
+      window.innerHeight != context.innerHeight
     ) {
       // Store the new found position + document size
       context.scrollY = window.scrollY;
       context.innerHeight = window.innerHeight;
-      context.documentHeight = document.body.clientHeight;
     }
 
     // Add a new requestAnimationFrame
