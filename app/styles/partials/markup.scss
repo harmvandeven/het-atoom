@@ -1,3 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 32px;
+  line-height: 30px;
+}
+
+.header {
+  .het-atoom {
+    text-transform: uppercase;
+  }
+  .id {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 82px;
+    line-height: 82px;
+  }
+  h1 {
+    font-weight: 400;
+  }
+}
+
+.menu {
+  font-size: 20px;
+  line-height: 36px;
+  .id {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }

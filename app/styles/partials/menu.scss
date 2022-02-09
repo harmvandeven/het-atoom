@@ -1,0 +1,35 @@
+div.menu {
+  background-color: white;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  height: 100vh;
+  @include calc('height', '100vh - 100px');
+  z-index: 100;
+  overflow-y: auto;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      div.id {
+        float: left;
+        text-align: center;
+        width: 64px;
+      }
+      div.title {
+        float: left;
+      }
+      @include clearfix;
+    }
+    li:not(.link) {
+      color: #d4d4d4;
+    }
+    li.link {
+      cursor: pointer;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

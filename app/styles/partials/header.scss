@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100vw;
+  height: 100px;
+  background-color: white;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  h1 {
+    @include calc('width', '100% - 200px');
+    text-align: center;
+  }
+
+  .id {
+    color: $blue;
+  }
+}

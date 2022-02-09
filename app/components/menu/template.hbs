@@ -1,0 +1,27 @@
+<div class='menu'>
+  <ul>
+    {{#each @model as |item|}}
+      {{#if item.parts}}
+        <li class='link'>
+          <div class='id'>
+            {{item.id}}
+          </div>
+          <div class='title'>
+            {{item.title}}
+          </div>
+        </li>
+      {{else}}
+        <li>
+          <div class='id'>
+            {{item.id}}
+          </div>
+          <div class='title'>
+            {{item.title}}
+          </div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
+
+{{yield}}

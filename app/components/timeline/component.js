@@ -1,16 +1,9 @@
 import Component from '@glimmer/component';
-import {
-  htmlSafe
-} from '@ember/template';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  action
-} from '@ember/object';
+import { htmlSafe } from '@ember/template';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
 export default class TimelineComponent extends Component {
-
   // Store some variables
   @tracked length = 0;
   @tracked pixelPerFrame = 12;

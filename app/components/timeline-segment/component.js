@@ -1,10 +1,7 @@
 import Component from '@glimmer/component';
-import {
-  htmlSafe
-} from '@ember/template';
+import { htmlSafe } from '@ember/template';
 
 export default class TimelineSegmentComponent extends Component {
-
   keyframes = null;
 
   constructor() {
@@ -12,7 +9,6 @@ export default class TimelineSegmentComponent extends Component {
 
     // When we have keyframes, create a timeline from all those keyframes only once
     if (this.args.keyframes) {
-
       // create the keyframes array
       this.keyframes = [];
 
@@ -43,7 +39,11 @@ export default class TimelineSegmentComponent extends Component {
               let currentValue = this.keyframes[i - 1][prop];
               let targetValue = currentValue;
               let targetFrames = 0;
-              for (let k = currentKey + 1; k < this.args.keyframes.length; k++) {
+              for (
+                let k = currentKey + 1;
+                k < this.args.keyframes.length;
+                k++
+              ) {
                 if (this.args.keyframes[k][prop] != undefined) {
                   targetValue = this.args.keyframes[k][prop];
                   targetFrames = this.args.keyframes[k]['frame'] - i;
@@ -54,7 +54,8 @@ export default class TimelineSegmentComponent extends Component {
               if (targetFrames < 1) {
                 perStepValue[prop] = 0;
               } else {
-                perStepValue[prop] = (targetValue - currentValue) / targetFrames;
+                perStepValue[prop] =
+                  (targetValue - currentValue) / targetFrames;
               }
             });
             currentKey++;
@@ -68,13 +69,13 @@ export default class TimelineSegmentComponent extends Component {
         this.keyframes[i] = [];
         props.forEach((prop) => {
           if (i > 0) {
-            this.keyframes[i][prop] = this.keyframes[i - 1][prop] + perStepValue[prop];
+            this.keyframes[i][prop] =
+              this.keyframes[i - 1][prop] + perStepValue[prop];
           } else {
             this.keyframes[i][prop] = initialValue[prop];
           }
         });
       }
-
     }
   }
 
@@ -217,5 +218,4 @@ export default class TimelineSegmentComponent extends Component {
     // Return the joined style
     return htmlSafe(styles.join(';'));
   }
-
 }
