@@ -7,7 +7,7 @@
   {{#each @model.chapters as |chapter index|}}
     {{#if (or chapter.parts (eq index 0))}}
       <li>
-        <ChapterHeader @model={{chapter}} />
+        <ChapterHeader @model={{chapter}} @index={{index}} />
 
         {{#each chapter.parts as |part|}}
           {{#if part.description}}
