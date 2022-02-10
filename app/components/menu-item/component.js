@@ -20,7 +20,11 @@ export default class MenuItemComponent extends Component {
       return false;
     }
     if (this.args.model.parts) {
-      return dasherize(this.args.model.id + '-' + this.args.model.title);
+      let dashed = dasherize(this.args.model.title);
+      if (this.args.model.id != '-') {
+        dashed = this.args.model.id + '-' + dashed;
+      }
+      return dashed;
     }
     return false;
   }
