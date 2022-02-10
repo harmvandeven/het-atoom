@@ -1,0 +1,12 @@
+<div class='chapter-header'>
+  {{#if (and @model.id (not-eq @model.id '-'))}}
+    <div class='id'>
+      {{@model.id}}
+    </div>
+  {{/if}}
+  <h1 class='title'>
+    {{@model.title}}
+  </h1>
+</div>
+
+{{yield}}

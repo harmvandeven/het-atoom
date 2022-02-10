@@ -1,10 +1,7 @@
 import Component from '@glimmer/component';
-import {
-  dasherize
-} from '@ember/string';
+import { dasherize } from '@ember/string';
 
 export default class MenuItemComponent extends Component {
-
   get route() {
     if (this.args.index == 0) {
       return 'index';
@@ -28,5 +25,4 @@ export default class MenuItemComponent extends Component {
     }
     return false;
   }
-
 }

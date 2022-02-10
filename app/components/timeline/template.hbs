@@ -1,8 +1,4 @@
-<div
-  class='timeline'
-  {{did-insert this.didInsert}}
-  {{will-destroy this.willDestroy}}
->
+<div class='timeline'>
   {{#each @segments as |item|}}
     <TimelineSegment
       @src={{item.src}}

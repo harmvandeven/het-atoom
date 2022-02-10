@@ -1,18 +1,11 @@
 import Route from '@ember/routing/route';
-import {
-  dasherize
-} from '@ember/string';
-import {
-  service
-} from '@ember/service';
+import { dasherize } from '@ember/string';
+import { service } from '@ember/service';
 
 export default class ChapterRoute extends Route {
   @service('content') content;
 
-  model({
-    chapter_id
-  }) {
-
+  model({ chapter_id }) {
     let id = chapter_id.split('-')[0].toUpperCase();
     let name = chapter_id;
 

@@ -7,14 +7,8 @@
   {{#each @model.chapters as |chapter index|}}
     {{#if (or chapter.parts (eq index 0))}}
       <li>
-        {{#if (and chapter.id (not-eq chapter.id '-'))}}
-          <div class='id'>
-            {{chapter.id}}
-          </div>
-        {{/if}}
-        <h1 class='title'>
-          {{chapter.title}}
-        </h1>
+        <ChapterHeader @model={{chapter}} />
+
         {{#each chapter.parts as |part|}}
           {{#if part.description}}
             <div class='segment'>

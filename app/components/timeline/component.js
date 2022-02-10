@@ -1,17 +1,24 @@
 import Component from '@glimmer/component';
-import { htmlSafe } from '@ember/template';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
+import {
+  htmlSafe
+} from '@ember/template';
+import {
+  tracked
+} from '@glimmer/tracking';
+import {
+  action
+} from '@ember/object';
+import {
+  service
+} from '@ember/service';
 
 export default class TimelineComponent extends Component {
   // Store some variables
   @tracked length = 0;
   @tracked pixelPerFrame = 12;
 
-  // Store the scroll position + document size
-  @tracked scrollY = -1;
-  @tracked innerHeight = -1;
-  @tracked innerWidth = -1;
+  // Get the scroll service
+  @service('scroll') scroll;
 
   // Set the base width + height
   @tracked width = 960;
@@ -23,50 +30,10 @@ export default class TimelineComponent extends Component {
     this.length = this.calulateLength(this.args.segments);
   }
 
-  // Create an requestAnimationFrame loop
-  @action
-  didInsert(element) {
-    // Setup the request for syncing frames
-    this.raf = window.requestAnimationFrame(() => {
-      this.setScrollY(this);
-    });
-  }
-
-  // Destroy the requestAnimationFrame loop
-  @action
-  willDestroy(element) {
-    super.willDestroy(...arguments);
-    if (this.raf) {
-      window.cancelAnimationFrame(this.raf);
-    }
-  }
-
-  setScrollY(context) {
-    // Return when removed
-    if (context.isDestroying || context.isDestroyed) return;
-
-    // Look for a new scroll position
-    if (
-      window.scrollY != context.scrollY ||
-      window.innerHeight != context.innerHeight ||
-      window.innerWidth != context.innerWidth
-    ) {
-      // Store the new found position + document size
-      context.scrollY = window.scrollY;
-      context.innerWidth = window.innerWidth;
-      context.innerHeight = window.innerHeight;
-    }
-
-    // Add a new requestAnimationFrame
-    this.raf = window.requestAnimationFrame(() => {
-      context.setScrollY(context);
-    });
-  }
-
   get frame() {
-    return Math.floor(
-      (this.length / (this.scrollHeight - this.innerHeight)) * this.scrollY
-    );
+    let fr = Math.floor(
+      (this.length / (this.scrollHeight - this.scroll.get('innerHeight'))) * this.scroll.get('scrollY'));
+    return fr;
   }
 
   get progress() {
@@ -86,10 +53,10 @@ export default class TimelineComponent extends Component {
   }
 
   get baseRatio() {
-    if (this.innerWidth < 0 || this.innerHeight < 0) return 1;
+    if (this.scroll.get('innerWidth') < 0 || this.scroll.get('innerHeight') < 0) return 1;
     return Math.max(
-      this.innerWidth / this.width,
-      this.innerHeight / this.height
+      this.scroll.get('innerWidth') / this.width,
+      this.scroll.get('innerHeight') / this.height
     );
   }
 
@@ -102,7 +69,6 @@ export default class TimelineComponent extends Component {
   }
 
   calulateLength(segments) {
-    console.log('calulateLength', segments);
     let length = 0;
     for (let i = 0; i < segments.length; i++) {
       length = Math.max(
@@ -110,7 +76,6 @@ export default class TimelineComponent extends Component {
         parseFloat(segments[i]['start']) + parseFloat(segments[i]['length'])
       );
     }
-    console.log('length', length);
     return length;
   }
 }
