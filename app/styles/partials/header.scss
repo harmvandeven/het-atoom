@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  cursor: pointer;
   top: 0;
   left: 0;
   z-index: 101;
@@ -17,5 +18,14 @@
 
   .id {
     color: $blue;
+  }
+  svg {
+    @include rotate(0);
+    @include transition(transform 0.2s);
+  }
+  &.menu-open {
+    svg {
+      @include rotate(90);
+    }
   }
 }

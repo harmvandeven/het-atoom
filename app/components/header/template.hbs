@@ -1,4 +1,4 @@
-<div class='header'>
+<div class='header {{this.menuClass}}' {{on 'click' this.toggleMenu}}>
   <div class='het-atoom'>
     Het Atoom
   </div>
@@ -11,6 +11,6 @@
   </h1>
 </div>
 
-<Menu @model={{@model}} />
+<Menu @isOpen={{this.menuOpen}} @model={{@model}} />
 
 {{yield}}
