@@ -1,7 +1,7 @@
 {{page-title 'Het Atoom'}}
 
 <Header @model={{@model.chapters}} />
-{{!-- <Timeline @segments={{@model.timeline}} /> --}}
+<Timeline @segments={{@model.timeline}} />
 
 <ul class='chapters'>
   {{#each @model.chapters as |chapter index|}}
@@ -17,10 +17,12 @@
         </h1>
         {{#each chapter.parts as |part|}}
           {{#if part.description}}
-            {{markdown-to-html
-              markdown=part.description
-              extensions='showdownCaption'
-            }}
+            <div class='segment'>
+              {{markdown-to-html
+                markdown=part.description
+                extensions='showdownCaption'
+              }}
+            </div>
           {{/if}}
         {{/each}}
       </li>

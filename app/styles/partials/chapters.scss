@@ -6,19 +6,32 @@ ul.chapters {
 
   li {
     position: relative;
-    padding: 1rem;
-    background-color: white;
     margin: 25vh 2rem;
 
-    h1 {
-      text-align: center;
-    }
     .id {
       color: $blue;
       position: absolute;
       width: 90px;
       left: 0;
       top: 0;
+    }
+
+    h1 {
+      padding: 0.5rem 1rem;
+      text-align: center;
+      background-color: white;
+    }
+
+    .segment {
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      background-color: white;
+    }
+
+    &:first-child {
+      h1 {
+        background-color: transparent;
+      }
     }
   }
 }
