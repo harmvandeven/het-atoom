@@ -1,0 +1,24 @@
+ul.chapters {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  li {
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    margin: 25vh 2rem;
+
+    h1 {
+      text-align: center;
+    }
+    .id {
+      color: $blue;
+      position: absolute;
+      width: 90px;
+      left: 0;
+      top: 0;
+    }
+  }
+}

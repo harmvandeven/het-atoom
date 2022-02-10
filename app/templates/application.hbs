@@ -1,14 +1,31 @@
 {{page-title 'Het Atoom'}}
 
 <Header @model={{@model.chapters}} />
-<Timeline @segments={{@model.timeline}} />
+{{!-- <Timeline @segments={{@model.timeline}} /> --}}
 
-<h1>
-  Het Atoom
-</h1>
-
-<p>
-  Scroll down
-</p>
+<ul class='chapters'>
+  {{#each @model.chapters as |chapter index|}}
+    {{#if (or chapter.parts (eq index 0))}}
+      <li>
+        {{#if (and chapter.id (not-eq chapter.id '-'))}}
+          <div class='id'>
+            {{chapter.id}}
+          </div>
+        {{/if}}
+        <h1 class='title'>
+          {{chapter.title}}
+        </h1>
+        {{#each chapter.parts as |part|}}
+          {{#if part.description}}
+            {{markdown-to-html
+              markdown=part.description
+              extensions='showdownCaption'
+            }}
+          {{/if}}
+        {{/each}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
 
 {{outlet}}

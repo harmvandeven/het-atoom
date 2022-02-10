@@ -30,3 +30,22 @@ h1 {
     font-weight: 700;
   }
 }
+
+ul.chapters {
+  li {
+    h1 {
+      font-weight: 400;
+    }
+    .id {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 82px;
+      line-height: 82px;
+    }
+    &:first-child {
+      h1 {
+        font-size: 84px;
+      }
+    }
+  }
+}

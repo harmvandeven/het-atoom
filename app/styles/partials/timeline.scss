@@ -1,0 +1,80 @@
+.timeline {
+  overflow: hidden;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  .timeline-segment,
+  .timeline-segment .video-player,
+  .timeline-segment .image-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .container {
+      margin: 0 auto;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.timeline-debug {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 42px;
+  color: yellow;
+  z-index: 100;
+}
+
+.timeline-scrollheight {
+  width: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: bisque;
+  height: 100vh;
+  opacity: 0;
+}
+
+.timeline-progress {
+  width: 24px;
+  height: 100vh;
+  position: fixed;
+  top: 24px;
+  right: 12px;
+  @include calc('height', '100vh - 48px');
+
+  .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    margin-top: -12px;
+    background-color: pink;
+  }
+}
