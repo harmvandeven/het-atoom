@@ -1,0 +1,36 @@
+{{#if this.route}}
+  {{#if this.link}}
+    <LinkTo @route={{this.route}} @model={{this.link}}>
+      <li class='link'>
+        <div class='id'>
+          {{@model.id}}
+        </div>
+        <div class='title'>
+          {{@model.title}}
+        </div>
+      </li>
+    </LinkTo>
+  {{else}}
+    <LinkTo @route={{this.route}}>
+      <li class='link'>
+        <div class='id'>
+          {{@model.id}}
+        </div>
+        <div class='title'>
+          {{@model.title}}
+        </div>
+      </li>
+    </LinkTo>
+  {{/if}}
+{{else}}
+  <li>
+    <div class='id'>
+      {{@model.id}}
+    </div>
+    <div class='title'>
+      {{@model.title}}
+    </div>
+  </li>
+{{/if}}
+
+{{yield}}

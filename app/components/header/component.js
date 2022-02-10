@@ -1,14 +1,9 @@
 import Component from '@glimmer/component';
-import {
-  action
-} from '@ember/object';
-import {
-  tracked
-} from '@glimmer/tracking';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
 
 export default class HeaderComponent extends Component {
-
-  @tracked menuOpen = true;
+  @tracked menuOpen = false;
 
   @action toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -18,5 +13,4 @@ export default class HeaderComponent extends Component {
     if (this.menuOpen) return 'menu-open';
     return 'menu-closed';
   }
-
 }
