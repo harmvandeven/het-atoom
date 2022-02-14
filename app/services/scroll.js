@@ -1,10 +1,7 @@
 import Service from '@ember/service';
-import {
-  tracked
-} from '@glimmer/tracking';
+import { tracked } from '@glimmer/tracking';
 
 export default class ScrollService extends Service {
-
   // Store the scroll position + document size
   @tracked scrollY = -1;
   @tracked innerHeight = -1;
@@ -40,5 +37,4 @@ export default class ScrollService extends Service {
       context.setScrollY(context);
     });
   }
-
 }

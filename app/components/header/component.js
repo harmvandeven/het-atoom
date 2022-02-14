@@ -1,26 +1,18 @@
 import Component from '@glimmer/component';
-import {
-  action
-} from '@ember/object';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  service
-} from '@ember/service';
-import {
-  next
-} from '@ember/runloop';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { service } from '@ember/service';
+import { next } from '@ember/runloop';
+import { dasherize } from '@ember/string';
 
 export default class HeaderComponent extends Component {
-
   @service('scroll') scroll;
-  @tracked menuOpen = false;
+  @service('menu') menu;
   @tracked positions = [];
   @tracked positionWidth = -1;
 
   @action toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+    this.menu.toggle();
   }
 
   get chapter() {
@@ -32,6 +24,9 @@ export default class HeaderComponent extends Component {
       });
     }
     let found = false;
+    if (this.positions.length > 0) {
+      chap = this.positions[0];
+    }
     for (let i = 0; i < this.positions.length; i++) {
       if (this.positions[i].scrollY > this.scrollY) {
         if (i > 0) {
@@ -44,6 +39,18 @@ export default class HeaderComponent extends Component {
     if (!found && this.positions.length > 0) {
       chap = this.positions[this.positions.length - 1];
     }
+
+    // Replace the hash of het window.location
+    if (window.location.hash != chap.hash) {
+      if (chap.hash != '/het-atoom/' || window.location.hash) {
+        let title = 'Het Atoom';
+        if (chap.hash != '/het-atoom/') {
+          title = chap.id.toUpperCase() + ': ' + chap.title + ' | ' + title;
+        }
+        window.history.replaceState(null, null, chap.hash);
+        document.title = title;
+      }
+    }
     return chap;
   }
 
@@ -52,7 +59,7 @@ export default class HeaderComponent extends Component {
   }
 
   get menuClass() {
-    if (this.menuOpen) return 'menu-open';
+    if (this.menu.isOpen) return 'menu-open';
     return 'menu-closed';
   }
 
@@ -61,16 +68,26 @@ export default class HeaderComponent extends Component {
     this.args.model.forEach((item, index) => {
       let elem = document.getElementById('chapter-header-' + index);
       if (elem) {
+        let link = '/het-atoom/';
+        if (index > 0) {
+          link = dasherize(item.title);
+          if (item.id != '-') {
+            link = item.id + '-' + link;
+          }
+          link = '#' + link;
+        }
         this.positions.push({
           scrollY: parseFloat(this.getCoords(elem).top),
           id: item.id,
           title: item.title,
+          hash: link,
         });
       }
     });
   }
 
-  getCoords(elem) { // crossbrowser version
+  getCoords(elem) {
+    // crossbrowser version
     var box = elem.getBoundingClientRect();
 
     var body = document.body;
@@ -87,8 +104,7 @@ export default class HeaderComponent extends Component {
 
     return {
       top: Math.round(top),
-      left: Math.round(left)
+      left: Math.round(left),
     };
   }
-
 }

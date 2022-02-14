@@ -1,16 +1,8 @@
 import Component from '@glimmer/component';
-import {
-  htmlSafe
-} from '@ember/template';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  action
-} from '@ember/object';
-import {
-  service
-} from '@ember/service';
+import { htmlSafe } from '@ember/template';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
+import { service } from '@ember/service';
 
 export default class TimelineComponent extends Component {
   // Store some variables
@@ -32,7 +24,9 @@ export default class TimelineComponent extends Component {
 
   get frame() {
     let fr = Math.floor(
-      (this.length / (this.scrollHeight - this.scroll.get('innerHeight'))) * this.scroll.get('scrollY'));
+      (this.length / (this.scrollHeight - this.scroll.get('innerHeight'))) *
+        this.scroll.get('scrollY')
+    );
     return fr;
   }
 
@@ -53,7 +47,8 @@ export default class TimelineComponent extends Component {
   }
 
   get baseRatio() {
-    if (this.scroll.get('innerWidth') < 0 || this.scroll.get('innerHeight') < 0) return 1;
+    if (this.scroll.get('innerWidth') < 0 || this.scroll.get('innerHeight') < 0)
+      return 1;
     return Math.max(
       this.scroll.get('innerWidth') / this.width,
       this.scroll.get('innerHeight') / this.height

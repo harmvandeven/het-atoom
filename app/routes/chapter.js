@@ -4,6 +4,7 @@ import { service } from '@ember/service';
 
 export default class ChapterRoute extends Route {
   @service('content') content;
+  @service('menu') menu;
 
   model({ chapter_id }) {
     let id = chapter_id.split('-')[0].toUpperCase();
@@ -25,6 +26,10 @@ export default class ChapterRoute extends Route {
     if (id && id != '-') {
       name = id + ': ' + name;
     }
+
+    // TODO: Scroll to the right segment;
+    // Close the menu
+    this.menu.close();
 
     return {
       pageTitle: name,
