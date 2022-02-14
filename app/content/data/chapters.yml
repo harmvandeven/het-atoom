@@ -39,6 +39,7 @@
             rotate: 20
             opacity: 0
       description:
+      alignment: left
       credit:
 - id: b
   title: Historie Energie Voorziening
@@ -58,10 +59,12 @@
       title: 'Draaimolen "de Mens"'
       description: Eeuwenlang beschikte de mens slechts over zijn spierkracht
       credit:
+      alignment: right
     - id: b-2
       title: 'Spierkracht'
       description:
       credit: 'foto: Nat Farbman; met toestemming van het tijdschrift "Life"'
+      alignment: center
     - id: b-3a
       title: Oude werktuigen
       description:

@@ -26,6 +26,19 @@ ul.chapters {
       padding: 0.5rem 1rem;
       margin: 1rem 0;
       background-color: white;
+
+      &.alignment-center {
+        max-width: 200px;
+        margin: 1rem auto;
+      }
+      &.alignment-left {
+        max-width: 200px;
+        margin-right: auto;
+      }
+      &.alignment-right {
+        max-width: 200px;
+        margin-left: auto;
+      }
     }
 
     &:first-child {
