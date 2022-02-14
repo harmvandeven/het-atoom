@@ -1,10 +1,9 @@
-import Component from '@glimmer/component';
+import Service from '@ember/service';
 import { htmlSafe } from '@ember/template';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
 import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
 
-export default class TimelineComponent extends Component {
+export default class TimelineService extends Service {
   // Store some variables
   @tracked length = 0;
   @tracked pixelPerFrame = 12;
@@ -19,7 +18,8 @@ export default class TimelineComponent extends Component {
   // Constructor
   constructor() {
     super(...arguments);
-    this.length = this.calulateLength(this.args.segments);
+    // this.length = this.calulateLength(this.args.segments);
+    this.length = 300;
   }
 
   get frame() {
