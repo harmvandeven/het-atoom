@@ -1,7 +1,5 @@
 import Service from '@ember/service';
-import {
-  tracked
-} from '@glimmer/tracking';
+import { tracked } from '@glimmer/tracking';
 
 export default class ScrollService extends Service {
   // Store the scroll position + document size
@@ -65,5 +63,4 @@ export default class ScrollService extends Service {
       right: Math.round(right),
     };
   }
-
 }

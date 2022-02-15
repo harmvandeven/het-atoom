@@ -23,17 +23,7 @@
       />
     {{/if}}
 
-    <div class='segment alignment-{{item.alignment}}'>
-      <h2>
-        {{item.title}}
-      </h2>
-      {{#if item.description}}
-        {{markdown-to-html
-          markdown=item.description
-          extensions='showdownCaption'
-        }}
-      {{/if}}
-    </div>
+    <ChapterPart @model={{item}} />
   {{/each}}
 </li>
 

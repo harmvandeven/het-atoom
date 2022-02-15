@@ -1,0 +1,20 @@
+<div
+  class='chapter-part'
+  data-start={{@model.timeline.start}}
+  data-end={{@model.timeline.end}}
+  style={{this.style}}
+>
+  <div class='alignment alignment-{{@model.alignment}}'>
+    <h2>
+      {{@model.title}}
+    </h2>
+    {{#if @model.description}}
+      {{markdown-to-html
+        markdown=@model.description
+        extensions='showdownCaption'
+      }}
+    {{/if}}
+  </div>
+</div>
+
+{{yield}}

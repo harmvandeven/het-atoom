@@ -1,8 +1,12 @@
 import Component from '@glimmer/component';
-import { htmlSafe } from '@ember/template';
-import { service } from '@ember/service';
+import {
+  htmlSafe
+} from '@ember/template';
+import {
+  service
+} from '@ember/service';
 
-export default class ChapterHeaderComponent extends Component {
+export default class ChapterPartComponent extends Component {
   @service('timeline') timeline;
 
   get style() {

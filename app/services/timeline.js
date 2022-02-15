@@ -1,18 +1,11 @@
 import Service from '@ember/service';
-import {
-  htmlSafe
-} from '@ember/template';
-import {
-  service
-} from '@ember/service';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  next
-} from '@ember/runloop';
+import { htmlSafe } from '@ember/template';
+import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
+import { next } from '@ember/runloop';
 
 export default class TimelineService extends Service {
+  @tracked minPixelsPerFrame = 12;
 
   // Get the scroll service
   @service('scroll') scroll;
@@ -50,7 +43,10 @@ export default class TimelineService extends Service {
       if (item.timeline.start != undefined && item.timeline.end != undefined) {
         let next = undefined;
         for (let j = i + 1; j < this.segmentPositions.length; j++) {
-          if (this.segmentPositions[j].timeline.start != undefined && this.segmentPositions[j].timeline.end != undefined) {
+          if (
+            this.segmentPositions[j].timeline.start != undefined &&
+            this.segmentPositions[j].timeline.end != undefined
+          ) {
             next = this.segmentPositions[j];
             j = this.segmentPositions.length + 1;
           }
@@ -59,10 +55,12 @@ export default class TimelineService extends Service {
         if (item.coords.bottom > maxY) maxY = item.coords.bottom;
         if (y >= item.coords.top && y <= item.coords.bottom) {
           i = this.segmentPositions + 1;
-          percentage = (y - item.coords.top) / (item.coords.bottom - item.coords.top);
+          percentage =
+            (y - item.coords.top) / (item.coords.bottom - item.coords.top);
           timeline = item.timeline;
         } else if (next && y >= item.coords.bottom && y < next.coords.top) {
-          percentage = (y - item.coords.bottom) / (next.coords.top - item.coords.bottom);
+          percentage =
+            (y - item.coords.bottom) / (next.coords.top - item.coords.bottom);
           timeline = {
             start: item.timeline.end,
             end: next.timeline.start,
@@ -81,7 +79,15 @@ export default class TimelineService extends Service {
   }
 
   get progress() {
-    return Math.min(100, Math.max(0, (this.scroll.scrollY / (document.body.clientHeight - (window.innerHeight * 0.5))) * 100));
+    return Math.min(
+      100,
+      Math.max(
+        0,
+        (this.scroll.scrollY /
+          (document.body.clientHeight - window.innerHeight * 0.5)) *
+          100
+      )
+    );
   }
 
   get progressStyle() {
@@ -112,8 +118,11 @@ export default class TimelineService extends Service {
       [...document.getElementsByClassName('chapter-header')].forEach((item) => {
         this.segments.push(item);
       });
-      [...document.getElementsByClassName('timeline-segment')].forEach((item) => {
+      [...document.getElementsByClassName('chapter-part')].forEach((item) => {
         this.segments.push(item);
+      });
+      [...document.getElementsByClassName('timeline-segment')].forEach((item) => {
+          this.segments.push(item);
       });
     }
     this.segmentPositions = [];
@@ -121,12 +130,15 @@ export default class TimelineService extends Service {
       this.segmentPositions.push({
         elem: elem,
         timeline: {
-          start: elem.getAttribute('data-start') ? parseFloat(elem.getAttribute('data-start')) : undefined,
-          end: elem.getAttribute('data-end') ? parseFloat(elem.getAttribute('data-end')) : undefined,
+          start: elem.getAttribute('data-start')
+            ? parseFloat(elem.getAttribute('data-start'))
+            : undefined,
+          end: elem.getAttribute('data-end')
+            ? parseFloat(elem.getAttribute('data-end'))
+            : undefined,
         },
         coords: this.scroll.getCoords(elem),
       });
     });
   }
-
 }

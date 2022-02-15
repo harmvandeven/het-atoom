@@ -1,19 +1,9 @@
 import Component from '@glimmer/component';
-import {
-  action
-} from '@ember/object';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  service
-} from '@ember/service';
-import {
-  next
-} from '@ember/runloop';
-import {
-  dasherize
-} from '@ember/string';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import { service } from '@ember/service';
+import { next } from '@ember/runloop';
+import { dasherize } from '@ember/string';
 
 export default class HeaderComponent extends Component {
   @service('scroll') scroll;
@@ -95,5 +85,4 @@ export default class HeaderComponent extends Component {
       }
     });
   }
-
 }

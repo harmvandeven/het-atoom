@@ -3,6 +3,7 @@
   id='chapter-header-{{@index}}'
   data-start={{@model.timeline.start}}
   data-end={{@model.timeline.end}}
+  style={{this.style}}
 >
   {{#if (and @model.id (not-eq @model.id '-'))}}
     <div class='id'>
