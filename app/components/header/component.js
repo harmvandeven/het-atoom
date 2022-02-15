@@ -1,9 +1,19 @@
 import Component from '@glimmer/component';
-import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
-import { service } from '@ember/service';
-import { next } from '@ember/runloop';
-import { dasherize } from '@ember/string';
+import {
+  action
+} from '@ember/object';
+import {
+  tracked
+} from '@glimmer/tracking';
+import {
+  service
+} from '@ember/service';
+import {
+  next
+} from '@ember/runloop';
+import {
+  dasherize
+} from '@ember/string';
 
 export default class HeaderComponent extends Component {
   @service('scroll') scroll;
@@ -77,7 +87,7 @@ export default class HeaderComponent extends Component {
           link = '#' + link;
         }
         this.positions.push({
-          scrollY: parseFloat(this.getCoords(elem).top),
+          scrollY: parseFloat(this.scroll.getCoords(elem).top),
           id: item.id,
           title: item.title,
           hash: link,
@@ -86,25 +96,4 @@ export default class HeaderComponent extends Component {
     });
   }
 
-  getCoords(elem) {
-    // crossbrowser version
-    var box = elem.getBoundingClientRect();
-
-    var body = document.body;
-    var docEl = document.documentElement;
-
-    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-    var clientTop = docEl.clientTop || body.clientTop || 0;
-    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-
-    var top = box.top + scrollTop - clientTop;
-    var left = box.left + scrollLeft - clientLeft;
-
-    return {
-      top: Math.round(top),
-      left: Math.round(left),
-    };
-  }
 }

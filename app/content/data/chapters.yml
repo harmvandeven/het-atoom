@@ -1,8 +1,13 @@
 - id: '-'
   title: Het Atoom
+  timeline:
+    start: -1
+    end: -1
 - id: a
   title: Ingang
-  frame: 0
+  timeline:
+    start: 0
+    end: 0
   description: |
     # Atoomenergie - Onze toekomst
     ## Duizenden jaren lang beschikte de mens slechts over één energiebron: zijn spierkracht
@@ -43,7 +48,9 @@
       credit:
 - id: b
   title: Historie Energie Voorziening
-  frame: 12
+  timeline:
+    start: 100
+    end: 100
   description: |
     ## Wij zijn aan het "potverteren!"
     De wereldbevolking groeit, de behoeften nemen toe en koortsachtig zoekt de mens naar nieuwe energiebronnen. De zon kan hem helpen, maar zij staat te ver van de aarde af. De maan, die door haar aantrekkingskracht op de aarde de zeeën in rusteloze beweging houdt, kan ons eveneens helpen, maar de bijdrage is uiterst gering.

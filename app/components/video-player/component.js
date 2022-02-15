@@ -21,8 +21,10 @@ export default class VideoPlayerComponent extends Component {
     next(this, () => {
       if (this.player) {
         if (this.player.currentTime != time && this.readyForUpdate) {
-          this.readyForUpdate = false;
-          this.player.currentTime = time;
+          if (time && time != NaN) {
+            this.readyForUpdate = false;
+            this.player.currentTime = time;
+          }
           if (this.isPlaying) this.player.pause();
         }
       }

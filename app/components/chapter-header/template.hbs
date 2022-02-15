@@ -1,4 +1,9 @@
-<div class='chapter-header' id='chapter-header-{{@index}}'>
+<div
+  class='chapter-header'
+  id='chapter-header-{{@index}}'
+  data-start={{@model.timeline.start}}
+  data-end={{@model.timeline.end}}
+>
   {{#if (and @model.id (not-eq @model.id '-'))}}
     <div class='id'>
       {{@model.id}}
