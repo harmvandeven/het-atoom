@@ -16,6 +16,9 @@
   parts:
     - id: a-1
       title: 'Wandschildering "de Oerelementen"'
+      description:
+      alignment: left
+      credit:
       img:
         src: https://static01.nyt.com/newsgraphics/2021/03/22/tulsa-massacre-centennial/47ebd8bc23cd5948bd03030e261d0e6dfec311f5/topper/top-destruction-v3-desktop.jpg
         start: 40
@@ -43,9 +46,6 @@
             scale: 0.25
             rotate: 20
             opacity: 0
-      description:
-      alignment: left
-      credit:
 - id: b
   title: Historie Energie Voorziening
   timeline:
