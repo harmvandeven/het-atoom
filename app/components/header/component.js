@@ -41,13 +41,14 @@ export default class HeaderComponent extends Component {
     }
 
     // Replace the hash of het window.location
-    if (window.location.hash != chap.hash) {
+    if (window.location.hash != chap.hash && this.scroll.active) {
       if (chap.hash != '/het-atoom/' || window.location.hash) {
         let title = 'Het Atoom';
         if (chap.hash != '/het-atoom/') {
           title = chap.id.toUpperCase() + ': ' + chap.title + ' | ' + title;
         }
-        window.history.replaceState(null, null, chap.hash);
+        // TODO: Find an alternative for this
+        // window.history.replaceState(null, null, chap.hash);
         document.title = title;
       }
     }

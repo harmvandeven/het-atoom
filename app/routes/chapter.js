@@ -1,35 +1,32 @@
 import Route from '@ember/routing/route';
-import { dasherize } from '@ember/string';
-import { service } from '@ember/service';
+import {
+  service
+} from '@ember/service';
 
 export default class ChapterRoute extends Route {
+
   @service('content') content;
   @service('menu') menu;
+  @service('scroll') scroll;
 
-  model({ chapter_id }) {
-    let id = chapter_id.split('-')[0].toUpperCase();
-    let name = chapter_id;
+  model({
+    chapter_id
+  }) {
 
-    this.content.getChapters().every((item) => {
-      let dashed = dasherize(item.title);
-      if (item.id != '-') {
-        dashed = item.id + '-' + dashed;
-      }
-      if (dashed == chapter_id) {
-        id = item.id.toUpperCase();
-        name = item.title;
-        return false;
-      }
-      return true;
-    });
-
-    if (id && id != '-') {
-      name = id + ': ' + name;
-    }
+    let chapter = this.content.getChapterById(chapter_id);
 
     // TODO: Scroll to the right segment;
     // Close the menu
     this.menu.close();
+
+    if (chapter.index != undefined) {
+      let elem = document.getElementById('chapter-header-' + chapter.index);
+      if (chapter.index == 0) {
+        this.scroll.to(undefined, 0);
+      } else {
+        this.scroll.to(elem);
+      }
+    }
 
     return {
       pageTitle: name,

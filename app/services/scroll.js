@@ -1,11 +1,15 @@
 import Service from '@ember/service';
-import { tracked } from '@glimmer/tracking';
+import {
+  tracked
+} from '@glimmer/tracking';
 
 export default class ScrollService extends Service {
   // Store the scroll position + document size
   @tracked scrollY = -1;
   @tracked innerHeight = -1;
   @tracked innerWidth = -1;
+
+  @tracked active = false;
 
   // Constructor
   constructor() {
@@ -63,4 +67,17 @@ export default class ScrollService extends Service {
       right: Math.round(right),
     };
   }
+
+  to(elem = undefined, top = undefined) {
+    if (elem != undefined) {
+      top = this.getCoords(elem).top;
+    }
+    if (top != undefined) {
+      scroll({
+        top: top,
+        behavior: "smooth"
+      });
+    }
+  }
+
 }
