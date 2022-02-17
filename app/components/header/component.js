@@ -41,17 +41,7 @@ export default class HeaderComponent extends Component {
 
     // Replace the hash of het window.location
     if (chap && chap.hash) {
-      if (window.location.hash != chap.hash && this.scroll.active) {
-        if (chap.hash != '/het-atoom/' || window.location.hash) {
-          let title = 'Het Atoom';
-          if (chap.hash != '/het-atoom/') {
-            title = chap.id.toUpperCase() + ': ' + chap.title + ' | ' + title;
-          }
-          // TODO: Find an alternative for this
-          // window.history.replaceState(null, null, chap.hash);
-          document.title = title;
-        }
-      }
+      this.scroll.replaceState(chap);
     }
     return chap;
   }
@@ -70,15 +60,11 @@ export default class HeaderComponent extends Component {
     this.args.model.forEach((item, index) => {
       let elem = document.getElementById('chapter-header-' + index);
       if (elem) {
-        let link = '/het-atoom/';
-        if (index > 0) {
-          link = '#' + item.hash;
-        }
         this.positions.push({
           scrollY: parseFloat(this.scroll.getCoords(elem).top),
           id: item.id,
           title: item.title,
-          hash: link,
+          hash: item.hash,
         });
       }
     });

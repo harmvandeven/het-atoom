@@ -2,6 +2,9 @@ import Route from '@ember/routing/route';
 import {
   service
 } from '@ember/service';
+import {
+  next
+} from '@ember/runloop';
 
 export default class ChapterRoute extends Route {
 
@@ -18,14 +21,19 @@ export default class ChapterRoute extends Route {
     // Close the menu
     this.menu.close();
 
-    if (chapter.index != undefined) {
-      let elem = document.getElementById('chapter-header-' + chapter.index);
-      if (chapter.index == 0) {
-        this.scroll.to(undefined, 0);
-      } else {
-        this.scroll.to(elem);
+    // Only scroll to the element when it is not a replacedState
+    next(() => {
+      if (!this.scroll.isReplacedState) {
+        if (chapter.index != undefined) {
+          let elem = document.getElementById('chapter-header-' + chapter.index);
+          if (chapter.index == 0) {
+            this.scroll.to(undefined, 0);
+          } else {
+            this.scroll.to(elem);
+          }
+        }
       }
-    }
+    });
 
     return {
       pageTitle: chapter.pageTitle,

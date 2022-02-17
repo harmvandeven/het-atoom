@@ -29,7 +29,7 @@ export default class ContentService extends Service {
   getChapterById(chapter_id = undefined) {
     let chapters = this.getChapters();
     for (let i = 0; i < chapters.length; i++) {
-      if (chapters[i].hash == chapter_id) {
+      if (chapters[i].hash == chapter_id || i == 0 && chapter_id == '/het-atoom/') {
         return chapters[i];
       }
     }

@@ -1,15 +1,26 @@
 import Service from '@ember/service';
 import {
+  service
+} from '@ember/service';
+import {
   tracked
 } from '@glimmer/tracking';
+import {
+  later,
+  next
+} from '@ember/runloop';
 
 export default class ScrollService extends Service {
+
+  @service('router') router;
+
   // Store the scroll position + document size
   @tracked scrollY = -1;
   @tracked innerHeight = -1;
   @tracked innerWidth = -1;
 
   @tracked active = false;
+  @tracked isReplacedState = false;
 
   // Constructor
   constructor() {
@@ -77,6 +88,20 @@ export default class ScrollService extends Service {
         top: top,
         behavior: "smooth"
       });
+    }
+  }
+
+  replaceState(chapter = {}) {
+    if (window.location.hash != '#/' + chapter.hash && !this.isReplacedState) {
+      if (chapter.hash != '/het-atoom/' || window.location.hash) {
+        next(() => {
+          this.isReplacedState = true;
+          this.router.transitionTo('chapter', chapter.hash);
+          later(() => {
+            this.isReplacedState = false;
+          }, 250);
+        });
+      }
     }
   }
 
