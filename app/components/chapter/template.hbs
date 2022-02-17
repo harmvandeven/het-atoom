@@ -2,27 +2,6 @@
   <ChapterHeader @model={{@model}} @index={{@index}} />
 
   {{#each @model.parts as |item|}}
-    {{#if item.img}}
-      <TimelineSegment
-        @src={{item.img.src}}
-        @start={{item.img.start}}
-        @length={{item.img.length}}
-        @fade={{item.img.fade}}
-        @opacity={{item.img.opacity}}
-        @width={{item.img.width}}
-        @height={{item.img.height}}
-        @top={{item.img.top}}
-        @left={{item.img.left}}
-        @originWidth={{item.img.originWidth}}
-        @originHeight={{item.img.orginHeight}}
-        @style={{item.img.style}}
-        @keyframes={{item.img.keyframes}}
-        @baseWidth={{this.timeline.baseWidth}}
-        @baseHeight={{this.timeline.baseHeight}}
-        @frame={{this.timeline.frame}}
-      />
-    {{/if}}
-
     <ChapterPart @model={{item}} />
   {{/each}}
 </li>

@@ -26,7 +26,8 @@ export default class ApplicationRoute extends Route {
     }
 
     return {
-      chapters: this.content.getChapters(),
+      chaptersContent: this.content.getChapters(),
+      timelineContent: this.content.getTimeline(),
       timeline: this.timeline,
     };
   }

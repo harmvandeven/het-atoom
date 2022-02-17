@@ -6,8 +6,14 @@ import {
   dasherize
 } from '@ember/string';
 import chapters from 'het-atoom/content/data/chapters';
+import timeline from 'het-atoom/content/data/timeline';
 
 export default class ContentService extends Service {
+
+  getTimeline() {
+    return timeline;
+  }
+
   getChapters() {
     let items = A();
     chapters.forEach((item, index) => {

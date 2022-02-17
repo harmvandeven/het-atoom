@@ -1,7 +1,16 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
-import { action } from '@ember/object';
-import { next } from '@ember/runloop';
+import {
+  tracked
+} from '@glimmer/tracking';
+import {
+  action
+} from '@ember/object';
+import {
+  next
+} from '@ember/runloop';
+import {
+  htmlSafe
+} from '@ember/template';
 
 export default class VideoPlayerComponent extends Component {
   @tracked isPlaying = false;
@@ -40,6 +49,13 @@ export default class VideoPlayerComponent extends Component {
   get length() {
     if (this.args.length) return this.args.length;
     return this.defaultLength;
+  }
+
+  get style() {
+    if (!this.args.visible) {
+      return htmlSafe('opacity:0;');
+    }
+    return '';
   }
 
   @action

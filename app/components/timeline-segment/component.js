@@ -1,5 +1,7 @@
 import Component from '@glimmer/component';
-import { htmlSafe } from '@ember/template';
+import {
+  htmlSafe
+} from '@ember/template';
 
 export default class TimelineSegmentComponent extends Component {
   keyframes = null;
@@ -7,10 +9,14 @@ export default class TimelineSegmentComponent extends Component {
   constructor() {
     super(...arguments);
 
+    console.log(this.args.keyframes);
+
     // When we have keyframes, create a timeline from all those keyframes only once
     if (this.args.keyframes) {
       // create the keyframes array
       this.keyframes = [];
+
+      console.log('hi"0;')
 
       // Get the properties and intialValues for those properties
       let props = [];
@@ -29,9 +35,18 @@ export default class TimelineSegmentComponent extends Component {
         });
       }
 
+      console.log('props', props);
+
       // Run through the length of the segment + create keyframes for all
       let currentKey = 0;
-      for (let i = 0; i < this.args.length; i++) {
+      let length = this.args.length;
+      if (this.args.end) {
+        length = this.args.end - this.args.start;
+      }
+
+      console.log(length);
+
+      for (let i = 0; i < length; i++) {
         if (i > this.args.keyframes[currentKey].frame) {
           if (this.args.keyframes.length > currentKey + 1) {
             // per prop look for the next keyframe containing the prop and interpolate current value to then next target
@@ -40,9 +55,7 @@ export default class TimelineSegmentComponent extends Component {
               let targetValue = currentValue;
               let targetFrames = 0;
               for (
-                let k = currentKey + 1;
-                k < this.args.keyframes.length;
-                k++
+                let k = currentKey + 1; k < this.args.keyframes.length; k++
               ) {
                 if (this.args.keyframes[k][prop] != undefined) {
                   targetValue = this.args.keyframes[k][prop];
@@ -100,7 +113,7 @@ export default class TimelineSegmentComponent extends Component {
     if (this.args.length) end = parseFloat(this.args.length);
     let currentFrame = parseFloat(this.args.frame) - start;
     if (currentFrame < 0) return false;
-    if (end > -1 && currentFrame >= end) return false;
+    if (currentFrame >= end) return false;
     return true;
   }
 
@@ -120,9 +133,10 @@ export default class TimelineSegmentComponent extends Component {
       styles.push(this.args.style.replace(/^;+|;+$/g, ''));
     }
 
-    // Add a transition to the facde when necessary
-    if (this.args.fade) {
-      styles.push('transition: opacity ' + this.args.fade + 's');
+    // Add a transition to the face when necessary
+    if (this.args.fade != 'none' && !this.args.keyframes) {
+      let fade = this.args.fade ? this.args.fade : 0.33;
+      styles.push('transition: opacity ' + fade + 's');
     }
 
     // Check for the opacity based on the args or the visibility

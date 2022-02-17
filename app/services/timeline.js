@@ -71,6 +71,10 @@ export default class TimelineService extends Service {
     );
   }
 
+  get visible() {
+    return this.frame > -1;
+  }
+
   get progressStyle() {
     return htmlSafe('top:' + this.progress + '%;');
   }

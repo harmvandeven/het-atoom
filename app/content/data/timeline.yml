@@ -1,0 +1,38 @@
+id: het-atoom-timeline
+video:
+  src: https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4
+  type: video/mp4
+parts:
+  - id: test
+    src: https://dlc.services/thumbs/7/26/b89e27fd-94eb-4328-80e7-8de8206f5fc3/full/full/0/default.jpg
+    start: 10
+    end: 11
+    width: 0.65
+    originWidth: 1024
+    originHeight: 774
+  - id: test-1
+    src: https://static01.nyt.com/newsgraphics/2021/03/22/tulsa-massacre-centennial/47ebd8bc23cd5948bd03030e261d0e6dfec311f5/topper/top-destruction-v3-desktop.jpg
+    start: 40
+    end: 240
+    width: 0.5
+    top: 0.05
+    originWidth: 1664
+    originHeight: 990
+    keyframes:
+      - frame: 0
+        opacity: 0
+        top: 0.0
+        rotate: -1
+        scale: 1.25
+      - frame: 50
+        top: 0.05
+        opacity: 1
+        rotate: 0
+        scale: 1
+      - frame: 100
+        opacity: 1
+      - frame: 200
+        top: 0.1
+        scale: 0.25
+        rotate: 20
+        opacity: 0
