@@ -32,7 +32,7 @@ export default class TimelineService extends Service {
       });
     }
     let y = this.scroll.get('scrollY');
-    // TODO: Create a calculation where I base the frame on the current active content
+    
     let percentage = 0;
     let timeline = undefined;
     let minY = window.innerHeight;

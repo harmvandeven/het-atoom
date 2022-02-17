@@ -15,7 +15,6 @@ export default class ChapterRoute extends Route {
 
     let chapter = this.content.getChapterById(chapter_id);
 
-    // TODO: Scroll to the right segment;
     // Close the menu
     this.menu.close();
 
