@@ -1,6 +1,6 @@
 {{#if this.route}}
-  {{#if this.link}}
-    <LinkTo @route={{this.route}} @model={{this.link}}>
+  {{#if @model.hash}}
+    <LinkTo @route={{this.route}} @model={{@model.hash}}>
       <li class='link'>
         <div class='id'>
           {{@model.id}}

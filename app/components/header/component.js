@@ -3,7 +3,6 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
 import { next } from '@ember/runloop';
-import { dasherize } from '@ember/string';
 
 export default class HeaderComponent extends Component {
   @service('scroll') scroll;
@@ -41,15 +40,17 @@ export default class HeaderComponent extends Component {
     }
 
     // Replace the hash of het window.location
-    if (window.location.hash != chap.hash && this.scroll.active) {
-      if (chap.hash != '/het-atoom/' || window.location.hash) {
-        let title = 'Het Atoom';
-        if (chap.hash != '/het-atoom/') {
-          title = chap.id.toUpperCase() + ': ' + chap.title + ' | ' + title;
+    if (chap && chap.hash) {
+      if (window.location.hash != chap.hash && this.scroll.active) {
+        if (chap.hash != '/het-atoom/' || window.location.hash) {
+          let title = 'Het Atoom';
+          if (chap.hash != '/het-atoom/') {
+            title = chap.id.toUpperCase() + ': ' + chap.title + ' | ' + title;
+          }
+          // TODO: Find an alternative for this
+          // window.history.replaceState(null, null, chap.hash);
+          document.title = title;
         }
-        // TODO: Find an alternative for this
-        // window.history.replaceState(null, null, chap.hash);
-        document.title = title;
       }
     }
     return chap;
@@ -71,11 +72,7 @@ export default class HeaderComponent extends Component {
       if (elem) {
         let link = '/het-atoom/';
         if (index > 0) {
-          link = dasherize(item.title);
-          if (item.id != '-') {
-            link = item.id + '-' + link;
-          }
-          link = '#' + link;
+          link = '#' + item.hash;
         }
         this.positions.push({
           scrollY: parseFloat(this.scroll.getCoords(elem).top),

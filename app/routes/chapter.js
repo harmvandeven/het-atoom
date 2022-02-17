@@ -28,7 +28,7 @@ export default class ChapterRoute extends Route {
     }
 
     return {
-      pageTitle: name,
+      pageTitle: chapter.pageTitle,
     };
   }
 }
