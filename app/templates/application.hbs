@@ -1,7 +1,19 @@
 {{page-title 'Het Atoom'}}
 
 <Header @model={{@model.chaptersContent}} />
-{{!-- <Timeline @segments={{@model.timeline}} /> --}}
+
+<div class='intro'>
+  <div class='illustration'>
+    <div>
+      <Svg::AtoomIllustration />
+    </div>
+  </div>
+  <div class='logo'>
+    <div>
+      <Svg::HetAtoom />
+    </div>
+  </div>
+</div>
 
 <ul class='chapters'>
   {{#each @model.chaptersContent as |chapter index|}}

@@ -1,21 +1,13 @@
 import Route from '@ember/routing/route';
-import {
-  service
-} from '@ember/service';
-import {
-  next
-} from '@ember/runloop';
+import { service } from '@ember/service';
+import { next } from '@ember/runloop';
 
 export default class ChapterRoute extends Route {
-
   @service('content') content;
   @service('menu') menu;
   @service('scroll') scroll;
 
-  model({
-    chapter_id
-  }) {
-
+  model({ chapter_id }) {
     let chapter = this.content.getChapterById(chapter_id);
 
     // Close the menu

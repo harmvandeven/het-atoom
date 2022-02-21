@@ -1,17 +1,9 @@
 import Service from '@ember/service';
-import {
-  service
-} from '@ember/service';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  later,
-  next
-} from '@ember/runloop';
+import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
+import { later, next } from '@ember/runloop';
 
 export default class ScrollService extends Service {
-
   @service('router') router;
 
   // Store the scroll position + document size
@@ -86,7 +78,7 @@ export default class ScrollService extends Service {
     if (top != undefined) {
       scroll({
         top: top,
-        behavior: "smooth"
+        behavior: 'smooth',
       });
     }
   }
@@ -104,5 +96,4 @@ export default class ScrollService extends Service {
       }
     }
   }
-
 }

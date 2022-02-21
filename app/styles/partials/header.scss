@@ -21,6 +21,7 @@
     width: 90px;
   }
   svg {
+    fill: $blue;
     @include rotate(0);
     @include transition(transform 0.2s);
   }

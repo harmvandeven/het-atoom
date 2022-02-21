@@ -1,15 +1,10 @@
 import Service from '@ember/service';
-import {
-  A
-} from '@ember/array';
-import {
-  dasherize
-} from '@ember/string';
+import { A } from '@ember/array';
+import { dasherize } from '@ember/string';
 import chapters from 'het-atoom/content/data/chapters';
 import timeline from 'het-atoom/content/data/timeline';
 
 export default class ContentService extends Service {
-
   getTimeline() {
     return timeline;
   }
@@ -35,11 +30,13 @@ export default class ContentService extends Service {
   getChapterById(chapter_id = undefined) {
     let chapters = this.getChapters();
     for (let i = 0; i < chapters.length; i++) {
-      if (chapters[i].hash == chapter_id || i == 0 && chapter_id == '/het-atoom/') {
+      if (
+        chapters[i].hash == chapter_id ||
+        (i == 0 && chapter_id == '/het-atoom/')
+      ) {
         return chapters[i];
       }
     }
     return null;
   }
-
 }

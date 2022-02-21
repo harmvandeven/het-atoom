@@ -1,7 +1,5 @@
 import Component from '@glimmer/component';
-import {
-  htmlSafe
-} from '@ember/template';
+import { htmlSafe } from '@ember/template';
 
 export default class TimelineSegmentComponent extends Component {
   keyframes = null;
@@ -16,7 +14,7 @@ export default class TimelineSegmentComponent extends Component {
       // create the keyframes array
       this.keyframes = [];
 
-      console.log('hi"0;')
+      console.log('hi"0;');
 
       // Get the properties and intialValues for those properties
       let props = [];
@@ -55,7 +53,9 @@ export default class TimelineSegmentComponent extends Component {
               let targetValue = currentValue;
               let targetFrames = 0;
               for (
-                let k = currentKey + 1; k < this.args.keyframes.length; k++
+                let k = currentKey + 1;
+                k < this.args.keyframes.length;
+                k++
               ) {
                 if (this.args.keyframes[k][prop] != undefined) {
                   targetValue = this.args.keyframes[k][prop];

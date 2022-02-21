@@ -1,16 +1,8 @@
 import Service from '@ember/service';
-import {
-  htmlSafe
-} from '@ember/template';
-import {
-  service
-} from '@ember/service';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  next
-} from '@ember/runloop';
+import { htmlSafe } from '@ember/template';
+import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
+import { next } from '@ember/runloop';
 
 export default class TimelineService extends Service {
   @tracked minPixelsPerFrame = 12;
@@ -66,7 +58,7 @@ export default class TimelineService extends Service {
         0,
         (this.scroll.scrollY /
           (document.body.clientHeight - window.innerHeight * 0.5)) *
-        100
+          100
       )
     );
   }
@@ -106,9 +98,11 @@ export default class TimelineService extends Service {
       [...document.getElementsByClassName('chapter-part')].forEach((item) => {
         this.segments.push(item);
       });
-      [...document.getElementsByClassName('timeline-segment')].forEach((item) => {
-        this.segments.push(item);
-      });
+      [...document.getElementsByClassName('timeline-segment')].forEach(
+        (item) => {
+          this.segments.push(item);
+        }
+      );
     }
     this.timeline = [];
     this.segments.forEach((elem) => {
