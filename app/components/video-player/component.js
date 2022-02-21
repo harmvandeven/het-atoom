@@ -55,7 +55,7 @@ export default class VideoPlayerComponent extends Component {
     if (!this.args.visible) {
       return htmlSafe('opacity:0;');
     }
-    return '';
+    return htmlSafe('');
   }
 
   @action
