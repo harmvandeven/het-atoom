@@ -170,10 +170,10 @@
   title: Uitgang
 - id: '-'
   title: Colofon
-  parts: 
+  parts:
     - id: colofon
       description: |
         ## TU Delft
         &copy; TU Delft 2022
   timeline:
-    end: 3000
+    end: 5400
