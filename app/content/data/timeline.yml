@@ -1,6 +1,6 @@
 id: het-atoom-timeline
 video:
-  src: https://int.nyt.com/newsgraphics/2021/tulsa-massacre-centennial-videos/topper/topper-video-v9-960.mp4
+  src: https://player.vimeo.com/progressive_redirect/playback/679969643/rendition/1080p?loc=external&signature=f8504684e8643e1f763068abeca2381d6f675692339d3f43ec850206ac0018eb
   type: video/mp4
 parts:
   - id: test
