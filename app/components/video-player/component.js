@@ -8,7 +8,7 @@ export default class VideoPlayerComponent extends Component {
   @tracked isPlaying = false;
 
   @tracked defaultLength = 100;
-  @tracked defautlFps = 30;
+  @tracked defautlFps = 25;
 
   @tracked player = null;
   @tracked readyForUpdate = true;
