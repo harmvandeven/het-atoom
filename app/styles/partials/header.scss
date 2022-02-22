@@ -10,6 +10,7 @@
   @include flexbox;
   @include align-items(center);
   @include justify-content(space-between);
+  @include transition(color 0.2s);
 
   .title {
     height: 42px;
@@ -34,6 +35,7 @@
       right: 32px;
       top: 0;
       svg {
+        @include transition(fill 0.2s);
         width: 183px;
         height: 35px;
       }
@@ -52,11 +54,20 @@
           stroke-width: 8;
         }
         path {
+          @include transition(fill 0.2s);
           fill: black;
           stroke: black;
           stroke-width: 40;
           stroke-linecap: round;
         }
+      }
+    }
+  }
+  &:hover {
+    color: $blue;
+    .het-atoom-title {
+      svg {
+        fill: $blue;
       }
     }
   }

@@ -31,18 +31,17 @@ div.menu {
     li:not(.link) {
       color: #d4d4d4;
     }
-    li.link {
-      cursor: pointer;
-      &:hover {
-        color: $blue;
-      }
-    }
   }
 
   a,
   a:link,
   a:visited {
+    cursor: pointer;
     color: inherit;
+    @include transition(color 0.2s);
     text-decoration: none;
+  }
+  a:hover {
+    color: $blue;
   }
 }
