@@ -5,29 +5,59 @@
   left: 0;
   z-index: 101;
   width: 100vw;
-  height: 100px;
+  height: $header-height;
   background-color: white;
   @include flexbox;
   @include align-items(center);
   @include justify-content(space-between);
 
-  h1 {
-    @include calc('width', '100% - 200px');
-    text-align: center;
+  .title {
+    height: 42px;
+    .id {
+      margin-left: 20px;
+      width: 52px;
+      float: left;
+    }
+    h1 {
+      margin: 0;
+      float: left;
+    }
+    @include clearfix;
   }
 
-  .id {
-    color: $blue;
-    width: 90px;
-  }
-  svg {
-    fill: $blue;
-    @include rotate(0);
-    @include transition(transform 0.2s);
-  }
-  &.menu-open {
-    svg {
-      @include rotate(90);
+  .het-atoom-title {
+    height: 42px;
+    position: relative;
+    .logo {
+      position: absolute;
+      z-index: 2;
+      right: 32px;
+      top: 0;
+      svg {
+        width: 183px;
+        height: 35px;
+      }
+    }
+    .illustration {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 232px;
+      svg {
+        width: 35px;
+        height: 35px;
+        ellipse {
+          fill: none;
+          stroke: black;
+          stroke-width: 8;
+        }
+        path {
+          fill: black;
+          stroke: black;
+          stroke-width: 40;
+          stroke-linecap: round;
+        }
+      }
     }
   }
 }

@@ -6,6 +6,7 @@ div.intro {
   position: relative;
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
   > div {
     position: absolute;
     top: 0;
@@ -30,7 +31,11 @@ div.intro {
     &.illustration {
       > div {
         max-width: 800px;
-        svg {
+        svg ellipse {
+          fill: none;
+          stroke: $blue;
+        }
+        svg path {
           fill: $blue;
         }
       }

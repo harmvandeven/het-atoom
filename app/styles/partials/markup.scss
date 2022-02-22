@@ -2,6 +2,8 @@
 
 body {
   font-family: 'Yantramanav', Helvetica, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 h1 {
@@ -9,49 +11,27 @@ h1 {
   line-height: 30px;
 }
 h2 {
-  font-size: 16px;
+  font-size: 22px;
+  line-height: 26px;
 }
 
-.header {
-  .het-atoom {
-    text-transform: uppercase;
-  }
+.header,
+.header h1 {
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
   .id {
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 82px;
-    line-height: 82px;
-  }
-  h1 {
-    font-weight: 700;
   }
 }
 
 .menu {
-  font-size: 20px;
-  line-height: 36px;
-  .id {
-    text-transform: uppercase;
+  font-size: 32px;
+  line-height: 30px;
+  a.active {
     font-weight: 700;
   }
-}
-
-ul.chapters {
-  li {
-    h1 {
-      font-weight: 700;
-    }
-    .id {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 82px;
-      line-height: 82px;
-    }
-    &:first-child {
-      h1 {
-        font-size: 82px;
-        line-height: 70px;
-      }
-    }
+  .id {
+    text-transform: uppercase;
   }
 }

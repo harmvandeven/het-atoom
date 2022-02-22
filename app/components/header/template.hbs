@@ -1,14 +1,20 @@
 <div class='header {{this.menuClass}}' {{on 'click' this.toggleMenu}}>
-  <div class='het-atoom'>
-    Het Atoom
+  <div class='title'>
+    <div class='id'>
+      {{this.chapter.id}}
+    </div>
+    <h1>
+      {{this.chapter.title}}
+    </h1>
   </div>
-  <Svg::ArrowRight />
-  <div class='id'>
-    {{this.chapter.id}}
+  <div class='het-atoom-title'>
+    <div class='illustration'>
+      <Svg::AtoomIllustration />
+    </div>
+    <div class='logo'>
+      <Svg::HetAtoom />
+    </div>
   </div>
-  <h1>
-    {{this.chapter.title}}
-  </h1>
 </div>
 
 <Menu @isOpen={{this.menu.isOpen}} @model={{@model}} />
