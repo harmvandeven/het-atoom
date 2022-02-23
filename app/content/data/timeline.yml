@@ -3,36 +3,185 @@ video:
   src: https://player.vimeo.com/progressive_redirect/playback/679969643/rendition/1080p?loc=external&signature=f8504684e8643e1f763068abeca2381d6f675692339d3f43ec850206ac0018eb
   type: video/mp4
 parts:
-  - id: test
-    src: https://dlc.services/thumbs/7/26/b89e27fd-94eb-4328-80e7-8de8206f5fc3/full/full/0/default.jpg
-    start: 10
-    end: 11
-    width: 0.65
-    originWidth: 1024
-    originHeight: 774
-  - id: test-1
-    src: https://static01.nyt.com/newsgraphics/2021/03/22/tulsa-massacre-centennial/47ebd8bc23cd5948bd03030e261d0e6dfec311f5/topper/top-destruction-v3-desktop.jpg
-    start: 40
-    end: 240
+  - id: 01
+    src: https://dlc.services/iiif-img/7/26/03d1ae1e-5634-4236-9ec0-e2a1678805ed/full/!2000,2000/0/default.jpg
+    start: 0
+    end: 0
     width: 0.5
-    top: 0.05
-    originWidth: 1664
-    originHeight: 990
-    keyframes:
-      - frame: 0
-        opacity: 0
-        top: 0.0
-        rotate: -1
-        scale: 1.25
-      - frame: 50
-        top: 0.05
-        opacity: 1
-        rotate: 0
-        scale: 1
-      - frame: 100
-        opacity: 1
-      - frame: 200
-        top: 0.1
-        scale: 0.25
-        rotate: 20
-        opacity: 0
+    originWidth: 2000
+    originHeight: 1568
+  - id: 02
+    src: https://dlc.services/iiif-img/7/26/420c23a1-1e17-4816-8969-aaab861d0523/full/!2000,2000/0/default.jpg
+    start: 510
+    end: 510
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1574
+  - id: 03
+    src: https://dlc.services/iiif-img/7/26/de9c0e4c-da74-42b8-beb2-75a2bcccd65e/full/!2000,2000/0/default.jpg
+    start: 767
+    end: 767
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1502
+  - id: 04
+    src: https://dlc.services/iiif-img/7/26/3bae4532-2a41-4f33-bc48-3fc0f98a87d2/full/!2000,2000/0/default.jpg
+    start: 876
+    end: 876
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1473
+  - id: 05
+    src: https://dlc.services/iiif-img/7/26/b3138edb-a4a5-4d30-94c7-52aa94e29190/full/!2000,2000/0/default.jpg
+    start: 1029
+    end: 1029
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1555
+  - id: 06
+    src: https://dlc.services/iiif-img/7/26/dfc16e21-2d49-4d95-8732-21a8e016ac03/full/!2000,2000/0/default.jpg
+    start: 1132
+    end: 1132
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1498
+  - id: 07
+    src: https://dlc.services/iiif-img/7/26/431f0a6c-882f-4bdc-ac5a-2705ebdffa85/full/!2000,2000/0/default.jpg
+    start: 1224
+    end: 1224
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1475
+  - id: 08
+    src: https://dlc.services/iiif-img/7/26/a2721184-6967-47e2-b073-5e526d849002/full/!2000,2000/0/default.jpg
+    start: 1275
+    end: 1275
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1534
+  - id: 09
+    src: https://dlc.services/iiif-img/7/26/7e1b682b-111c-4bf8-8495-af4fc228aeae/full/!2000,2000/0/default.jpg
+    start: 1391
+    end: 1391
+    width: 0.5
+    originWidth: 1561
+    originHeight: 2000
+  - id: 10
+    src: https://dlc.services/iiif-img/7/26/d2b4cab1-7550-4007-84af-dc06b70375ab/full/!2000,2000/0/default.jpg
+    start: 1621
+    end: 1621
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1509
+  - id: 11
+    src: https://dlc.services/iiif-img/7/26/a4beb01c-0984-4caf-8d24-54e743c84296/full/!2000,2000/0/default.jpg
+    start: 1770
+    end: 1770
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1489
+  - id: 12
+    src: https://dlc.services/iiif-img/7/26/5193d7b5-55c2-49d9-9772-bdf73fb30b5e/full/!2000,2000/0/default.jpg
+    start: 1897
+    end: 1897
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1511
+  - id: 13
+    src: https://dlc.services/iiif-img/7/26/f1158804-62f1-457c-9045-e5258ddd42a9/full/!2000,2000/0/default.jpg
+    start: 2022
+    end: 2022
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1569
+  - id: 14
+    src: https://dlc.services/iiif-img/7/26/32185619-1343-493d-9569-9c43592b4373/full/!2000,2000/0/default.jpg
+    start: 2094
+    end: 2094
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1508
+  - id: 15
+    src: https://dlc.services/iiif-img/7/26/88c92769-6e04-4b91-ae96-51c0c8e725ab/full/!2000,2000/0/default.jpg
+    start: 2158
+    end: 2158
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1563
+  - id: 16
+    src: https://dlc.services/iiif-img/7/26/ceb54883-084d-4789-9039-e56fbc75c5ac/full/!2000,2000/0/default.jpg
+    start: 2242
+    end: 2242
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1521
+  - id: 17
+    src: https://dlc.services/iiif-img/7/26/b404d346-c484-4115-8dfd-d90904eb20dc/full/!2000,2000/0/default.jpg
+    start: 2322
+    end: 2322
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1566
+  - id: 18
+    src: https://dlc.services/iiif-img/7/26/2b568be9-b053-4df9-bc80-bf8a2c227f42/full/!2000,2000/0/default.jpg
+    start: 2609
+    end: 2609
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1488
+  - id: 19
+    src: https://dlc.services/iiif-img/7/26/8dd34fc3-3978-4b82-8ef7-cd1ef10b406b/full/!2000,2000/0/default.jpg
+    start: 2968
+    end: 2968
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1553
+  - id: 20
+    src: https://dlc.services/iiif-img/7/26/4b34c2ef-d4d2-4dbd-9ee0-a709c7c63143/full/!2000,2000/0/default.jpg
+    start: 3075
+    end: 3075
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1554
+  - id: 21
+    src: https://dlc.services/iiif-img/7/26/355993f9-70b5-4ecb-a9b5-850b06c5f1fe/full/!2000,2000/0/default.jpg
+    start: 3253
+    end: 3253
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1556
+  - id: 22
+    src: https://dlc.services/iiif-img/7/26/e02dd9c9-05b8-4af7-a33a-e108e1d26d6a/full/!2000,2000/0/default.jpg
+    start: 3403
+    end: 3403
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1509
+  - id: 23
+    src: https://dlc.services/iiif-img/7/26/0f1f3c93-61f4-422b-b015-377b0c00dede/full/!2000,2000/0/default.jpg
+    start: 3610
+    end: 3610
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1534
+  - id: 24
+    src: https://dlc.services/iiif-img/7/26/fc540ad2-4152-439f-99b5-a6ab0321fc3f/full/!2000,2000/0/default.jpg
+    start: 3780
+    end: 3780
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1554
+  - id: 25
+    src: https://dlc.services/iiif-img/7/26/8c61b3db-1575-47e6-9185-8cafa0fd6ce0/full/!2000,2000/0/default.jpg
+    start: 3919
+    end: 3919
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1516
+  - id: 26
+    src: https://dlc.services/iiif-img/7/26/98dda139-2b8e-4761-9e8e-405c4cd66192/full/!2000,2000/0/default.jpg
+    start: 4092
+    end: 4092
+    width: 0.5
+    originWidth: 2000
+    originHeight: 1521
