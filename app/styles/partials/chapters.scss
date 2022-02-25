@@ -25,11 +25,14 @@ ul.chapters {
     h1 {
       padding: 0.5rem 1rem;
       text-align: center;
-      background-color: white;
     }
 
     .chapter-part {
-      margin: 25vh 0;
+      position: relative;
+      &:not(.filler) {
+        margin: 100vh 0 0 0;
+        @include calc('margin-top', '100vh + 8rem');
+      }
       ul {
         list-style: disc;
         padding: 0 0 0 1rem;
@@ -64,6 +67,18 @@ ul.chapters {
     }
     &:last-child {
       min-height: 100vh;
+    }
+  }
+
+  .chapter-part-debug {
+    display: none;
+    position: absolute;
+    left: 0;
+    &.chapter-part-debug-start {
+      top: 0;
+    }
+    &.chapter-part-debug-end {
+      bottom: 0;
     }
   }
 }

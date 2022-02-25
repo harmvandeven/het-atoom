@@ -5,7 +5,7 @@ import { tracked } from '@glimmer/tracking';
 import { next } from '@ember/runloop';
 
 export default class TimelineService extends Service {
-  @tracked minPixelsPerFrame = 12;
+  @tracked minPixelsPerFrame = 4;
 
   // Get the scroll service
   @service('scroll') scroll;
@@ -17,6 +17,7 @@ export default class TimelineService extends Service {
   // Segments
   @tracked segments = [];
   @tracked calculatedWidth = -1;
+  @tracked calculatedHeight = -1;
 
   @tracked timeline = [];
 
@@ -26,10 +27,18 @@ export default class TimelineService extends Service {
   }
 
   get frame() {
-    if (this.calculatedWidth != window.innerWidth || this.segments.length < 1) {
+    if (
+      this.calculatedWidth != window.innerWidth ||
+      this.calculatedHeight != window.innerHeight ||
+      this.segments.length < 1
+    ) {
       next(() => {
-        this.calculateSegments();
+        // eslint-disable-next-line ember/no-side-effects
         this.calculatedWidth = window.innerWidth;
+        // eslint-disable-next-line ember/no-side-effects
+        this.calculatedHeight = window.innerHeight;
+        // calculate the segments
+        this.calculateSegments();
       });
     }
     let y = this.scroll.get('scrollY');
@@ -41,8 +50,12 @@ export default class TimelineService extends Service {
       }
       if (y >= item.scrollY && next && y < next.scrollY) {
         // Current
-        let percentage = (y - item.scrollY) / (next.scrollY - item.scrollY);
+        let percentage = Math.min(
+          1.0,
+          Math.max(0.0, (y - item.scrollY) / (next.scrollY - item.scrollY))
+        );
         let fr = item.frame + (next.frame - item.frame) * percentage;
+        console.log()
         return Math.round(fr);
       } else if (y >= item.scrollY && !next) {
         return Math.round(item.frame);

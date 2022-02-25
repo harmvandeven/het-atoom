@@ -1,20 +1,31 @@
 <div
-  class='chapter-part'
+  class='chapter-part {{@model.class}}'
   data-start={{@model.timeline.start}}
   data-end={{@model.timeline.end}}
   style={{this.style}}
 >
-  <div class='alignment alignment-{{@model.alignment}}'>
-    <h2>
-      {{@model.title}}
-    </h2>
-    {{#if @model.description}}
-      {{markdown-to-html
-        markdown=@model.description
-        extensions='showdownCaption'
-      }}
-    {{/if}}
+  <div class='chapter-part-debug chapter-part-debug-start'>
+    {{@model.id}} == Start: {{@model.timeline.start}}
   </div>
+  <div class='chapter-part-debug chapter-part-debug-end'>
+    {{@model.id}} == End: {{@model.timeline.end}}
+  </div>
+
+  {{#if (or @model.title @model.description)}}
+    <div class='alignment alignment-{{@model.alignment}}'>
+      {{#if @model.title}}
+        <h2>
+          {{@model.title}}
+        </h2>
+      {{/if}}
+      {{#if @model.description}}
+        {{markdown-to-html
+          markdown=@model.description
+          extensions='showdownCaption'
+        }}
+      {{/if}}
+    </div>
+  {{/if}}
 </div>
 
 {{yield}}
