@@ -1,8 +1,10 @@
 import Component from '@glimmer/component';
 import { htmlSafe } from '@ember/template';
+import { service } from '@ember/service';
 
 export default class TimelineSegmentComponent extends Component {
   keyframes = null;
+  @service('environment') environment;
 
   constructor() {
     super(...arguments);
@@ -82,6 +84,13 @@ export default class TimelineSegmentComponent extends Component {
         });
       }
     }
+  }
+
+  get src() {
+    if (this.args.localSrc && this.environment.config.environment == 'pi') {
+      return this.args.localSrc;
+    }
+    return this.args.src;
   }
 
   get type() {

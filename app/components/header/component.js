@@ -63,7 +63,7 @@ export default class HeaderComponent extends Component {
     if (this.scroll.scrollY >= window.innerHeight) {
       cls += ' logo-visible';
     }
-    return cls
+    return cls;
   }
 
   calculatePositions() {

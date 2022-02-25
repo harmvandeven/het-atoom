@@ -1,10 +1,12 @@
 id: het-atoom-timeline
 video:
   src: https://player.vimeo.com/progressive_redirect/playback/679969643/rendition/1080p?loc=external&signature=f8504684e8643e1f763068abeca2381d6f675692339d3f43ec850206ac0018eb
+  localSrc: /video/test.mp4
   type: video/mp4
 parts:
   - id: 01
     src: https://dlc.services/iiif-img/7/26/03d1ae1e-5634-4236-9ec0-e2a1678805ed/full/!2000,2000/0/default.jpg
+    localSrc: http://het-atoom.loc/image/part-01.jpg
     start: 0
     end: 1
     width: 0.5

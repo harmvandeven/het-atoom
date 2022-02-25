@@ -55,7 +55,6 @@ export default class TimelineService extends Service {
           Math.max(0.0, (y - item.scrollY) / (next.scrollY - item.scrollY))
         );
         let fr = item.frame + (next.frame - item.frame) * percentage;
-        console.log()
         return Math.round(fr);
       } else if (y >= item.scrollY && !next) {
         return Math.round(item.frame);

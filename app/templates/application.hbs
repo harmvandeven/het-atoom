@@ -27,6 +27,7 @@
 <div class='base-video'>
   <VideoPlayer
     @src={{@model.timelineContent.video.src}}
+    @localSrc={{@model.timelineContent.video.localSrc}}
     @type={{@model.timelineContent.video.type}}
     @visible={{@model.timeline.visible}}
     @frame={{@model.timeline.frame}}
@@ -38,6 +39,7 @@
   {{#each @model.timelineContent.parts as |item index|}}
     <TimelineSegment
       @src={{item.src}}
+      @localSrc={{item.localSrc}}
       @start={{item.start}}
       @end={{item.end}}
       @length={{item.length}}

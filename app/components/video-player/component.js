@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { next } from '@ember/runloop';
@@ -12,6 +13,15 @@ export default class VideoPlayerComponent extends Component {
 
   @tracked player = null;
   @tracked readyForUpdate = true;
+  
+  @service('environment') environment;
+
+  get src() {
+    if (this.args.localSrc && this.environment.config.environment == 'pi') {
+      return this.args.localSrc;
+    }
+    return this.args.src;
+  }
 
   // Get and update the current time based on the frame coming in
   get currentTime() {

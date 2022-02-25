@@ -21,3 +21,11 @@ To deploy run the follow command, within minutes the GitHub pages code should be
 * `ember deploy production`
 
 Visit [het-atoom](https://harmvandeven.github.io/het-atoom/)
+
+
+### Exposition / PI version
+
+## Running / Development
+* `ember serve --environment=pi`
+* Visit your app at [http://localhost:4200/het-atoom/](http://localhost:4200/het-atoom/).
+* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
