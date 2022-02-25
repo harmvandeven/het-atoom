@@ -159,14 +159,23 @@ export default class TimelineSegmentComponent extends Component {
     if (this.args.width != null || this.args.height != null) {
       if (this.args.width != null) {
         w = parseFloat(this.args.width) * this.args.baseWidth;
-        h = (w / this.args.baseWidth) * this.args.baseHeight;
+        h = (w / this.args.originWidth) * this.args.originHeight;
       } else if (this.args.height != null) {
         h = parseFloat(this.args.height) * this.args.baseHeight;
-        w = (h / this.args.baseHeight) * this.args.baseWidth;
+        w = (h / this.args.originHeight) * this.args.originWidth;
       }
     } else if (this.args.left != null || this.args.top != null) {
-      w = this.args.baseWidth;
-      h = this.args.baseHeight;
+      let wa = this.args.baseWidth;
+      let ha = (wa / this.args.originWidth) * this.args.originHeight;
+      let hb = this.args.baseHeight;
+      let wb = (hb / this.args.originHeight) * this.args.originWidth;
+      if (hb < ha && wb < wa) {
+        w = wb;
+        h = hb;
+      } else {
+        w = wa;
+        h = ha;
+      }
     }
 
     if (this.keyframes != null && this.keyframes[this.frame] != null) {
