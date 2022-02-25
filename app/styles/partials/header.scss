@@ -1,6 +1,5 @@
 .header {
   position: fixed;
-  cursor: pointer;
   top: 0;
   left: 0;
   z-index: 101;
@@ -10,9 +9,9 @@
   @include flexbox;
   @include align-items(center);
   @include justify-content(space-between);
-  @include transition(color 0.2s);
 
   .title {
+    cursor: pointer;
     height: 42px;
     .id {
       margin-left: 20px;
@@ -24,18 +23,30 @@
       float: left;
     }
     @include clearfix;
+    @include transition(color 0.2s);
+    &:hover {
+      color: $blue;
+    }
   }
 
   .het-atoom-title {
+    top: 2px;
     height: 42px;
     position: relative;
+    cursor: pointer;
+    svg {
+      @include transition(fill 0.2s);
+      ellipse,
+      path {
+        @include transition(stroke 0.2s);
+      }
+    }
     .logo {
       position: absolute;
       z-index: 2;
       right: 32px;
       top: 0;
       svg {
-        @include transition(fill 0.2s);
         width: 183px;
         height: 35px;
       }
@@ -62,12 +73,15 @@
         }
       }
     }
-  }
-  &:hover {
-    color: $blue;
-    .het-atoom-title {
+    &:hover {
       svg {
         fill: $blue;
+      }
+      .illustration svg {
+        ellipse,
+        path {
+          stroke: $blue;
+        }
       }
     }
   }

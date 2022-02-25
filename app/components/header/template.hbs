@@ -1,5 +1,5 @@
-<div class='header {{this.menuClass}}' {{on 'click' this.toggleMenu}}>
-  <div class='title'>
+<div class='header {{this.menuClass}}'>
+  <div class='title' {{on 'click' this.toggleMenu}}>
     <div class='id'>
       {{this.chapter.id}}
     </div>
@@ -7,7 +7,7 @@
       {{this.chapter.title}}
     </h1>
   </div>
-  <div class='het-atoom-title'>
+  <div class='het-atoom-title' {{on 'click' this.scrollTop}}>
     <div class='illustration'>
       <Svg::AtoomIllustration />
     </div>

@@ -13,6 +13,10 @@ export default class HeaderComponent extends Component {
   @action toggleMenu() {
     this.menu.toggle();
   }
+  @action scrollTop() {
+    this.menu.close();
+    this.scroll.to(null, 0);
+  }
 
   get chapter() {
     let chap = this.args.model.firstObject;
