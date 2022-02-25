@@ -6,10 +6,12 @@ export default class MenuService extends Service {
 
   open() {
     this.isOpen = true;
+    document.body.classList.add('menu-open');
   }
 
   close() {
     this.isOpen = false;
+    document.body.classList.remove('menu-open');
   }
 
   toggle() {

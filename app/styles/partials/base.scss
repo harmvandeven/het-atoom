@@ -7,3 +7,7 @@ html {
   background-color: white;
   color: black;
 }
+
+body.menu-open {
+  overflow: hidden;
+}
