@@ -7,6 +7,7 @@ import { next } from '@ember/runloop';
 export default class HeaderComponent extends Component {
   @service('scroll') scroll;
   @service('menu') menu;
+
   @tracked positions = [];
   @tracked positionWidth = -1;
 
@@ -55,8 +56,14 @@ export default class HeaderComponent extends Component {
   }
 
   get menuClass() {
-    if (this.menu.isOpen) return 'menu-open';
-    return 'menu-closed';
+    let cls = 'menu-closed';
+    if (this.menu.isOpen) {
+      cls = 'menu-open';
+    }
+    if (this.scroll.scrollY >= window.innerHeight) {
+      cls += ' logo-visible';
+    }
+    return cls
   }
 
   calculatePositions() {

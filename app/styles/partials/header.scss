@@ -30,7 +30,8 @@
   }
 
   .het-atoom-title {
-    top: 2px;
+    top: 0-$header-height;
+    @include transition(top 0.2s);
     height: 42px;
     position: relative;
     cursor: pointer;
@@ -83,6 +84,12 @@
           stroke: $blue;
         }
       }
+    }
+  }
+
+  &.logo-visible {
+    .het-atoom-title {
+      top: 2px;
     }
   }
 }
