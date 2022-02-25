@@ -7,14 +7,10 @@ export default class TimelineSegmentComponent extends Component {
   constructor() {
     super(...arguments);
 
-    console.log(this.args.keyframes);
-
     // When we have keyframes, create a timeline from all those keyframes only once
     if (this.args.keyframes) {
       // create the keyframes array
       this.keyframes = [];
-
-      console.log('hi"0;');
 
       // Get the properties and intialValues for those properties
       let props = [];
@@ -33,16 +29,12 @@ export default class TimelineSegmentComponent extends Component {
         });
       }
 
-      console.log('props', props);
-
       // Run through the length of the segment + create keyframes for all
       let currentKey = 0;
       let length = this.args.length;
       if (this.args.end) {
         length = this.args.end - this.args.start;
       }
-
-      console.log(length);
 
       for (let i = 0; i < length; i++) {
         if (i > this.args.keyframes[currentKey].frame) {
