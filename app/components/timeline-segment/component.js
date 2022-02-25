@@ -100,12 +100,19 @@ export default class TimelineSegmentComponent extends Component {
   get visible() {
     let start = 0;
     let end = -1;
-    if (this.args.start) start = parseFloat(this.args.start);
-    if (this.args.end) end = parseFloat(this.args.end) - start;
-    if (this.args.length) end = parseFloat(this.args.length);
+    if (this.args.start != undefined) {
+      start = parseFloat(this.args.start);
+      end = start;
+    }
+    if (this.args.end != undefined) {
+      end = parseFloat(this.args.end) - start;
+    }
+    if (this.args.length != undefined) {
+      end = parseFloat(this.args.length);
+    }
     let currentFrame = parseFloat(this.args.frame) - start;
     if (currentFrame < 0) return false;
-    if (currentFrame >= end) return false;
+    if (currentFrame > end) return false;
     return true;
   }
 
