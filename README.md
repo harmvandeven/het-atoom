@@ -29,3 +29,7 @@ Visit [het-atoom](https://harmvandeven.github.io/het-atoom/)
 * `ember serve --environment=pi`
 * Visit your app at [http://localhost:4200/het-atoom/](http://localhost:4200/het-atoom/).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+
+## Deploy
+* `ember deploy pi`
+* The build folder can be found in `../deploy-het-atoom-pi`

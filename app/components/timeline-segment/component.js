@@ -87,7 +87,11 @@ export default class TimelineSegmentComponent extends Component {
   }
 
   get src() {
-    if (this.args.localSrc && this.environment.config.environment == 'pi') {
+    if (
+      this.args.localSrc &&
+      (this.environment.config.environment === 'pi' ||
+        this.environment.deployTarget === 'pi')
+    ) {
       return this.args.localSrc;
     }
     return this.args.src;

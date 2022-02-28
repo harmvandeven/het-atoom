@@ -5,12 +5,25 @@ module.exports = function (deployTarget) {
   let ENV = {
     build: {},
     // include other plugin configuration that applies to all deploy targets here
+    // Enable the git-pages plugin only in production deployments
+    pipeline: {
+      disabled: {
+        cp: deployTarget != 'pi',
+        git: deployTarget != 'production',
+      },
+    },
   };
 
+  // Setup the git-pages config
   ENV.git = {
     repo: 'git@github.com:harmvandeven/het-atoom.git',
     branch: 'github-pages',
     commitMessage: 'Deployed %@',
+  };
+
+  // Create a deploy location of the PI version
+  ENV.cp = {
+    destDir: '../deploy-het-atoom-pi',
   };
 
   if (deployTarget === 'development') {
@@ -27,6 +40,9 @@ module.exports = function (deployTarget) {
     ENV.build.environment = 'production';
     // configure other plugins for production deploy target here
   }
+
+  // Store the deployTarget used to load local or remote images
+  ENV.deployTarget = deployTarget;
 
   // Note: if you need to build some configuration asynchronously, you can return
   // a promise that resolves with the ENV object instead of returning the
