@@ -1,14 +1,7 @@
 import Service from '@ember/service';
-import {
-  service
-} from '@ember/service';
-import {
-  tracked
-} from '@glimmer/tracking';
-import {
-  later,
-  next
-} from '@ember/runloop';
+import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
+import { later, next } from '@ember/runloop';
 
 export default class ScrollService extends Service {
   @service('environment') environment;
@@ -43,7 +36,6 @@ export default class ScrollService extends Service {
         this.to(undefined, -1, this.autoScrollSpeed);
       }, 1000);
     }
-
   }
 
   setScrollY(context) {
@@ -110,7 +102,10 @@ export default class ScrollService extends Service {
       this.tranisitonInitialTop = this.scrollY;
       this.transitionStartTime = new Date().getTime();
       if (duration == undefined) {
-        duration = Math.min(5000, Math.abs(this.transitionTop - this.tranisitonInitialTop) * 0.33);
+        duration = Math.min(
+          5000,
+          Math.abs(this.transitionTop - this.tranisitonInitialTop) * 0.33
+        );
       }
       this.transitionDuration = duration;
     }
