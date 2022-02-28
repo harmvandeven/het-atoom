@@ -33,3 +33,4 @@ Visit [het-atoom](https://harmvandeven.github.io/het-atoom/)
 ## Deploy
 * `ember deploy pi`
 * The build folder can be found in `../deploy-het-atoom-pi`
+* Serve the folder as your localhost and go to `http://localhost/het-atoom/`

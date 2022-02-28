@@ -4,6 +4,7 @@ import { service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
   @service('content') content;
+  @service('environment') environment;
   @service('timeline') timeline;
   @service('scroll') scroll;
 
@@ -25,6 +26,7 @@ export default class ApplicationRoute extends Route {
       chaptersContent: this.content.getChapters(),
       timelineContent: this.content.getTimeline(),
       timeline: this.timeline,
+      environment: this.environment,
     };
   }
 }

@@ -23,7 +23,7 @@ module.exports = function (deployTarget) {
 
   // Create a deploy location of the PI version
   ENV.cp = {
-    destDir: '../deploy-het-atoom-pi',
+    destDir: '../deploy-het-atoom-pi/het-atoom',
   };
 
   if (deployTarget === 'development') {
@@ -36,13 +36,15 @@ module.exports = function (deployTarget) {
     // configure other plugins for staging deploy target here
   }
 
+  if (deployTarget === 'pi') {
+    // Add a PI deployTarget
+    ENV.build.environment = 'pi';
+  }
+
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
     // configure other plugins for production deploy target here
   }
-
-  // Store the deployTarget used to load local or remote images
-  ENV.deployTarget = deployTarget;
 
   // Note: if you need to build some configuration asynchronously, you can return
   // a promise that resolves with the ENV object instead of returning the

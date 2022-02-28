@@ -17,11 +17,7 @@ export default class VideoPlayerComponent extends Component {
   @service('environment') environment;
 
   get src() {
-    if (
-      this.args.localSrc &&
-      (this.environment.config.environment === 'pi' ||
-        this.environment.deployTarget === 'pi')
-    ) {
+    if (this.args.localSrc && this.environment.config.environment === 'pi') {
       return this.args.localSrc;
     }
     return this.args.src;

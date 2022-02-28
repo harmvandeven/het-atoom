@@ -61,16 +61,20 @@
 </ul>
 
 {{! Timeline progress }}
-<div class='timeline-progress'>
-  <div class='indicator' style={{@model.timeline.progressStyle}}>
-    &nbsp;
+{{#if @model.environment.debug}}
+  <div class='timeline-progress'>
+    <div class='indicator' style={{@model.timeline.progressStyle}}>
+      &nbsp;
+    </div>
   </div>
-</div>
+{{/if}}
 
 {{! Debug / Development }}
-<div class='timeline-debug'>
-  {{@model.timeline.scroll.scrollY}} /
-  {{@model.timeline.frame}}
-</div>
+{{#if @model.environment.debug}}
+  <div class='timeline-debug'>
+    {{@model.timeline.scroll.scrollY}} /
+    {{@model.timeline.frame}}
+  </div>
+{{/if}}
 
 {{outlet}}
