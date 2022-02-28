@@ -5,8 +5,9 @@
 >
   <video
     autoplay
-    muted
+    muted='muted'
     playsinline
+    controls
     {{on 'timeupdate' this.setReadyForUpdate}}
     {{on 'play' this.onPlay}}
     {{on 'pause' this.onPause}}

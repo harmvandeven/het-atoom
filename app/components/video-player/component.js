@@ -12,6 +12,7 @@ export default class VideoPlayerComponent extends Component {
   @tracked defautlFps = 25;
 
   @tracked player = null;
+  @tracked isReady = false;
   @tracked readyForUpdate = true;
 
   @service('environment') environment;
@@ -31,7 +32,11 @@ export default class VideoPlayerComponent extends Component {
     // Run it on the next frame to make sure we don't do a double take
     next(this, () => {
       if (this.player) {
-        if (this.player.currentTime != time && this.readyForUpdate) {
+        if (
+          this.player.currentTime != time &&
+          this.readyForUpdate &&
+          this.isReady
+        ) {
           if (time && time != NaN) {
             this.readyForUpdate = false;
             this.player.currentTime = time;
@@ -64,34 +69,40 @@ export default class VideoPlayerComponent extends Component {
   didInsert(element) {
     // Setup the video player
     this.player = element;
-    this.player.removeAttribute('controls');
     this.player.muted = 'muted';
-    this.player.autoplay = true;
     this.player.preload = 'auto';
 
     this.player.playsinline = true;
     this.player.disableRemotePlayback = true;
     this.player.setAttribute('playsinline', true);
-    this.player.setAttribute('autoplay', true);
     this.player.setAttribute('disableRemotePlayback', true);
-
-    let canPlay = () => {
-      this.player.pause();
-      this.player.removeEventListener('canplay', canPlay);
-    };
-    this.player.addEventListener('canplay', canPlay);
-
-    let playOnce = () => {
-      this.player.play();
-      this.player.pause();
-      document.body.removeEventListener('touchstart', playOnce);
-      document.body.removeEventListener('mousemove', playOnce);
-      window.removeEventListener('scroll', playOnce);
-    };
-    document.body.addEventListener('touchstart', playOnce);
-    document.body.addEventListener('mousemove', playOnce);
-    window.addEventListener('scroll', playOnce);
+    next(() => {
+      this.playOnce();
+    });
   }
+
+  playOnce = function () {
+    console.log('playOnce');
+    let playPromise = this.player.play();
+    console.log(playPromise);
+    if (playPromise === null) {
+      this.isReady = false;
+      this.player.removeAttribute('controls');
+      this.player.pause();
+    } else {
+      playPromise
+        .then(() => {
+          this.isReady = true;
+          this.player.removeAttribute('controls');
+          this.player.pause();
+        })
+        .catch(() => {
+          next(() => {
+            this.playOnce();
+          });
+        });
+    }
+  };
 
   @action
   onPlay() {
