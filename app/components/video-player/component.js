@@ -82,9 +82,7 @@ export default class VideoPlayerComponent extends Component {
   }
 
   playOnce = function () {
-    console.log('playOnce');
     let playPromise = this.player.play();
-    console.log(playPromise);
     if (playPromise === null) {
       this.isReady = false;
       this.player.removeAttribute('controls');
