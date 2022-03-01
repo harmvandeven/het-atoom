@@ -60,7 +60,7 @@ export default class ContentService extends Service {
 
   parseChapter(item, index = 0) {
     item.index = index;
-    item.hash = dasherize(item.title);
+    item.hash = dasherize(item.title.replace(/['"]+/g, ''));
     item.pageTitle = item.title;
     if (item.id != '-') {
       item.hash = item.id + '-' + item.hash;
