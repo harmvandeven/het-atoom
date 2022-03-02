@@ -38,21 +38,26 @@ export default class ScrollService extends Service {
     if (this.environment.config.environment === 'pi') {
       document.addEventListener('mousedown', () => {
         this.clearIdleTimer(this);
+        this.cancelTransition(this);
       });
       document.addEventListener('mousemove', () => {
         this.clearIdleTimer(this);
       });
       document.addEventListener('keypress', () => {
         this.clearIdleTimer(this);
+        this.cancelTransition(this);
       });
       document.addEventListener('touchstart', () => {
         this.clearIdleTimer(this);
+        this.cancelTransition(this);
       });
       document.addEventListener('touchmove', () => {
         this.clearIdleTimer(this);
+        this.cancelTransition(this);
       });
       document.addEventListener('wheel', () => {
         this.clearIdleTimer(this);
+        this.cancelTransition(this);
       });
       document.addEventListener('scroll', () => {
         this.clearIdleTimer(this, true);
@@ -185,6 +190,10 @@ export default class ScrollService extends Service {
         });
       }
     }
+  }
+
+  cancelTransition(context) {
+    context.inTransition = false;
   }
 
   clearIdleTimer(context, isScrollEvent = false) {
