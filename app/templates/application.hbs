@@ -2,18 +2,7 @@
 
 <Header @model={{@model.chaptersContent}} />
 
-<div class='intro'>
-  <div class='illustration'>
-    <div>
-      <Svg::AtoomIllustration />
-    </div>
-  </div>
-  <div class='logo'>
-    <div>
-      <Svg::HetAtoom />
-    </div>
-  </div>
-</div>
+<Intro />
 
 <ul class='chapters'>
   {{#each @model.chaptersContent as |chapter index|}}
