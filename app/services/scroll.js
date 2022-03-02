@@ -124,8 +124,7 @@ export default class ScrollService extends Service {
     autoplay = false
   ) {
     if (top !== undefined && top < 0) {
-      elem = document.querySelectorAll('li.chapter:nth-last-of-type(1)');
-      top = this.getCoords(elem[0]).bottom;
+      top = document.body.clientHeight - window.innerHeight * 0.5;
     } else if (elem != undefined) {
       top = this.getCoords(elem).top;
     }
