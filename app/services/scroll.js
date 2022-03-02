@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import { later, next } from '@ember/runloop';
+import { cancel, later, next } from '@ember/runloop';
 
 export default class ScrollService extends Service {
   @service('environment') environment;
@@ -15,12 +15,17 @@ export default class ScrollService extends Service {
   @tracked active = false;
   @tracked isReplacedState = false;
 
-  @tracked transitionTop = 0;
+  @tracked inTransition = false;
+  @tracked inAutoTransition = false;
+  @tracked transitionTargetTop = 0;
   @tracked tranisitonInitialTop = 0;
   @tracked tranistionRuntime = 0;
   @tracked transitionDuration = 0;
 
-  autoScrollSpeed = 5000000;
+  // TODO: Scroll between content. not at a fixed speed
+  idleTimer = null;
+  autoScrollSpeed = 500000;
+  autoScrollDelay = 1000;
 
   // Constructor
   constructor() {
@@ -31,10 +36,28 @@ export default class ScrollService extends Service {
     });
 
     if (this.environment.config.environment === 'pi') {
-      later(() => {
-        console.log('autscroll');
-        this.to(undefined, -1, this.autoScrollSpeed);
-      }, 1000);
+      document.addEventListener('mousedown', () => {
+        this.clearIdleTimer(this);
+      });
+      document.addEventListener('mousemove', () => {
+        this.clearIdleTimer(this);
+      });
+      document.addEventListener('keypress', () => {
+        this.clearIdleTimer(this);
+      });
+      document.addEventListener('touchstart', () => {
+        this.clearIdleTimer(this);
+      });
+      document.addEventListener('touchmove', () => {
+        this.clearIdleTimer(this);
+      });
+      document.addEventListener('wheel', () => {
+        this.clearIdleTimer(this);
+      });
+      document.addEventListener('scroll', () => {
+        this.clearIdleTimer(this, true);
+      });
+      this.clearIdleTimer(this);
     }
   }
 
@@ -56,7 +79,7 @@ export default class ScrollService extends Service {
 
     // Add a new requestAnimationFrame
     this.raf = window.requestAnimationFrame(() => {
-      if (context.tranistionRuntime < context.transitionDuration) {
+      if (context.inTransition || context.inAutoTransition) {
         context.setTransition(context);
       }
       context.setScrollY(context);
@@ -89,7 +112,12 @@ export default class ScrollService extends Service {
     };
   }
 
-  to(elem = undefined, top = undefined, duration = undefined) {
+  to(
+    elem = undefined,
+    top = undefined,
+    duration = undefined,
+    autoplay = false
+  ) {
     if (top !== undefined && top < 0) {
       elem = document.querySelectorAll('li.chapter:nth-last-of-type(1)');
       top = this.getCoords(elem[0]).bottom;
@@ -98,16 +126,23 @@ export default class ScrollService extends Service {
     }
     if (top != undefined) {
       this.tranistionRuntime = 0;
-      this.transitionTop = top;
       this.tranisitonInitialTop = this.scrollY;
+      this.transitionTargetTop = top;
       this.transitionStartTime = new Date().getTime();
       if (duration == undefined) {
         duration = Math.min(
           5000,
-          Math.abs(this.transitionTop - this.tranisitonInitialTop) * 0.33
+          Math.abs(this.transitionTargetTop - this.tranisitonInitialTop) * 0.33
         );
       }
       this.transitionDuration = duration;
+      if (autoplay) {
+        this.inTransition = false;
+        this.inAutoTransition = true;
+      } else {
+        this.inTransition = true;
+        this.inAutoTransition = false;
+      }
     }
   }
 
@@ -123,12 +158,16 @@ export default class ScrollService extends Service {
 
   setTransition(context) {
     let currentTime = new Date().getTime();
-    this.tranistionRuntime = currentTime - context.transitionStartTime;
-
+    context.tranistionRuntime = currentTime - context.transitionStartTime;
+    if (context.tranistionRuntime >= context.transitionDuration) {
+      context.inTransition = false;
+      context.inAutoTransition = false;
+      context.clearIdleTimer(context);
+    }
     let val = this.easeLinear(
       this.tranistionRuntime,
       context.tranisitonInitialTop,
-      context.transitionTop - context.tranisitonInitialTop,
+      context.transitionTargetTop - context.tranisitonInitialTop,
       context.transitionDuration
     );
     window.scroll(0, val);
@@ -146,5 +185,21 @@ export default class ScrollService extends Service {
         });
       }
     }
+  }
+
+  clearIdleTimer(context, isScrollEvent = false) {
+    if (!isScrollEvent) {
+      context.inAutoTransition = false;
+    }
+    if (context.idleTimer) {
+      cancel(context.idleTimer);
+    }
+    context.idleTimer = later(() => {
+      if (context.inTransition) {
+        context.clearIdleTimer(context);
+      } else {
+        context.to(undefined, -1, context.autoScrollSpeed, true);
+      }
+    }, context.autoScrollDelay);
   }
 }
