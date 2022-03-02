@@ -15,11 +15,15 @@ export default class TimelineService extends Service {
   @tracked height = 540;
 
   // Segments
+  @tracked content = [];
+
   @tracked segments = [];
   @tracked calculatedWidth = -1;
   @tracked calculatedHeight = -1;
 
   @tracked timeline = [];
+  @tracked current = null;
+  @tracked next = null;
 
   // Constructor
   constructor() {
@@ -55,6 +59,11 @@ export default class TimelineService extends Service {
           Math.max(0.0, (y - item.scrollY) / (next.scrollY - item.scrollY))
         );
         let fr = item.frame + (next.frame - item.frame) * percentage;
+        // Set the next and current items
+        // eslint-disable-next-line ember/no-side-effects
+        this.next = next;
+        // eslint-disable-next-line ember/no-side-effects
+        this.current = item;
         return Math.round(fr);
       } else if (y >= item.scrollY && !next) {
         return Math.round(item.frame);
@@ -100,6 +109,37 @@ export default class TimelineService extends Service {
     return this.height * this.baseRatio;
   }
 
+  getCurrentContent() {
+    if (this.content.length > 0) {
+      for (let i = 0; i < this.content.length; i++) {
+        let coords = this.scroll.getCoords(this.content[i]);
+        if (i == 0 && coords.top > this.scroll.scrollY) {
+          return null;
+        } else if (coords.top >= this.scroll.scrollY) {
+          return this.content[i];
+        }
+      }
+    }
+    return null;
+  }
+
+  getNextContent() {
+    if (this.content.length > 0) {
+      let current = this.getCurrentContent();
+      if (!current) {
+        return this.content[0];
+      }
+      for (let i = 0; i < this.content.length; i++) {
+        if (current == this.content[i]) {
+          if (this.content.length > i + 1) {
+            return this.content[i + 1];
+          }
+        }
+      }
+    }
+    return null;
+  }
+
   calculateSegments() {
     // Get all the segments
     if (this.segments.length < 1) {
@@ -109,6 +149,9 @@ export default class TimelineService extends Service {
       });
       [...document.getElementsByClassName('chapter-part')].forEach((item) => {
         this.segments.push(item);
+        if (!item.classList.contains('filler')) {
+          this.content.push(item);
+        }
       });
       [...document.getElementsByClassName('timeline-segment')].forEach(
         (item) => {

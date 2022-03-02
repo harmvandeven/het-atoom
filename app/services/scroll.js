@@ -6,6 +6,7 @@ import { cancel, later, next } from '@ember/runloop';
 export default class ScrollService extends Service {
   @service('environment') environment;
   @service('router') router;
+  @service('timeline') timeline;
 
   // Store the scroll position + document size
   @tracked scrollY = -1;
@@ -24,8 +25,7 @@ export default class ScrollService extends Service {
 
   // TODO: Scroll between content. not at a fixed speed
   idleTimer = null;
-  autoScrollSpeed = 500000;
-  autoScrollDelay = 1000;
+  autoScrollDelay = 5000;
 
   // Constructor
   constructor() {
@@ -114,6 +114,8 @@ export default class ScrollService extends Service {
       left: Math.round(left),
       bottom: Math.round(bottom),
       right: Math.round(right),
+      height: box.height,
+      width: box.width,
     };
   }
 
@@ -168,7 +170,7 @@ export default class ScrollService extends Service {
       context.inAutoTransition = false;
       context.clearIdleTimer(context);
     }
-    let val = this.easeLinear(
+    let val = this.easeOutCubic(
       this.tranistionRuntime,
       context.tranisitonInitialTop,
       context.transitionTargetTop - context.tranisitonInitialTop,
@@ -206,7 +208,18 @@ export default class ScrollService extends Service {
       if (context.inTransition) {
         context.clearIdleTimer(context);
       } else {
-        context.to(undefined, -1, context.autoScrollSpeed, true);
+        let elem = this.timeline.getNextContent();
+        if (elem) {
+          // console.log(elem.getAttribute('data-id'));
+          let coords = this.getCoords(elem);
+          let top = coords.top;
+          // TODO: Fix the auto scroll position of the element
+          console.log(top, coords.height);
+          context.to(undefined, top, undefined, true);
+        } else {
+          // console.log('back to top');
+          context.to(undefined, 0, undefined, true);
+        }
       }
     }, context.autoScrollDelay);
   }
