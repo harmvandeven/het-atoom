@@ -11,8 +11,10 @@
   @include justify-content(space-between);
 
   .title {
+    overflow: hidden;
     cursor: pointer;
     height: 42px;
+    @include calc('width', '100% - 280px');
     .id {
       margin-left: 20px;
       width: 52px;
@@ -21,6 +23,8 @@
     h1 {
       margin: 0;
       float: left;
+      white-space: nowrap;
+      @include calc('width', '100% - 82px');
     }
     @include clearfix;
     @include transition(color 0.2s);
