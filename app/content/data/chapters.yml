@@ -12,6 +12,8 @@
         From June until September 1957 the large-scale exhibition Het Atoom was held at Schiphol Airport. It can be seen as the absolute high point of atomic optimism in the Netherlands. Initiated by the Amsterdam Chamber of Commerce and funded by the City of Amsterdam, it painted a particularly positive picture of nuclear energy, solving the world's major problems. No expense was spared to convince visitors of the possibilities.
 
         Based on the archive of the foundation Het Atoom at the Amsterdam City Archives, photos of Hein de Bouter, and texts from the original exhibition catalogue, this website offers a 3D-reconstruction of the exhibition. Scroll down to take a full tour or use the menu on the top left to select a specific room.
+
+        This website has been developed in conjunction with the [Atomic Reactions](https://www.tudelft.nl/library/over-de-library/tu-delft-library-presenteert/atomic-reactions) programme at TU Delft Library, from March 7 until June 3 2022.
     - id: a-0
       title: Atoomenergie - Onze toekomst
       timeline:
@@ -472,23 +474,48 @@
 - id: z
   title: Uitgang
   parts:
-    - id: colofon
+    - id: literature
+      title: Further reading
+      description: |
+        ## Primary sources
+        - [Tentoonstelling 'Het Atoom' (1957)](https://www.youtube.com/watch?v=TEE-97sGNM4), Nederlands Instituut voor Beeld en Geluid.
+        - [259 Inventaris van het Archief van de Stichting Internationale Tentoonstelling Het Atoom](https://archief.amsterdam/inventarissen/details/259/) (1955-59), Stadsarchief Amsterdam.
+        - Catalogus Het Atoom (1957)
+        - [Verslag van de Stichting Internationale Tentoonstelling Het Atoom Amsterdam](https://archief.amsterdam/inventarissen/file/a3e1dab62e146bb7dc697412de54a781) (1958)
+        
+        ## Secondary sources
+        - '[Wegwijzer voor Het Atoom](https://resolver.kb.nl/resolve?urn=ABCDDD:010831533:mpeg21:p013)' (28-06-1957), in: _Het Parool_, Amsterdam.
+        - Jacob Berend Bakema (1957) 'Enkele opmerkingen naar aanleiding van Het Atoom', in: _Forum: maandblad voor architectuur en gebonden kunsten_, (Vol. 12, No. 11 november 1957).
+        - G.P.J. Verbong & J.A.C. Lagaaij (2000) '[De belofte van kernenergie](https://www.dbnl.org/tekst/lint011tech02_01/lint011tech02_01_0016.php)', in: A.A.A. de la Bruhèze, H.W. Lintsen, Arie Rip, J.W. Schot (eds.) _Techniek in Nederland in de twintigste eeuw. Deel 2 Delfstoffen, energie, chemie_, Zutphen: Walburg Pers.
+        - Hugo van Dam & Frida de Jong (2003) _Geboeid door straling en strategie: geschiedenis van het Interfacultair Reactor Instituut te Delft_, Zutphen: Walburg Pers.
+        - Dick van Lente (2008) 'A Tamed Shrew? Images Of The Atomic Age In Dutch Popular Culture, 1945-1957', in: Mogens Rüdiger (ed.), _The Culture of Energy_, Newcastle, UK: Cambridge Scholars Pub.
+        - Irene Cieraad (2009) 'The Radiant American Kitchen. Domesticating Dutch Nuclear Energy', in: R Oldenziel, K Zachmann (eds.) _Cold War Kitchen: Americanization, Technology, and European Users_, Cambridge, Mass.: MIT Press.
+        - Dick van Lente (2012) 'Nuclear Power, World Politics, and a Small Nation: Narratives and Counternarratives in the Netherlands', in: Dick van Lente (ed.) _The Nuclear Age in Popular Media_, New York: Palgrave Macmillan.
+        - Frederike Huygen (2015) _Wim Crouwel. Modernist_, Eindhoven: Lecturis.
+        - E.D. Roodenburg (2016). [Met niet begrijpend ontzag](http://hdl.handle.net/2105/34526), Thesis History of Society, Erasmus University.
+      timeline:
+        start: 4500
+        end: 4500
+    - id: credits
       title: Credits
       description: |
         This website has been developed in conjunction with the [Atomic Reactions](https://www.tudelft.nl/library/over-de-library/tu-delft-library-presenteert/atomic-reactions) programme at TU Delft Library, from March 7 until June 3 2022.
 
-        Inspired by [What the Tulsa Race Massacre Destroyed](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html), New York Times (May 24, 2021).
+        Menu titles and letters are based on the original exhibition plan. Grey menu titles have been omitted from the tour due to a lack of photos (in the series of Hein de Bouter) and/or information. Part N is skipped because the reactor is already visible from the walkway (Part I). Parts T and U have been swapped to match the route of the animation. The Fokker aeroplane standing outside (between parts R and T) is part of W (History of Aviation).
 
-        - Concept and production: [Jules Schoonman / Academic Heritage Team](https://heritage.tudelft.nl)
-        - 3D-model: Sebastian von Rosen / Faculty of Architecture and the Built Environment
-        - Animation: [Roland van Roijen / NewMedia Centre](https://newmediacentre.tudelft.nl/)
+        A selection of Hein de Bouter's photos of the exhibition were published in the Dutch architecture magazine _Forum_ (November 11, 1957). In total 37 glass negatives have been scanned by the Maria Austria Institute for this project, of which 26 have been published here. The original glass negative of Part K (as published in Forum) could not be located.
+
+        - Concept and production: Jules Schoonman / [Academic Heritage Team](https://heritage.tudelft.nl)
+        - 3D-model: Sebastian von Rosen
+        - Animation: Roland van Roijen / [NewMedia Centre](https://newmediacentre.tudelft.nl/)
         - App: [Harm van de Ven](http://harmvandeven.nl/)
-        - Photos: [Hein de Bouter / Maria Austria Instituut](https://www.maibeeldbank.nl/fotograaf/11)
-        - Archival material: [259 Stichting Het Atoom / Stadsarchief Amsterdam](https://archief.amsterdam/inventarissen/details/259/)
-        - Additional research: Janne Voskuijl / Faculty of Architecture and the Built Environment
+        - Graphic design: [Vanessa van Dam](https://www.vanessavandam.nl)
+        - Photos: Hein de Bouter / [Maria Austria Instituut](https://www.maibeeldbank.nl/fotograaf/11)
+        - Archival material: 259 Stichting Het Atoom / [Stadsarchief Amsterdam](https://archief.amsterdam/inventarissen/details/259/)
+        - Technical assistance: Kevin Siemonsma
+        - Additional research: Janne Voskuijl
 
-        More information about the exhibition:
-        - [Tentoonstelling 'Het Atoom' (1957)](https://www.youtube.com/watch?v=TEE-97sGNM4)
+        Inspired by: [What the Tulsa Race Massacre Destroyed](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html), New York Times (May 24, 2021).
       timeline:
         start: 4500
         end: 4500
