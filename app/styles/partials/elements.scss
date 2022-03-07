@@ -47,10 +47,11 @@ div.base-video {
   overflow: hidden;
   position: fixed;
   z-index: -1;
-  top: 0;
+  top: $header-height;
   left: 0;
   height: 100vh;
   width: 100vw;
+  @include calc('height', '100vh - '+$header-height);
 
   .video-player {
     position: absolute;
