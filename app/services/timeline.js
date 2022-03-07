@@ -5,7 +5,7 @@ import { tracked } from '@glimmer/tracking';
 import { next } from '@ember/runloop';
 
 export default class TimelineService extends Service {
-  @tracked minPixelsPerFrame = 4;
+  @tracked minPixelsPerFrame = 10;
 
   // Get the scroll service
   @service('scroll') scroll;
@@ -113,9 +113,12 @@ export default class TimelineService extends Service {
     if (this.content.length > 0) {
       for (let i = 0; i < this.content.length; i++) {
         let coords = this.scroll.getCoords(this.content[i]);
-        if (i == 0 && coords.top > this.scroll.scrollY) {
+        let top = Math.floor(
+          coords.top - (window.innerHeight - coords.height) * 0.5
+        );
+        if (i == 0 && top > this.scroll.scrollY) {
           return null;
-        } else if (coords.top >= this.scroll.scrollY) {
+        } else if (top >= this.scroll.scrollY) {
           return this.content[i];
         }
       }

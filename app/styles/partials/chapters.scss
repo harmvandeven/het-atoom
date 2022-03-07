@@ -75,6 +75,7 @@ ul.chapters {
 
   .chapter-part-debug {
     display: none;
+    color: $blue;
     position: absolute;
     left: 0;
     &.chapter-part-debug-start {

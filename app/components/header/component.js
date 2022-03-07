@@ -16,7 +16,7 @@ export default class HeaderComponent extends Component {
   }
   @action scrollTop() {
     this.menu.close();
-    this.scroll.to(null, 0);
+    this.scroll.to({ position: 0 });
   }
 
   get chapter() {

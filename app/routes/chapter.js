@@ -19,9 +19,9 @@ export default class ChapterRoute extends Route {
         if (chapter.index != undefined) {
           let elem = document.getElementById('chapter-header-' + chapter.index);
           if (chapter.index == 0) {
-            this.scroll.to(undefined, 0);
+            this.scroll.to({ position: 0 });
           } else {
-            this.scroll.to(elem);
+            this.scroll.to({ element: elem });
           }
         }
       }

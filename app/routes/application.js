@@ -16,7 +16,7 @@ export default class ApplicationRoute extends Route {
         );
         if (chapter && chapter.index != undefined) {
           let elem = document.getElementById('chapter-header-' + chapter.index);
-          this.scroll.to(elem);
+          this.scroll.to({ element: elem });
           this.scroll.active = true;
         }
       }, 1000);
