@@ -49,15 +49,18 @@ ul.chapters {
         padding: 0.5rem 1rem;
         background-color: $light-blue;
         &.alignment-center {
-          max-width: 200px;
+          width: 60%;
+          max-width: 600px;
           margin: 1rem auto;
         }
         &.alignment-left {
-          max-width: 200px;
+          width: 60%;
+          max-width: 600px;
           margin-right: auto;
         }
         &.alignment-right {
-          max-width: 200px;
+          width: 60%;
+          max-width: 600px;
           margin-left: auto;
         }
       }
