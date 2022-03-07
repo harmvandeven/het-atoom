@@ -204,23 +204,25 @@ export default class ScrollService extends Service {
     if (context.idleTimer) {
       cancel(context.idleTimer);
     }
-    context.idleTimer = later(() => {
-      if (context.inTransition) {
-        context.clearIdleTimer(context);
-      } else {
-        let elem = this.timeline.getNextContent();
-        if (elem) {
-          // console.log(elem.getAttribute('data-id'));
-          let coords = this.getCoords(elem);
-          let top = coords.top;
-          // TODO: Fix the auto scroll position of the element
-          console.log(top, coords.height);
-          context.to(undefined, top, undefined, true);
+    if (this.environment.config.environment === 'pi') {
+      context.idleTimer = later(() => {
+        if (context.inTransition) {
+          context.clearIdleTimer(context);
         } else {
-          // console.log('back to top');
-          context.to(undefined, 0, undefined, true);
+          let elem = this.timeline.getNextContent();
+          if (elem) {
+            // console.log(elem.getAttribute('data-id'));
+            let coords = this.getCoords(elem);
+            let top = coords.top;
+            // TODO: Fix the auto scroll position of the element
+            console.log(top, coords.height);
+            context.to(undefined, top, undefined, true);
+          } else {
+            // console.log('back to top');
+            context.to(undefined, 0, undefined, true);
+          }
         }
-      }
-    }, context.autoScrollDelay);
+      }, context.autoScrollDelay);
+    }
   }
 }
