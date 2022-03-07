@@ -134,6 +134,10 @@ export default class ScrollService extends Service {
     } else if (currParams.position !== undefined) {
       top = currParams.position;
     }
+    if (params.offset) {
+      top += params.offset;
+    }
+
     let duration = undefined;
     if (currParams.duration) duration = currParams.duration;
     let autoplay = false;

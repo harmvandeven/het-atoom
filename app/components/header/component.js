@@ -16,7 +16,9 @@ export default class HeaderComponent extends Component {
   }
   @action scrollTop() {
     this.menu.close();
-    this.scroll.to({ position: 0 });
+    this.scroll.to({
+      position: 0,
+    });
   }
 
   get chapter() {
@@ -24,6 +26,7 @@ export default class HeaderComponent extends Component {
     if (this.positionWidth != window.innerWidth || this.positions.length < 1) {
       next(() => {
         this.calculatePositions();
+        // eslint-disable-next-line ember/no-side-effects
         this.positionWidth = window.innerWidth;
       });
     }
@@ -72,7 +75,7 @@ export default class HeaderComponent extends Component {
       let elem = document.getElementById('chapter-header-' + index);
       if (elem) {
         this.positions.push({
-          scrollY: parseFloat(this.scroll.getCoords(elem).top),
+          scrollY: parseFloat(this.scroll.getCoords(elem).top) - 200,
           id: item.id,
           title: item.title,
           hash: item.hash,
