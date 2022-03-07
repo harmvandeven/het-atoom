@@ -11,3 +11,14 @@ html {
 body.menu-open {
   overflow: hidden;
 }
+
+a,
+a:link,
+a:visited {
+  cursor: pointer;
+  color: $blue;
+  @include transition(color 0.2s);
+}
+a:hover {
+  color: inherit;
+}
