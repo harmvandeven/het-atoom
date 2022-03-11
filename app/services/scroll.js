@@ -157,7 +157,7 @@ export default class ScrollService extends Service {
         if (autoplay) {
           duration =
             Math.abs(this.transitionTargetTop - this.tranisitonInitialTop) *
-            (this.transitionEase == 'easeLinear' ? 10.0 : 2.0);
+            (this.transitionEase == 'easeLinear' ? 15.0 : 6.0);
         }
       }
       this.transitionDuration = duration;
