@@ -5,6 +5,7 @@ import { service } from '@ember/service';
 export default class TimelineSegmentComponent extends Component {
   keyframes = null;
   @service('environment') environment;
+  @service('timeline') timeline;
 
   constructor() {
     super(...arguments);
@@ -136,12 +137,6 @@ export default class TimelineSegmentComponent extends Component {
   get style() {
     let styles = [];
 
-    // Get the headerHeight
-    let headerHeight = 94;
-    if (window.innerWidth <= 768) {
-      headerHeight = 74;
-    }
-
     // Push the default style
     if (this.args.style) {
       styles.push(this.args.style.replace(/^;+|;+$/g, ''));
@@ -176,14 +171,13 @@ export default class TimelineSegmentComponent extends Component {
         w = parseFloat(this.args.width) * this.args.baseWidth;
         h = (w / this.args.originWidth) * this.args.originHeight;
       } else if (this.args.height != null) {
-        h =
-          parseFloat(this.args.height) * (this.args.baseHeight - headerHeight);
+        h = parseFloat(this.args.height) * this.args.baseHeight;
         w = (h / this.args.originHeight) * this.args.originWidth;
       }
     } else if (this.args.left != null || this.args.top != null) {
       let wa = this.args.baseWidth;
       let ha = (wa / this.args.originWidth) * this.args.originHeight;
-      let hb = this.args.baseHeight - headerHeight;
+      let hb = this.args.baseHeight;
       let wb = (hb / this.args.originHeight) * this.args.originWidth;
       if (hb < ha && wb < wa) {
         w = wb;
@@ -202,7 +196,7 @@ export default class TimelineSegmentComponent extends Component {
     }
 
     if (w != null && h != null) {
-      t = (window.innerHeight - h) * 0.5 + headerHeight;
+      t = (window.innerHeight - this.timeline.top - h) * 0.5;
       l = (window.innerWidth - w) * 0.5;
 
       if (this.args.left) {

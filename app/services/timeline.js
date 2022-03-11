@@ -11,8 +11,8 @@ export default class TimelineService extends Service {
   @service('scroll') scroll;
 
   // Set the base width + height
-  @tracked width = 960;
-  @tracked height = 540;
+  @tracked width = 1920;
+  @tracked height = 1080;
 
   // Segments
   @tracked content = [];
@@ -88,6 +88,13 @@ export default class TimelineService extends Service {
     return this.frame > -1;
   }
 
+  get top() {
+    if (window.innerWidth <= 768) {
+      return 74;
+    }
+    return 94;
+  }
+
   get progressStyle() {
     return htmlSafe('top:' + this.progress + '%;');
   }
@@ -97,16 +104,16 @@ export default class TimelineService extends Service {
       return 1;
     return Math.max(
       this.scroll.get('innerWidth') / this.width,
-      this.scroll.get('innerHeight') / this.height
+      (this.scroll.get('innerHeight') - this.top) / this.height
     );
   }
 
   get baseWidth() {
-    return this.width * this.baseRatio;
+    return Math.ceil(this.width * this.baseRatio);
   }
 
   get baseHeight() {
-    return this.height * this.baseRatio;
+    return Math.ceil(this.height * this.baseRatio);
   }
 
   getCurrentContent() {
