@@ -148,7 +148,7 @@ export default class TimelineService extends Service {
     if (this.segments.length < 1) {
       this.segments = [];
       [...document.getElementsByClassName('chapter-header')].forEach((item) => {
-        this.segments.push(item);
+        // this.segments.push(item);
       });
       [...document.getElementsByClassName('chapter-part')].forEach((item) => {
         this.segments.push(item);

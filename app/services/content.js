@@ -41,6 +41,41 @@ export default class ContentService extends Service {
           }
           parts.push(part);
         }
+        if (c < chapters.length - 1) {
+          if (
+            chapters[c + 1].timeline &&
+            chapters[c + 1].timeline.start &&
+            chapters[c + 1].timeline.start > end
+          ) {
+            parts.push({
+              id: 'Filler ' + fillerIndex,
+              class: 'filler',
+              timeline: {
+                start: end,
+                end: chapters[c + 1].timeline.start,
+              },
+            });
+            end = chapters[c + 1].timeline.start;
+            fillerIndex++;
+          } else if (
+            (!chapters[c + 1].timeline || !chapters[c + 1].timeline.start) &&
+            chapters[c + 1].parts &&
+            chapters[c + 1].parts.length > 0
+          ) {
+            if (chapters[c + 1].parts[0].timeline.start > end) {
+              parts.push({
+                id: 'Filler ' + fillerIndex,
+                class: 'filler',
+                timeline: {
+                  start: end,
+                  end: chapters[c + 1].parts[0].timeline.start,
+                },
+              });
+              end = chapters[c + 1].parts[0].timeline.start;
+              fillerIndex++;
+            }
+          }
+        }
         item.parts = parts;
       }
       items.push(item);
