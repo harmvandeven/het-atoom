@@ -78,6 +78,7 @@
         }
       }
     }
+
     &:hover {
       svg {
         fill: $blue;
@@ -94,6 +95,24 @@
   &.logo-visible {
     .het-atoom-title {
       top: 2px;
+    }
+  }
+
+  @media screen and (max-width: $phone-portrait) {
+    height: $header-height-mobile;
+
+    .title {
+      @include calc('width', '100% - 70px');
+      height: 32px;
+    }
+    .het-atoom-title {
+      top: 0-$header-height-mobile;
+      .logo {
+        display: none;
+      }
+      .illustration {
+        right: 32px;
+      }
     }
   }
 }

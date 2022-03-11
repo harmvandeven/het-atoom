@@ -67,4 +67,8 @@ div.base-video {
       object-fit: cover;
     }
   }
+  @media screen and (max-width: $phone-portrait) {
+    top: $header-height-mobile;
+    @include calc('height', '100vh - '+$header-height-mobile);
+  }
 }

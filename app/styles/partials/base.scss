@@ -2,9 +2,15 @@ $blue: #10a7dc;
 $light-blue: #d1e8f6;
 
 $header-height: 94px;
+$header-height-mobile: 74px;
+
+$thin-browser: 512px;
+$phone-portrait: 768px;
+$tablet-portrait: 940px;
 
 html {
   background-color: white;
+  background-color: pink;
   color: black;
 }
 

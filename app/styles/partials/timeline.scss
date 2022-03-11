@@ -38,6 +38,11 @@ ul.timeline {
       top: 5px;
       left: 5px;
     }
+
+    @media screen and (max-width: $phone-portrait) {
+      top: $header-height-mobile;
+      @include calc('height', '100% - '+$header-height-mobile);
+    }
   }
 }
 

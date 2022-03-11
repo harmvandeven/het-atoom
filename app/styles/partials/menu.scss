@@ -28,6 +28,7 @@ div.menu {
       }
       div.title {
         float: left;
+        @include calc('max-width', '100% - 100px');
       }
       @include clearfix;
     }
@@ -46,5 +47,12 @@ div.menu {
   }
   a:hover {
     color: $blue;
+  }
+
+  @media screen and (max-width: $phone-portrait) {
+    top: $header-height-mobile;
+    &.opened {
+      @include calc('height', '100vh - ' + $header-height-mobile);
+    }
   }
 }
