@@ -136,12 +136,18 @@ export default class TimelineSegmentComponent extends Component {
   get style() {
     let styles = [];
 
+    // Get the headerHeight
+    let headerHeight = 94;
+    if (window.innerWidth <= 768) {
+      headerHeight = 74;
+    }
+
     // Push the default style
     if (this.args.style) {
       styles.push(this.args.style.replace(/^;+|;+$/g, ''));
     }
 
-    // Add a transition to the face when necessary
+    // Add a transition to the fade when necessary
     if (this.args.fade != 'none' && !this.args.keyframes) {
       let fade = this.args.fade ? this.args.fade : 0.33;
       styles.push('transition: opacity ' + fade + 's');
@@ -170,13 +176,14 @@ export default class TimelineSegmentComponent extends Component {
         w = parseFloat(this.args.width) * this.args.baseWidth;
         h = (w / this.args.originWidth) * this.args.originHeight;
       } else if (this.args.height != null) {
-        h = parseFloat(this.args.height) * this.args.baseHeight;
+        h =
+          parseFloat(this.args.height) * (this.args.baseHeight - headerHeight);
         w = (h / this.args.originHeight) * this.args.originWidth;
       }
     } else if (this.args.left != null || this.args.top != null) {
       let wa = this.args.baseWidth;
       let ha = (wa / this.args.originWidth) * this.args.originHeight;
-      let hb = this.args.baseHeight;
+      let hb = this.args.baseHeight - headerHeight;
       let wb = (hb / this.args.originHeight) * this.args.originWidth;
       if (hb < ha && wb < wa) {
         w = wb;
@@ -195,7 +202,7 @@ export default class TimelineSegmentComponent extends Component {
     }
 
     if (w != null && h != null) {
-      t = (window.innerHeight - h) * 0.5;
+      t = (window.innerHeight - h) * 0.5 + headerHeight;
       l = (window.innerWidth - w) * 0.5;
 
       if (this.args.left) {
