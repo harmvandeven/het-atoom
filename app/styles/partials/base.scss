@@ -17,6 +17,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+body:not(.user-started) {
+  overflow: hidden;
+}
+
 a,
 a:link,
 a:visited {

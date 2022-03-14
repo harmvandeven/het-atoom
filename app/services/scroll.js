@@ -25,6 +25,8 @@ export default class ScrollService extends Service {
   @tracked transitionDuration = 0;
   @tracked transitionEase = 'easeOutSine';
 
+  @tracked isUserStarted = false;
+
   idleTimer = null;
   autoScrollDelay = 10000;
 
@@ -296,5 +298,10 @@ export default class ScrollService extends Service {
         }
       }, context.autoScrollDelay);
     }
+  }
+
+  startByUser() {
+    document.body.classList.add('user-started');
+    this.isUserStarted = true;
   }
 }

@@ -12,9 +12,11 @@ export default class HeaderComponent extends Component {
   @tracked positionWidth = -1;
 
   @action toggleMenu() {
+    this.scroll.startByUser();
     this.menu.toggle();
   }
   @action scrollTop() {
+    this.scroll.startByUser();
     this.menu.close();
     this.scroll.to({
       position: 0,

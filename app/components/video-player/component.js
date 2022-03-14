@@ -16,12 +16,18 @@ export default class VideoPlayerComponent extends Component {
   @tracked readyForUpdate = true;
 
   @service('environment') environment;
+  @service('scroll') scroll;
 
   get src() {
     if (this.args.localSrc && this.environment.config.environment === 'pi') {
       return this.args.localSrc;
     }
     return this.args.src;
+  }
+
+  get isUserStarted() {
+    if (this.environment.config.environment === 'pi') return true;
+    return this.scroll.isUserStarted;
   }
 
   // Get and update the current time based on the frame coming in

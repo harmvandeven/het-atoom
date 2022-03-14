@@ -1,4 +1,4 @@
-<div class='intro'>
+<button class='intro' type="button" {{on 'click' this.userStarted}}>
   <div class='illustration'>
     <div style={{this.illustrationStyle}}>
       <Svg::AtoomIllustration />
@@ -9,6 +9,6 @@
       <Svg::HetAtoom />
     </div>
   </div>
-</div>
+</button>
 
 {{yield}}
