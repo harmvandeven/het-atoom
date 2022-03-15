@@ -39,6 +39,8 @@ export default class ScrollService extends Service {
     });
 
     if (this.environment.config.environment === 'pi') {
+      this.startByUser();
+
       document.addEventListener('mousedown', () => {
         this.clearIdleTimer(this);
         this.cancelTransition(this);
@@ -145,7 +147,7 @@ export default class ScrollService extends Service {
     let autoplay = false;
     if (currParams.autoplay) autoplay = currParams.autoplay;
 
-    if (top != undefined) {
+    if (top != undefined && (this.isUserStarted || top < 1)) {
       this.tranistionRuntime = 0;
       this.tranisitonInitialTop = this.scrollY;
       this.transitionStartTime = new Date().getTime();
@@ -175,6 +177,9 @@ export default class ScrollService extends Service {
           this.to(params);
         }, duration + this.autoScrollDelay * 0.5);
       }
+    } else if (top != undefined) {
+      // Jump to the right position -> the user did not start yet
+      document.documentElement.scrollTop = document.body.scrollTop = top;
     }
   }
 

@@ -2,9 +2,15 @@ import Service from '@ember/service';
 import { A } from '@ember/array';
 import { dasherize } from '@ember/string';
 import chapters from 'het-atoom/content/data/chapters';
+import splash from 'het-atoom/content/data/splash';
 import timeline from 'het-atoom/content/data/timeline';
 
 export default class ContentService extends Service {
+
+  getSplash() {
+    return splash;
+  }
+
   getTimeline() {
     let parts = A();
     for (let i = 0; i < timeline.parts.length; i++) {
