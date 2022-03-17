@@ -22,19 +22,17 @@
   -o-transition: height 0.4s ease-out, top 0.4s ease-out;
   transition: height 0.4s ease-out, top 0.4s ease-out;
 
-  @include flexbox();
-  @include justify-content(center);
-  @include align-items(center);
-  overflow: hidden;
+  overflow: auto;
   &.hidden {
     top: 50%;
     height: 0;
+    overflow: hidden;
   }
 
   .content {
     @include calc('width', '100% - 4rem');
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
 
     button {
       border-radius: 2px;
