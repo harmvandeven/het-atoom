@@ -19,7 +19,6 @@ export default class SplashService extends Service {
   }
 
   hide() {
-    console.log('hide');
     this.isVisible = false;
   }
 }
