@@ -17,6 +17,9 @@ export default class IntroComponent extends Component {
     let elem = this.timeline.getNextContent();
     let coords = this.scroll.getCoords(elem);
     let top = coords.top - (window.innerHeight - coords.height) * 0.5;
+    if (coords.height > window.innerHeight - 200) {
+      top = coords.top - 110;
+    }
     this.scroll.to({
       position: top,
     });
