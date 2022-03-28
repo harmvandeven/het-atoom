@@ -11,7 +11,7 @@
       description: |
         From June until September 1957 the large-scale exhibition Het Atoom was held at Schiphol Airport. It can be seen as the absolute high point of atomic optimism in the Netherlands. Initiated by the Amsterdam Chamber of Commerce and funded by the City of Amsterdam, it painted a particularly positive picture of nuclear energy, solving the world's major problems. No expense was spared to convince visitors of the possibilities.
 
-        Based on the archive of the foundation Het Atoom at the Amsterdam City Archives, photos of Hein de Bouter, and texts from the original exhibition catalogue, this website offers a 3D-reconstruction of the exhibition. Scroll down to take a full tour or use the menu on the top left to select a specific room.
+        Based on the archive of the foundation Het Atoom at the Amsterdam City Archives, photos by Hein de Bouter of the Maria Austria Institute, and texts from the original exhibition catalogue, this website offers a 3D-reconstruction of the exhibition. Scroll down to take a full tour or use the menu on the top left to visit a specific room.
 
         This website has been developed in conjunction with the [Atomic Reactions](https://www.tudelft.nl/library/over-de-library/tu-delft-library-presenteert/atomic-reactions) programme at TU Delft Library, from March 7 until June 3 2022.
     - id: a-0
@@ -244,7 +244,7 @@
         Behalve de bovengenoemde functies van bescherming en warmteafvoer, dient het water ook nog voor het afremmen (modereren) van de gevormde snelle neutronen tot snelheden, waarbij de splijtingen zelfstandig voortgang kunnen vinden.
 
         Deze reactor is ontworpen door de American Machine & Foundry Company (A.M.F.) te New York; als Nederlanders mogen wij er ons over verheugen, dat deze firma een zodanig vertrouwen in onze Nederlandse industrie heeft gehad, dat zij erin toegestemd heeft, dat onder hun supervisie de N.V. Comprimo te Amsterdam en de N.V. Philips te Eindhoven deze reactor hier te lande hebben mogen vervaardigen. Alleen een aantal bijzondere onderdelen, als de splijtstofelementen, vervaardigd door Babcock & Wilcox Corp. te New York en delen der regelapparatuur, van A.M.F. zijn uit de U.S.A. betrokken.
-        
+
         Bruikleen: Ministerie van Onderwijs, Kunsten en Wetenschappen, bediening: Reactor Centrum Nederland, 's-Gravenhage, in samenwerking met de Technische Hogeschool, Delft
 - id: j
   title: Filmzaal
@@ -283,7 +283,7 @@
       description: |
         GMT 14: Waterdicht telapparaat voor fijnere metingen, werkt op batterijen.
         GMT 15: Waterdicht telapparaat, speciaal voor gebruik in mijnen en metingen van sterke radioactiviteit.
-        
+
         Bruikleen: Commissariat à l'Energie Atomique, Parijs
     - id: l-2
       title: Uraniummijn
@@ -296,7 +296,7 @@
         Door zijn radioactiviteit verraadt het erts zijn aanwezigheid; zelfs vanuit een vliegtuig kan het worden opgespoord.
 
         In deze namaak-uraniummijn ziet men dat deze ertsen lichtgevend zijn als zij met ultraviolet licht worden bestraald. Zichtbaar is tevens de ventilatie-inrichting, die nodig is om ophoping van radioactieve gassen (radon) te voorkomen. Voorts is mijngereedschap aanwezig.
-        
+
         Bruikleen: Commissariat à l'Energie Atomique, Parijs
     - id: l-3
       title: Voorbeelden van splijtstof elementen
@@ -310,7 +310,7 @@
         - 12 jaar ontwikkeling van splijtstofelementen.
         - Amerikaanse ontwerpen voor splijtstofelementen
         - Splijtstofelement, zoals in de Bassin-reactor op deze tentoonstelling wordt gebruikt.
-        
+
         Bruiklenen: Commissariat à l'Energie Atomique, Parijs; ICI, Metals Division, Londen; Sylvania Electric Corp. U.S.A.; Babcock & Wilcox Corp., New York
     - id: l-4
       title: Van erts tot metaal
@@ -320,7 +320,7 @@
       alignment: right
       description: |
         _Ruw uraniumerts_ wordt door malen, wassen en zeven veredeld tot _geconcentreerd erts_. Hieruit wordt door een lange reeks chemische bewerkingen afgescheiden een _zuivere uraniumverbinding_. Door behandeling met calciumpoeder in een smeltkroes (thermietreactie) verkrijgt men het _natuurlijke uraniummetaal_, dat in vele kernreactortypen zonder meer kan worden gebruikt.
-        
+
         Indien men, zoals voor sommige reactortypen vereist is, verrijkt uranium wenst te maken, d.w.z. uranium met een verhoogd gehalte aan het splijtbare 235-isotoop, wordt in bovengenoemd proces een tussentrap ingeschakeld, waarbij gasvormig zuiver uraniumfluoride door een enorme diffusiefabriek wordt gepompt. Stap voor stap, door honderden poreuze wanden diffunderend, neemt het gehalte aan uranium-235 langzaam toe. Daarna volgt weer de thermietreactie, om het _verrijkt uraniummetaal_ te verkrijgen.
 
         Bruikleen: Commisariat à l'Energie Atomique, Parijs
@@ -369,26 +369,26 @@
       alignment: right
       description: |
         Model op ware grootte van een kernreactor, waarin natuurlijk (niet verrijkt) Uranium als splijtstof wordt gebruikt en grafiet als moderator om de neutronen te vertragen tot de snelheid waarbij ze nieuwe kernsplijtingen kunnen veroorzaken.
-        
+
         De ontstane warmte, 30.000 kW, wordt door lucht afgevoerd en verdwijnt door de schoorsteen. Het doel van deze reactor is namelijk niet energieproductie, maar het maken van kunstmatige radioactieve isotopen.
-        
+
         Hiertoe worden de te behandelen preparaten door zijdelingse openingen tot in het hart van de reactor gebracht.
-        
+
         De openingen vóórin dienen voor het laden met uraniumstaven.
         Van de linkerzijde ziet men het inwendige van de reactor met de opgestapelde grafietblokken en de daartussen liggende uraniumstaven.
 
         De regelstaaf links kan naar binnen geschoven worden. Het materiaal, waarvan hij gemaakt is, neemt dan zoveel neutronen weg, dat de reactie wordt verminderd, eventueel tot stilstand komt.
-        
+
         Bruikleen: United States Information Service, 's-Gravenhage
     - id: o-16
       title: Master Slave Manipulators ("Magic Hands")
       timeline:
         start: 2525
         end: 2525
-      alignment: left      
+      alignment: left
       description: |
         Met "magic hands", mechanische wonderhanden, kan veilig achter beschermende muren gewerkt worden. Met de grootste precisie volgen de metalen handen elke beweging van de menselijke handen.
-        
+
         Bruikleen: United States Information Service, 's-Gravenhage
 - id: p
   timeline:
@@ -444,9 +444,9 @@
       alignment: left
       description: |
         Prototype van de 3 cm-havenradarinstallaties van de toegang tot het Noordzeekanaal bij IJmuiden en de Nieuwe Rotterdamse Waterweg.
-        
+
         Op het radarscherm wordt de omgeving van de tentoonstelling afgebeeld.
-        
+
         Bruikleen: Nederlandsch Radar Proefstation, Noordwijk aan Zee
     - id: r-1
       title: Electronische rekenmachine
@@ -456,13 +456,13 @@
       alignment: right
       description: |
         Vele ontwikkelingen op kernenergiegebied waren niet mogelijk geweest zonder de electronische rekenmachine, die op zijn beurt weer veel te danken heeft aan de stimulansen, welke hij kreeg uit zijn toepassingsgebieden.
-        
+
         Een I.B.M. 650 rekenmachine wordt in bedrijf getoond. Thans is dit reeds een kleine en - naar verhouding - langzame rekenmachine, vergeleken met zijn grote broers, maar desondanks een instrument, dat het werk van honderden rekenaars kan overnemen.
-        
+
         Ook wordt gedemonstreerd een "Ramac geheugen" voor de 650 miljoenen getallen kunnen hierin worden opgeborgen, maar binnen een seconde kan uit ieder gewenst geheugenvakje het ingeschreven getal worden teruggelezen, resp. er in worden opgetekend.
-        
+
         Werkelijke berekeningen zullen worden uitgevoerd met de 650, afgewisseld met demonstraties van de mogelijkheden en met wedstrijden van de machine tegen de mens, waarbij de laatste steeds verliest. En toch, de mens commandeert de rekenmachine, draagt hem alle details van de berekeningen op, zonder die instructies kan de machine niets.
-        
+
         Bruikleen: Internationale Bedrijfsmachine Maatschappij, Amsterdam
     - id: r-1
       title: De mens vliegt (onderdeel van W)
@@ -472,7 +472,7 @@
       alignment: left
       description: |
         Altijd is de mens gefascineerd geweest door de droom zich vrij in het luchtruim te kunnen bewegen. Sinds de oudste historie zijn ons pogingen bekend om deze droom te verwezenlijken en daarvan worden in deze afdeling enkele voorbeelden getoond. Dit zijn o.a. een Mexicaanse feestballon en de ballon van Montgolfier, Leonardo da Vinci's ontwerpen voor een vliegende mens en natuurgetrouwe copieën van het zweefvliegtuig van Lilienthal en van het eerste, door motorkracht voortbewogen, vliegtuig, waarmee de gebroeders Wright in 1903 erin slaagden los van de grond te komen.
-        
+
         Buiten de hal wordt deze serie voortgezet met de beroemde Fokker F VIIa, met welk type vliegtuig in 1927 de eerste retourvlucht naar het toenmalige Nederlands-Indië werd gemaakt, terwijl de bezoeker, als hij de tentoonstelling heeft verlaten, slechts om zich heen behoeft te zien op de Luchthaven Schiphol, om met eigen ogen te ervaren tot welke hoogte de vliegtuigtechniek zich in nauwelijks vijftig jaar heeft ontwikkeld.
 - id: s
   title: De Keuken van de Toekomst
@@ -572,7 +572,7 @@
   title: Bioscoop- en lezingenzaal
   description: |
     Een groot aantal films uit binnen- en buitenland over het onderwerp der tentoonstelling wordt vertoond.
-    
+
     Enkele malen per dag zullen deze filmvoorstellingen met populair-wetenschappelijke lezingen en demonstraties over electriciteit en electronica, afwisselen.
   parts:
 - id: z
@@ -591,7 +591,7 @@
         - [259 Inventaris van het Archief van de Stichting Internationale Tentoonstelling Het Atoom](https://archief.amsterdam/inventarissen/details/259/) (1955-59), Stadsarchief Amsterdam.
         - Catalogus Het Atoom (1957)
         - [Verslag van de Stichting Internationale Tentoonstelling Het Atoom Amsterdam](https://archief.amsterdam/inventarissen/file/a3e1dab62e146bb7dc697412de54a781) (1958)
-        
+
         ## Secondary sources
         - '[Wegwijzer voor Het Atoom](https://resolver.kb.nl/resolve?urn=ABCDDD:010831533:mpeg21:p013)' (28-06-1957), in: _Het Parool_, Amsterdam.
         - Jacob Berend Bakema (1957) 'Enkele opmerkingen naar aanleiding van Het Atoom', in: _Forum: maandblad voor architectuur en gebonden kunsten_, (Vol. 12, No. 11 november 1957).
