@@ -13,6 +13,11 @@ html {
   color: black;
 }
 
+body {
+  position: relative;
+  min-height: 100%;
+}
+
 body.menu-open {
   overflow: hidden;
 }
