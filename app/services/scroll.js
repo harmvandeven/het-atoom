@@ -306,7 +306,6 @@ export default class ScrollService extends Service {
   }
 
   startByUser() {
-    document.body.classList.add('user-started');
     this.isUserStarted = true;
   }
 }

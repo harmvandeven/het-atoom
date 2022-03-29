@@ -1,70 +1,72 @@
 {{page-title 'Reconstructing Het Atoom'}}
 
-<Header @model={{@model.chaptersContent}} />
-<SplashPage @model={{@model.splash}} />
+<div class='site {{if @model.scroll.isUserStarted 'user-started'}}'>
+  <Header @model={{@model.chaptersContent}} />
+  <SplashPage @model={{@model.splash}} />
 
-<Intro />
+  <Intro />
 
-<ul class='chapters'>
-  {{#each @model.chaptersContent as |chapter index|}}
-    {{#if (or chapter.parts (eq chapter @model.chaptersContent.firstObject))}}
-      <Chapter @model={{chapter}} @index={{index}} />
-    {{/if}}
-  {{/each}}
-</ul>
+  <ul class='chapters'>
+    {{#each @model.chaptersContent as |chapter index|}}
+      {{#if (or chapter.parts (eq chapter @model.chaptersContent.firstObject))}}
+        <Chapter @model={{chapter}} @index={{index}} />
+      {{/if}}
+    {{/each}}
+  </ul>
 
-{{! Base video  }}
-<div class='base-video'>
-  <VideoPlayer
-    @src={{@model.timelineContent.video.src}}
-    @localSrc={{@model.timelineContent.video.localSrc}}
-    @type={{@model.timelineContent.video.type}}
-    @visible={{@model.timeline.visible}}
-    @frame={{@model.timeline.frame}}
-  />
-</div>
-
-{{! Timeline segments }}
-<ul class='timeline'>
-  {{#each @model.timelineContent.parts as |item index|}}
-    <TimelineSegment
-      @src={{item.src}}
-      @localSrc={{item.localSrc}}
-      @start={{item.start}}
-      @end={{item.end}}
-      @length={{item.length}}
-      @fade={{item.fade}}
-      @opacity={{item.opacity}}
-      @width={{item.width}}
-      @height={{item.height}}
-      @top={{item.top}}
-      @left={{item.left}}
-      @originWidth={{item.originWidth}}
-      @originHeight={{item.originHeight}}
-      @style={{item.style}}
-      @keyframes={{item.keyframes}}
-      @baseWidth={{@model.timeline.baseWidth}}
-      @baseHeight={{@model.timeline.baseHeight}}
+  {{! Base video  }}
+  <div class='base-video'>
+    <VideoPlayer
+      @src={{@model.timelineContent.video.src}}
+      @localSrc={{@model.timelineContent.video.localSrc}}
+      @type={{@model.timelineContent.video.type}}
+      @visible={{@model.timeline.visible}}
       @frame={{@model.timeline.frame}}
     />
-  {{/each}}
-</ul>
+  </div>
 
-{{! Timeline progress }}
-{{#if @model.environment.debug}}
-  <div class='timeline-progress'>
-    <div class='indicator' style={{@model.timeline.progressStyle}}>
-      &nbsp;
+  {{! Timeline segments }}
+  <ul class='timeline'>
+    {{#each @model.timelineContent.parts as |item index|}}
+      <TimelineSegment
+        @src={{item.src}}
+        @localSrc={{item.localSrc}}
+        @start={{item.start}}
+        @end={{item.end}}
+        @length={{item.length}}
+        @fade={{item.fade}}
+        @opacity={{item.opacity}}
+        @width={{item.width}}
+        @height={{item.height}}
+        @top={{item.top}}
+        @left={{item.left}}
+        @originWidth={{item.originWidth}}
+        @originHeight={{item.originHeight}}
+        @style={{item.style}}
+        @keyframes={{item.keyframes}}
+        @baseWidth={{@model.timeline.baseWidth}}
+        @baseHeight={{@model.timeline.baseHeight}}
+        @frame={{@model.timeline.frame}}
+      />
+    {{/each}}
+  </ul>
+
+  {{! Timeline progress }}
+  {{#if @model.environment.debug}}
+    <div class='timeline-progress'>
+      <div class='indicator' style={{@model.timeline.progressStyle}}>
+        &nbsp;
+      </div>
     </div>
-  </div>
-{{/if}}
+  {{/if}}
 
-{{! Debug / Development }}
-{{#if @model.environment.debug}}
-  <div class='timeline-debug'>
-    {{@model.timeline.scroll.scrollY}} /
-    {{@model.timeline.frame}}
-  </div>
-{{/if}}
+  {{! Debug / Development }}
+  {{#if @model.environment.debug}}
+    <div class='timeline-debug'>
+      {{@model.timeline.scroll.scrollY}} /
+      {{@model.timeline.frame}}
+    </div>
+  {{/if}}
+</div>
 
 {{outlet}}

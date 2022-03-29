@@ -26,6 +26,7 @@ export default class ApplicationRoute extends Route {
       chaptersContent: this.content.getChapters(),
       splash: this.content.getSplash(),
       timelineContent: this.content.getTimeline(),
+      scroll: this.scroll,
       timeline: this.timeline,
       environment: this.environment,
     };

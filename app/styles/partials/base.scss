@@ -22,7 +22,8 @@ body.menu-open {
   overflow: hidden;
 }
 
-body:not(.user-started) {
+.site:not(.user-started) {
+  height: 100vh;
   overflow: hidden;
 }
 
