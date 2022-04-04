@@ -9,18 +9,14 @@ export default class ApplicationRoute extends Route {
   @service('scroll') scroll;
 
   async model() {
-    if (window.location.hash) {
-      later(() => {
-        let chapter = this.content.getChapterById(
-          window.location.hash.substring(1)
-        );
-        if (chapter && chapter.index != undefined) {
-          let elem = document.getElementById('chapter-header-' + chapter.index);
-          this.scroll.to({ element: elem });
-          this.scroll.active = true;
-        }
-      }, 1000);
+    if (history && history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
     }
+    window.onbeforeunload = function () {
+      if (window.scrollTo) {
+        window.scrollTo(0, 0);
+      }
+    };
 
     return {
       chaptersContent: this.content.getChapters(),
