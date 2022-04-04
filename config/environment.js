@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'het-atoom',
     environment,
     rootURL: '/het-atoom',
-    locationType: 'hash',
+    locationType: 'none',
     showdown: {
       metadata: true,
     },

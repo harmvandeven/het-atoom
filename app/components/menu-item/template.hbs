@@ -1,6 +1,6 @@
 {{#if this.route}}
   {{#if @model.hash}}
-    <LinkTo @route={{this.route}} @model={{@model.hash}}>
+    <button type='button' {{on 'click' this.clickButton}}>
       <li class='link'>
         <div class='id'>
           {{@model.id}}
@@ -9,9 +9,9 @@
           {{@model.title}}
         </div>
       </li>
-    </LinkTo>
+    </button>
   {{else}}
-    <LinkTo @route={{this.route}}>
+    <button type='button' {{on 'click' this.clickButton}}>
       <li class='link'>
         <div class='id'>
           {{@model.id}}
@@ -20,7 +20,7 @@
           {{@model.title}}
         </div>
       </li>
-    </LinkTo>
+    </button>
   {{/if}}
 {{else}}
   <li>
