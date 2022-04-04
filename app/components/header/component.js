@@ -10,11 +10,13 @@ export default class HeaderComponent extends Component {
 
   @tracked positions = [];
   @tracked positionWidth = -1;
+  @tracked positionHeight = -1;
 
   @action toggleMenu() {
     this.scroll.startByUser();
     this.menu.toggle();
   }
+
   @action scrollTop() {
     this.scroll.startByUser();
     this.menu.close();
@@ -25,11 +27,24 @@ export default class HeaderComponent extends Component {
 
   get chapter() {
     let chap = this.args.model.firstObject;
-    if (this.positionWidth != window.innerWidth || this.positions.length < 1) {
+
+    let documentHeight = Math.floor(
+      Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      )
+    );
+
+    if (
+      this.positionWidth != window.innerWidth ||
+      this.positionHeight != documentHeight ||
+      this.positions.length < 1
+    ) {
       next(() => {
         this.calculatePositions();
-        // eslint-disable-next-line ember/no-side-effects
-        this.positionWidth = window.innerWidth;
       });
     }
     let found = false;
@@ -72,6 +87,16 @@ export default class HeaderComponent extends Component {
   }
 
   calculatePositions() {
+    this.positionWidth = window.innerWidth;
+    this.positionHeight = Math.floor(
+      Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      )
+    );
     this.positions = [];
     this.args.model.forEach((item, index) => {
       let elem = document.getElementById('chapter-header-' + index);

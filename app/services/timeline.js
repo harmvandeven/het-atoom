@@ -31,16 +31,22 @@ export default class TimelineService extends Service {
   }
 
   get frame() {
+    let documentHeight = Math.floor(
+      Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      )
+    );
+
     if (
       this.calculatedWidth != window.innerWidth ||
-      this.calculatedHeight != window.innerHeight ||
+      this.calculatedHeight != documentHeight ||
       this.segments.length < 1
     ) {
       next(() => {
-        // eslint-disable-next-line ember/no-side-effects
-        this.calculatedWidth = window.innerWidth;
-        // eslint-disable-next-line ember/no-side-effects
-        this.calculatedHeight = window.innerHeight;
         // calculate the segments
         this.calculateSegments();
       });
@@ -151,6 +157,18 @@ export default class TimelineService extends Service {
   }
 
   calculateSegments() {
+    // Set the calculatedWidth and calculatedHeight
+    this.calculatedWidth = window.innerWidth;
+    this.calculatedHeight = Math.floor(
+      Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      )
+    );
+
     // Get all the segments
     if (this.segments.length < 1) {
       this.segments = [];

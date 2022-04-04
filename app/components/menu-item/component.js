@@ -6,7 +6,6 @@ export default class MenuItemComponent extends Component {
   @service('content') content;
   @service('menu') menu;
   @service('scroll') scroll;
-  @service('splash') splash;
 
   get route() {
     if (this.args.index == 0 || this.args.model.parts) {
@@ -20,6 +19,7 @@ export default class MenuItemComponent extends Component {
     if (this.args.model.hash) {
       // Get the chapter
       let chapter = this.content.getChapterById(this.args.model.hash);
+
       // Close the menu
       this.menu.close();
 
@@ -32,7 +32,7 @@ export default class MenuItemComponent extends Component {
         } else {
           this.scroll.to({
             element: elem,
-            offset: 100,
+            offset: 32,
           });
         }
       }
