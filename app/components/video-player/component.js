@@ -34,6 +34,10 @@ export default class VideoPlayerComponent extends Component {
   get currentTime() {
     // Set the currentTime on the player if it exists
     let time = this.args.frame / this.fps;
+    time = Math.max(0, time);
+    if (this.player) {
+      time = Math.min(time, this.player.duration - 0.1);
+    }
 
     // Run it on the next frame to make sure we don't do a double take
     next(this, () => {
@@ -43,8 +47,10 @@ export default class VideoPlayerComponent extends Component {
           this.readyForUpdate &&
           this.isReady
         ) {
-          if (time && time != NaN) {
+          if (time && !isNaN(time)) {
+            // eslint-disable-next-line ember/no-side-effects
             this.readyForUpdate = false;
+            // eslint-disable-next-line ember/no-side-effects
             this.player.currentTime = time;
           }
           if (this.isPlaying) this.player.pause();
