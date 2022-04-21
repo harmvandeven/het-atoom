@@ -1,0 +1,36 @@
+{{#if this.route}}
+  {{#if @model.hash}}
+    <button type='button' {{on 'click' this.clickButton}}>
+      <li class='link'>
+        <div class='id'>
+          {{@model.id}}
+        </div>
+        <div class='title'>
+          {{@model.title}}
+        </div>
+      </li>
+    </button>
+  {{else}}
+    <button type='button' {{on 'click' this.clickButton}}>
+      <li class='link'>
+        <div class='id'>
+          {{@model.id}}
+        </div>
+        <div class='title'>
+          {{@model.title}}
+        </div>
+      </li>
+    </button>
+  {{/if}}
+{{else}}
+  <li>
+    <div class='id'>
+      {{@model.id}}
+    </div>
+    <div class='title'>
+      {{@model.title}}
+    </div>
+  </li>
+{{/if}}
+
+{{yield}}

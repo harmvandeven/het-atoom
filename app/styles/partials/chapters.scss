@@ -1,0 +1,97 @@
+ul.chapters {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  z-index: 1;
+  max-width: 1200px;
+
+  .chapter-header {
+    @include opacity(0);
+    background-color: white;
+    height: 0px;
+    overflow: visible;
+  }
+
+  > li {
+    position: relative;
+    margin: 50vh 2rem;
+
+    .id {
+      color: $blue;
+      position: absolute;
+      width: 90px;
+      left: 0;
+      top: 0;
+    }
+
+    h1 {
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
+
+    .chapter-part {
+      position: relative;
+      &:not(.filler) {
+        margin: 100vh 0 0 0;
+        @include calc('margin-top', '100vh + 8rem');
+      }
+      ul {
+        list-style: disc;
+        padding: 0 0 0 1rem;
+        margin: 1rem 0;
+        ul {
+          list-style: circle;
+        }
+      }
+
+      .alignment {
+        padding: 0.5rem 1rem;
+        background-color: $light-blue;
+        @media screen and (min-width: $thin-browser + 1) {
+          &.alignment-center {
+            width: 60%;
+            max-width: 600px;
+            margin: 1rem auto;
+          }
+          &.alignment-left {
+            width: 60%;
+            max-width: 600px;
+            margin-right: auto;
+          }
+          &.alignment-right {
+            width: 60%;
+            max-width: 600px;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      h1 {
+        background-color: transparent;
+      }
+    }
+    &:last-child {
+      min-height: 100vh;
+    }
+
+    ol {
+      padding: 1rem;
+    }
+  }
+
+  .chapter-part-debug {
+    display: none;
+    color: $blue;
+    position: absolute;
+    left: 0;
+    &.chapter-part-debug-start {
+      top: 0;
+    }
+    &.chapter-part-debug-end {
+      bottom: 0;
+    }
+  }
+}

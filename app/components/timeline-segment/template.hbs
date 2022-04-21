@@ -1,0 +1,24 @@
+<div class='timeline-segment' data-frame={{this.frame}}>
+  <div class='container' style={{this.style}}>
+    {{#if (eq this.type 'video/mp4')}}
+      <VideoPlayer
+        @src={{this.src}}
+        @type={{this.type}}
+        @visible={{this.visible}}
+        @frame={{this.frame}}
+      />
+    {{else if (eq this.type 'image')}}
+      <ImageElement
+        @src={{this.src}}
+        @visible={{this.visible}}
+        @frame={{this.frame}}
+      />
+    {{else}}
+      <h1>
+        Unknown type: {{this.type}} => {{@src}}
+      </h1>
+    {{/if}}
+  </div>
+</div>
+
+{{yield}}

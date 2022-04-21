@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Het Atoom</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reconstructing Het Atoom</title>
+  <meta name="description"
+    content="From June until September 1957 the large-scale exhibition Het Atoom was held at Schiphol Airport. It can be seen as the absolute high point of atomic optimism in the Netherlands. Based on the archive of the foundation Het Atoom at the Amsterdam City Archives, photos by Hein de Bouter of the Maria Austria Institute, and texts from the original exhibition catalogue, this website offers a 3D-reconstruction of the exhibition. Scroll up or down, or use the menu on the top left to visit a specific room.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/het-atoom.css">
+  {{content-for "head"}}
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/het-atoom.css">
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/het-atoom.js"></script>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{rootURL}}image/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{rootURL}}image/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{rootURL}}image/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{rootURL}}image/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{rootURL}}image/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{rootURL}}image/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{rootURL}}image/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{rootURL}}image/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{rootURL}}image/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{rootURL}}image/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{rootURL}}image/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{rootURL}}image/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{rootURL}}image/favicon/favicon-16x16.png">
+  <link rel="manifest" href="{{rootURL}}image/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#00abdf">
+  <meta name="msapplication-TileImage" content="{{rootURL}}image/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#00abdf">
 
-    {{content-for "body-footer"}}
-  </body>
+  {{content-for "head-footer"}}
+</head>
+
+<body>
+  {{content-for "body"}}
+
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/het-atoom.js"></script>
+
+  {{content-for "body-footer"}}
+</body>
+
 </html>

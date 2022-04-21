@@ -1,0 +1,9 @@
+<div class='menu {{this.menuClass}}'>
+  <ul>
+    {{#each @model as |item index|}}
+      <MenuItem @index={{index}} @model={{item}} />
+    {{/each}}
+  </ul>
+</div>
+
+{{yield}}

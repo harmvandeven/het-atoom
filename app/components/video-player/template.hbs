@@ -1,0 +1,23 @@
+<div
+  class='video-player'
+  data-currentTime={{this.currentTime}}
+  style={{this.style}}
+>
+  {{#if this.isUserStarted}}
+    <video
+      autoplay
+      muted='muted'
+      playsinline
+      controls
+      {{on 'timeupdate' this.setReadyForUpdate}}
+      {{on 'play' this.onPlay}}
+      {{on 'pause' this.onPause}}
+      {{did-insert this.didInsert}}
+    >
+      <source src={{this.src}} type={{@type}} />
+      <!-- fallback content here -->
+    </video>
+  {{/if}}
+</div>
+
+{{yield}}

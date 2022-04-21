@@ -1,17 +1,31 @@
-{{page-title @model.catalogue.firstObject.title}}
-
-<h1>
-  Het Atoom
-</h1>
-<h2>
+{{!-- <h2>
   Catalogue
 </h2>
+
+<ol>
+  {{#each @model.frames as |frame|}}
+    <li>
+      {{frame}}
+    </li>
+  {{/each}}
+</ol>
 
 {{#each @model.catalogue as |item|}}
   <h3>
     {{item.title}}
   </h3>
   {{markdown-to-html markdown=item.description extensions='showdownCaption'}}
+
+  <ul>
+    {{#each item.parts as |part|}}
+      <h4>
+        {{part.id}}: {{part.title}}
+      </h4>
+      {{markdown-to-html markdown=part.description extensions='showdownCaption'
+      }}
+    {{/each}}
+  </ul>
+
   <hr />
 {{/each}}
 
@@ -25,6 +39,6 @@
   </h3>
   {{markdown-to-html markdown=item.description extensions='showdownCaption'}}
   <hr />
-{{/each}}
+{{/each}} --}}
 
 {{outlet}}

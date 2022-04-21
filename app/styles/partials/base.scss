@@ -1,3 +1,39 @@
+$blue: #10a7dc;
+$light-blue: #d1e8f6;
+
+$header-height: 94px;
+$header-height-mobile: 74px;
+
+$thin-browser: 512px;
+$phone-portrait: 768px;
+$tablet-portrait: 940px;
+
 html {
-  background-color: gainsboro;
+  background-color: white;
+  color: black;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.site:not(.user-started) {
+  height: 100vh;
+  overflow: hidden;
+}
+
+a,
+a:link,
+a:visited {
+  cursor: pointer;
+  color: $blue;
+  @include transition(color 0.2s);
+}
+a:hover {
+  color: inherit;
 }

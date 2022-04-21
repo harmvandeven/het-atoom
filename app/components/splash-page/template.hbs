@@ -1,0 +1,24 @@
+<div class='splash-page {{this.class}}'>
+  <div class='content'>
+    {{#if @model.title}}
+      <h2>
+        {{@model.title}}
+      </h2>
+    {{/if}}
+    {{#if @model.description}}
+      {{! template-lint-disable no-curly-component-invocation }}
+      {{markdown-to-html
+        markdown=@model.description
+        extensions='showdownCaption'
+      }}
+    {{/if}}
+
+    {{#if @model.button}}
+      <button type='button' {{on 'click' this.close}}>
+        {{@model.button}}
+      </button>
+    {{/if}}
+  </div>
+</div>
+
+{{yield}}

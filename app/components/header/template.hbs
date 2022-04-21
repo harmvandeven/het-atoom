@@ -1,0 +1,22 @@
+<div class='header {{this.menuClass}}'>
+  <div class='title' {{on 'click' this.toggleMenu}}>
+    <div class='id'>
+      {{this.chapter.id}}
+    </div>
+    <h1>
+      {{this.chapter.title}}
+    </h1>
+  </div>
+  <div class='het-atoom-title' {{on 'click' this.scrollTop}}>
+    <div class='illustration'>
+      <Svg::AtoomIllustration />
+    </div>
+    <div class='logo'>
+      <Svg::HetAtoom />
+    </div>
+  </div>
+</div>
+
+<Menu @isOpen={{this.menu.isOpen}} @model={{@model}} />
+
+{{yield}}

@@ -1,0 +1,18 @@
+<div
+  class='chapter-header'
+  id='chapter-header-{{@index}}'
+  data-start={{@model.timeline.start}}
+  data-end={{@model.timeline.end}}
+  style={{this.style}}
+>
+  {{#if (and @model.id (not-eq @model.id '-'))}}
+    <div class='id'>
+      {{@model.id}}
+    </div>
+  {{/if}}
+  <h1 class='title'>
+    {{@model.title}}
+  </h1>
+</div>
+
+{{yield}}

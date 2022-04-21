@@ -1,3 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Yantramanav', Helvetica, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 32px;
+  line-height: 30px;
+}
+h2 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.header,
+.header h1 {
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  .id {
+    text-transform: uppercase;
+  }
+}
+
+.menu {
+  font-size: 32px;
+  line-height: 30px;
+  a.active {
+    font-weight: 700;
+  }
+  .id {
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: $phone-portrait) {
+  body {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .header,
+  .header h1 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .menu {
+    font-size: 26px;
+    line-height: 24px;
+  }
 }

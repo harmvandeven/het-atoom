@@ -5,12 +5,25 @@ module.exports = function (deployTarget) {
   let ENV = {
     build: {},
     // include other plugin configuration that applies to all deploy targets here
+    // Enable the git-pages plugin only in production deployments
+    pipeline: {
+      disabled: {
+        cp: deployTarget != 'pi',
+        git: deployTarget != 'production',
+      },
+    },
   };
 
+  // Setup the git-pages config
   ENV.git = {
     repo: 'git@github.com:harmvandeven/het-atoom.git',
     branch: 'github-pages',
     commitMessage: 'Deployed %@',
+  };
+
+  // Create a deploy location of the PI version
+  ENV.cp = {
+    destDir: '../deploy-het-atoom-pi/het-atoom',
   };
 
   if (deployTarget === 'development') {
@@ -21,6 +34,11 @@ module.exports = function (deployTarget) {
   if (deployTarget === 'staging') {
     ENV.build.environment = 'production';
     // configure other plugins for staging deploy target here
+  }
+
+  if (deployTarget === 'pi') {
+    // Add a PI deployTarget
+    ENV.build.environment = 'pi';
   }
 
   if (deployTarget === 'production') {

@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100vw;
+  height: $header-height;
+  background-color: white;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  .title {
+    overflow: hidden;
+    cursor: pointer;
+    height: 42px;
+    @include calc('width', '100% - 280px');
+    .id {
+      margin-left: 20px;
+      width: 52px;
+      float: left;
+    }
+    h1 {
+      margin: 0;
+      float: left;
+      white-space: nowrap;
+      @include calc('width', '100% - 82px');
+    }
+    @include clearfix;
+    @include transition(color 0.2s);
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .het-atoom-title {
+    top: 0-$header-height;
+    @include transition(top 0.2s);
+    height: 42px;
+    position: relative;
+    cursor: pointer;
+    svg {
+      @include transition(fill 0.2s);
+      ellipse,
+      path {
+        @include transition(stroke 0.2s);
+      }
+    }
+    .logo {
+      position: absolute;
+      z-index: 2;
+      right: 32px;
+      top: 0;
+      svg {
+        width: 183px;
+        height: 35px;
+      }
+    }
+    .illustration {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 232px;
+      svg {
+        width: 35px;
+        height: 35px;
+        ellipse {
+          fill: none;
+          stroke: black;
+          stroke-width: 8;
+        }
+        path {
+          @include transition(fill 0.2s);
+          fill: black;
+          stroke: black;
+          stroke-width: 40;
+          stroke-linecap: round;
+        }
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $blue;
+      }
+      .illustration svg {
+        ellipse,
+        path {
+          stroke: $blue;
+        }
+      }
+    }
+  }
+
+  &.logo-visible {
+    .het-atoom-title {
+      top: 2px;
+    }
+  }
+
+  @media screen and (max-width: $phone-portrait) {
+    height: $header-height-mobile;
+
+    .title {
+      @include calc('width', '100% - 70px');
+      height: 32px;
+    }
+    .het-atoom-title {
+      top: 0-$header-height-mobile;
+      .logo {
+        display: none;
+      }
+      .illustration {
+        right: 32px;
+      }
+    }
+  }
+}

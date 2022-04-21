@@ -1,0 +1,9 @@
+<li class='chapter'>
+  <ChapterHeader @model={{@model}} @index={{@index}} />
+
+  {{#each @model.parts as |item|}}
+    <ChapterPart @model={{item}} />
+  {{/each}}
+</li>
+
+{{yield}}

@@ -1,0 +1,627 @@
+- id: a
+  title: Ingang
+  timeline:
+    start: -1
+  parts:
+    - id: a-1
+      title: Reconstructing Het Atoom
+      timeline:
+        start: 0
+        end: 0
+      description: |
+        From June until September 1957 the large-scale exhibition Het Atoom was held at Schiphol Airport. It can be seen as the absolute high point of atomic optimism in the Netherlands. Initiated by the Amsterdam Chamber of Commerce and funded by the City of Amsterdam, it painted a particularly positive picture of nuclear energy, solving the world's major problems. No expense was spared to convince visitors of the possibilities.
+
+        Based on the archive of the foundation Het Atoom at the Amsterdam City Archives, photos by Hein de Bouter of the Maria Austria Institute, and texts from the original exhibition catalogue, this website offers a 3D-reconstruction of the exhibition. Scroll down to take a full tour or use the menu on the top left to visit a specific room.
+
+        This website has been developed in conjunction with the [Atomic Reactions](https://www.tudelft.nl/library/over-de-library/tu-delft-library-presenteert/atomic-reactions) programme at TU Delft Library, from March 7 until June 3 2022.
+    - id: a-0
+      title: Atoomenergie - Onze toekomst
+      timeline:
+        start: 398
+        end: 398
+      description: |
+        ## Duizenden jaren lang beschikte de mens slechts over één energiebron: zijn spierkracht
+
+        Om zijn spierkracht doelmatiger te gebruiken vond de mens werktuigen uit. Hij bouwde molens, die door de wind werden aangedreven; hij maakte gebruik van de kracht van het stromende water en tweehonderd jaar geleden deed hij een grote ontdekking: de stoommachine.
+
+        De explosiemotor verdrong de stoommachine, de electriciteit betekende wéér een nieuwe vorm van energie, maar voor de brandstof, die al deze machines in beweging moet houden, was het noodzakelijk de wel zeer grote, maar niet onuitputtelijke voorraden steenkolen en aardolie, diep verborgen in de schoot der aarde, te exploiteren. Nog slechts korte tijd en die voorraden zullen zijn uitgeput. Het einde is in zicht. En wat dan?
+- id: b
+  title: Historie Energie Voorziening
+  timeline:
+    start: 646
+  parts:
+    - id: b-0
+      title: "Wij zijn aan het \"potverteren!\""
+      timeline:
+        start: 646
+      description: |
+        De wereld&shy;bevolking groeit, de behoeften nemen toe en koortsachtig zoekt de mens naar nieuwe energie&shy;bronnen. De zon kan hem helpen, maar zij staat te ver van de aarde af. De maan, die door haar aantrekkings&shy;kracht op de aarde de zeeën in rusteloze beweging houdt, kan ons eveneens helpen, maar de bijdrage is uiterst gering.
+        Is er dan niets, dat ons redden kan?
+        Ja! Want de menselijke geest heeft een geheel nieuwe, onvoorstelbaar grote energiebron ontdekt: de atoomkern&shy;energie!
+        De atoomkern&shy;energie luidt een nieuw tijdperk van de menselijke beschaving in:
+        - méér energie;
+        - grotere productie;
+        - méér voedsel;
+        - méér welvaart.
+    - id: b-1
+      title: "Draaimolen \"de Mens\""
+      timeline:
+        end: 646
+      alignment: left
+      description: Eeuwenlang beschikte de mens slechts over zijn spierkracht
+    - id: b-2
+      title: Spierkracht
+      timeline:
+        start: 779
+      alignment: left
+      description: "Foto's van Nat Farbman; met toestemming van het tijdschrift \"Life\""
+    - id: b-3
+      title: Tredrad
+      timeline:
+        end: 779
+      alignment: right
+      description: "O.a. gebruikt in mijnen om water te pompen voordat machines deze taak overnamen."
+    - id: b-4
+      title: "Stoomautomobiel, merk \"Serpollet\", anno 1900"
+      timeline:
+        start: 931
+      alignment: right
+      description: "Bruikleen: Alec Hodsdon, Lavenham, Suffolk, England"
+    - id: b-5
+      title: "Stoommachine anno 1851"
+      timeline:
+        end: 931
+      alignment: left
+      description: "Bruikleen: Museum \"De Cruquius\", Vijfhuizen"
+- id: c
+  timeline:
+    start: 999
+  title: Moleculen en Atomen
+  parts:
+    - id: c-0
+      title: Wat zijn atomen?
+      timeline:
+        start: 999
+      description: |
+        Dit is de wereld van het allerkleinste, onvoorstelbaar klein en onvoorstelbaar leeg tegelijkertijd. Het atoom bestaat uit een kern en om deze kern cirkelen de electronen. Een molecuul bestaat uit een samenstel van atomen; in het kristal zijn die moleculen weer op regelmatige wijze gerangschikt. In vloeistoffen bewegen zij zich vrijer en in gassen is elke orde of regelmaat verbroken, maar in het molecuul behouden de atomen ook dan hun vaste plaats.
+    - id: c-1
+      title: Atoom model 7 m diameter
+      timeline:
+        start: 999
+      alignment: left
+      description: "Zo leeg is een atoom!"
+    - id: c-2
+      title: Sneeuwkristal
+      timeline:
+        end: 999
+      alignment: right
+      description: |
+        Het sneeuwkristal is een fraai voorbeeld van de duizenden kristallen welke in de natuur voorkomen. De wonderlijke vormen van kristallen hebben de mens steeds weer geboeid. Wij weten thans dat deze uiterlijke verschijningsvormen het gevolg zijn van de strikt regelmatige rangschikking van de atomen in de moleculen en van de moleculen in de kristalroosters.
+    - id: c-3
+      title: Kristalvormen in de natuur
+      timeline:
+        start: 1089
+      alignment: right
+      description: "bruikleen: E. Th. Erb, Blaricum"
+    - id: c-4
+      title: Afbuiging van röntgenstralen
+      timeline:
+        end: 1089
+      alignment: left
+      description: "bruikleen: Laboratorium voor Physische Scheikunde, Technische Hogeschool Delft"
+- id: d
+  title: De Atoomkern, Isotopen
+  timeline:
+    start: 1152
+  parts:
+    - id: d-0
+      title: "De atoomkern: telraam van de natuur"
+      timeline:
+        start: 1152
+      description: |
+        Met de gebrekkige hulpmiddelen, waarover de mens eeuwenlang slechts beschikte, is hij er toch in geslaagd enkele eigenschappen van het molecuul en het atoom te ontdekken. Maar pas de laatste tientallen jaren slaagde hij er in door te dringen tot de geheimen van de kern, die uit twee elementaire bouwstoffen bestaat: protonen en neutronen. Hun aantal bepaalt de eigenschappen van de stof en de plaats van deze in de systematische rangschikking der elementen: het periodiek systeem. Ook ontdekte hij, dat sommige elementen weliswaar dezelfde chemische eigenschappen hadden, doch niet hetzelfde gewicht van de kern: de isotopen.
+    - id: d-1
+      title: Periodiek systeem der elementen
+      timeline:
+        start: 1152
+      alignment: left
+      description: |
+        Een geordende opstelling van de 101 elementen, die de bouwstenen zijn waaruit alle stoffen in het heelal zijn samengesteld.
+        Groen: de 90 elementen, die in de natuur voorkomen.
+        Blauw: de 11 elementen, die de mens heeft weten te vervaardigen
+        ## Isotopen
+        Elk element heeft zijn eigen vaste aantal protonen in de kern, maar het aantal neutronen varieert.
+        Deze "variaties" van de elementen noemt men isotopen. Chemisch gedragen zij zich gelijk, maar de eigenschappen van de kern kunnen sterk verschillen.
+    - id: d-2
+      title: "Fotowand \"Het Heelal\""
+      timeline:
+        end: 1152
+      alignment: right
+      description: "Bruikleen: United States Information Service, 's-Gravenhage"
+- id: e
+  title: Historie der wetenschap
+  timeline:
+    start: 1260
+  parts:
+    - id: e-0
+      title: "Eeuwige raadselen"
+      timeline:
+        start: 1260
+      description: |
+        Zolang de mens op aarde leeft, heeft hij getracht de geheimen der natuur te ontrafelen: de boeiende wereld van zon en maan, sterren en planeten probeerde hij te doorgronden, maar ook trachtte hij een antwoord te vinden op de vraag waaruit de stof was opgebouwd. Een lange, moeilijke weg van vallen en opstaan, want vaak was hij op de verkeerde weg en zag hij zich later genoodzaakt stellingen, die schijnbaar onomstotelijk vast stonden, te herzien. Maar hij vermeerderde steeds zijn kennis en stap voor stap drong hij dieper binnen-in de wonderlijke wereld van de natuur.
+    - id: e-1
+      title: Demokritus
+      timeline:
+        end: 1260
+      alignment: left
+      description: |
+        Demokritus, een Griek, dacht ±400 vóór Christus over het wezen van de natuur. Zijn overpeinzingen leidden hem tot de gedachte, dat alle stof uiteindelijk uit ondeelbare deeltjes moet zijn samengesteld, die hij a-tomos (on-deelbaar) noemde.
+- id: f
+  title: Natuurlijke en kunstmatige radioactiviteit
+  timeline:
+    start: 1409
+  parts:
+    - id: f-0
+      title: Radioactiviteit
+      timeline:
+        start: 1409
+      description: |
+        Het element radium, de grote ontdekking van het echtpaar Curie, bleek een wonderlijke en tot dusver onbekende eigenschap te hebben: het zendt straling uit, terwijl de kern van structuur verandert (radioactiviteit). Deze ontdekking leidde tot nieuwe experimenten: de mens trachtte deze natuurlijke straling na te bootsen door zelf de kern van een atoom te "bombarderen" met kleine atoomdeeltjes. Het zijn deze proefnemingen, die de deur hebben geopend voor een geheel nieuwe tak van wetenschap, de kernphysica.
+    - id: f-1
+      title: Radium-vervalreeks
+      timeline:
+        end: 1409
+      alignment: right
+      description: |
+        - alpha-deeltjes (heliumkernen)
+        - beta-deeltjes (electronen)
+        Elk radioactief atoom verliest één of meermalen een fragmentje van zijn kern en verandert daarbij telkens in een ander element, tot de kern uiteindelijk stabiel wordt. De reeks van "tussentrappen", die het al veranderend doorloopt, noemt men een _vervalreeks_.
+- id: g
+  title: "\"Kolossale\" hulpmiddelen"
+  timeline:
+    start: 1496
+  parts:
+    - id: g-0
+      timeline:
+        start: 1496
+      title: "Kolossale hulpmiddelen"
+      description: |
+        De krachten, die de atoomkern bij elkaar houden, zijn reusachtig groot. Wil de mens die kern splijten en de vrijkomende energie aan zijn wil onderwerpen, dan moet hij beschikken over instrumenten, die een nog grotere energie ontwikkelen dan die, welke de kern bij elkaar houdt. Generatoren en cyclotrons, waarmee men met miljoenen volts en onvoorstelbare snelheden de geheimen van de straling en de transmutatie kon doorgronden, waren dan ook nodig om de kernphysica verder te ontwikkelen.
+    - id: g-1
+      title: Cascade-generatoren
+      timeline:
+        end: 1496
+      alignment: left
+      description: |
+        Met Cascade-generatoren kunnen gelijkspanningen tot enige miljoenen Volts opgewekt worden. Deze installaties worden o.a. gebruikt om deeltjes te versnellen met deze hoge spanningen (bijv. protonen, deuteronen, heliumkernen). Dergelijke kunstmatig versnelde deeltjes dienen voor het onderzoek van de kernen.
+        De werking berust op het principe dat een aantal in serie geschakelde condensatoren voortdurend geladen worden gehouden op een betrekkelijk lage spanning (bijv. enige honderdduizenden Volts); de hoogspanningselectrode verkrijgt dan een spanning gelijk aan de som van de spanningen van deze condensatoren.
+        bruikleen: N.V. Philips, Eindhoven
+- id: h
+  title: Radioactiviteit, zichtbaar voor iedereen
+  description: |
+    ## Van het laboratorium naar de praktijk!
+    ## Theorie wordt werkelijkheid!
+    In 1938 werd aan de werktafel van Professor Otto Hahn voor het eerst de splijting van een zware uraniumkern door een neutron waargenomen, waarbij naar berekening een energie van tweehonderd miljoen electronvolt vrij kwam: massa was energie geworden! Overal ter wereld werd het experiment herhaald en daarbij werd ontdekt, dat er méér neutronen vrij kwamen dan het ene, dat nodig was om de splijting tot stand te brengen. De mogelijkheid van een \"kettingreactie\", splijting op splijting in groeiend aantal, met een onvoorstelbare energie-ontwikkeling, was ontdekt!
+    Jaren van ingespannen arbeid volgden, tot op 2 december 1942 de eerste \"atoomzuil\" kon worden ontstoken als voorloper van de tegenwoordige kernreactoren: de beheerste kettingreactie was een feit geworden.
+- id: i
+  title: Uitzicht op de energiebronnen van de toekomst
+  timeline:
+    start: 1653
+  description:
+  parts:
+    - id: i-0
+      title: "De poort naar de wereld van morgen staat wijd open!"
+      alignment: left
+      timeline:
+        start: 1653
+        end: 1653
+      description: |
+        ## Het tijdperk der atoomenergie is begonnen!
+        Met reuzenschreden heeft de techniek van de kernsplijting zich de laatste jaren ontwikkeld. Talrijke, aanvankelijk schier onoverkomelijke moeilijkheden zijn overwonnen: de automatische regeling van de kettingreactie, materialen, die de intensieve straling weerstaan, de warmte-overdracht, de beveiliging en de koeling, enz.
+
+        Vele reactoren zijn nu al in bedrijf. Het eerste atoomschip, de onderzeeboot "Nautilus" heeft reeds tienduizenden zeemijlen afgelegd, het eerste tankschip, door kernenergie voortgestuwd, is in aanbouw, de reactor in Calder Hall (Engeland) voorziet een groot gebied reeds van electrische stroom. Op "Het Atoom" staat de eerste kernreactor, die ooit in Nederland is geplaatst; hier wordt energie uit atoomkernen geproduceerd.
+    - id: i-0
+      title: "De eerste kernreactor in Nederland"
+      timeline:
+        start: 1787
+        end: 1787
+      alignment: right
+      description: |
+        Deze reactor, aangeschaft door het Ministerie van Onderwijs, Kunsten en Wetenschappen, zal worden opgesteld in Delft voor hoger onderwijs doeleinden.
+
+        Dank zij de welwillende medewerking van dit Ministerie, de Technische Hogeschool en het Reactor Centrum Nederland wordt deze reactor eerst aan de bezoekers van deze tentoonstelling in volle werking getoond.
+
+        Het personeel controleert de reactor met de vele instrumenten op het controle paneel, maar ook de bezoekers zullen zelf het effect van de atoomsplijtingen direct kunnen waarnemen. Onder in het waterbassin zien zij de splijtstofelementen, gehuld in een geheimzinnige blauwe gloed: het oplichten van het water onder de inwerking van de intensieve straling, welke in de reactor wordt opgewekt, De wachtenden nemen dit verschijnsel bovendien waar op de televisie-apparaten, welke bij de voet van de reactor zijn opgesteld; de televisie-camera bevindt zich onder in het waterbassin naast het pakket splijtstofelementen.
+
+        Om bezoekers en personeel te beschermen tegen de straling, is de reactor geplaatst in een ca 7 meter diep waterbassin, vandaar de naam bassin-reactor. Deze waterlaag reduceert de straling aan het oppervlak tot ver beneden de sterkte, die voor de mens toelaatbaar is, ook bij voortdurend verblijf bovenop; de dikke betonnen mantel geeft eenzelfde bescherming bij de, voet. Het bassin is gevuld met ongeveer 50 m3 zeer zuiver water, dat voortdurend (1 x per 10 uur) wordt rondgepompt door een reinigingsinstallatie. Hierdoor behoudt het water een zuiverheid die 1O tot 100 maal beter is dan het gedestilleerde water, dat bijv. door apothekers wordt gebruikt.
+
+        De splijtstof bestaat uit 17 kilogram uranium, verrijkt tot 20%, met het splijtbare 235-isotoop. Deze splijtstof is ondergebracht in ca 20 langwerpige splijtstofelementen in dunne, evenwijdige platen van een uranium-aluminium legering. Tussen deze platen circuleert het water voor de afvoer van de ontwikkelde warmte. Het in deze splijtstofelementen verwerkte verrijkte uranium is door de Amerikaanse Atomic Energy Commission in bruikleen ter beschikking gesteld als uitvloeisel van een in 1955 tussen de Amerikaanse en Nederlandse regeringen gesloten bilaterale overeenkomst; Nederland was één der eerste landen in de wereld dat een dergelijke overeenkomst afsloot.
+
+        Het vermogen van de reactor bedraagt tijdens de tentoonstelling 10 kW, maar zal te zijner tijd in Delft bij opstelling in een groter bassin en met meer splijtstof tot 100 kW worden opgevoerd.
+
+        De regeling geschiedt vol-automatisch met regelstaven, terwijl stopstaven de reactor direct tot stilstand kunnen brengen. Onder geen enkele voorstelbare mogelijkheid kan deze reactor ooit tot gevaarlijke situaties aanleiding geven; een temperatuurverhoging van het water van enige tientallen graden is reeds voldoende om de kettingreactie te onderbreken.
+
+        Behalve de bovengenoemde functies van bescherming en warmteafvoer, dient het water ook nog voor het afremmen (modereren) van de gevormde snelle neutronen tot snelheden, waarbij de splijtingen zelfstandig voortgang kunnen vinden.
+
+        Deze reactor is ontworpen door de American Machine & Foundry Company (A.M.F.) te New York; als Nederlanders mogen wij er ons over verheugen, dat deze firma een zodanig vertrouwen in onze Nederlandse industrie heeft gehad, dat zij erin toegestemd heeft, dat onder hun supervisie de N.V. Comprimo te Amsterdam en de N.V. Philips te Eindhoven deze reactor hier te lande hebben mogen vervaardigen. Alleen een aantal bijzondere onderdelen, als de splijtstofelementen, vervaardigd door Babcock & Wilcox Corp. te New York en delen der regelapparatuur, van A.M.F. zijn uit de U.S.A. betrokken.
+
+        Bruikleen: Ministerie van Onderwijs, Kunsten en Wetenschappen, bediening: Reactor Centrum Nederland, 's-Gravenhage, in samenwerking met de Technische Hogeschool, Delft
+- id: j
+  title: Filmzaal
+  description: Vertoning van korte documentaire films
+  parts:
+- id: k
+  title: Kernsplijting, hoe en hoever
+  timeline:
+    start: 1807
+  parts:
+    - id: k-0
+      timeline:
+        start: 1807
+        end: 1807
+      title: Kernsplijting, hoe en hoever
+      description: |
+        De grote uranium-235-kernen kunnen splijten, d.w.z. uiteenvallen in twee nieuwe elementen van ongeveer gelijke massa. Deze splijting treedt op, als een uranium-235-kern getroffen wordt door een neutron. Bovendien zendt de splijtende kern zelf óók weer twee of drie neutronen uit, die op hun beurt weer nieuwe kernen kunnen splijten: _de kettingreactie_. De kettingreactie kan ongecontroleerd verlopen (een explosie) of beheerst: in de kernreactor.
+- id: l
+  title: Uranium, de grondstof
+  timeline:
+    start: 1923
+  parts:
+    - id: l-0
+      title: In de ingewanden der aarde
+      timeline:
+        start: 1923
+        end: 1923
+      description: |
+        Nieuwe energie, nieuwe grondstoffen: uraniumerts. Eeuwenlang een nauwelijks bekend produkt, slechts gebruikt voor het kleuren van glas en aardewerk. Tot uraniumerts in 1942 opeens dé energiebron van de toekomst bleek te zijn. Oude vindplaatsen werden ontgonnen, nieuwe werden opgespoord. Over de hele wereld knetterden de telapparaten, die het kostbare erts moesten aanwijzen. Rum Jungle, Radium Hill, Behara-Esra, Zyryanovsk,... onbekende plaatsen tot nog toe op de wereldkaart, thans belangrijke vindplaatsen van uranium.
+    - id: l-1
+      title: Draagbare telapparaten
+      timeline:
+        start: 1923
+        end: 1923
+      alignment: right
+      description: |
+        GMT 14: Waterdicht telapparaat voor fijnere metingen, werkt op batterijen.
+        GMT 15: Waterdicht telapparaat, speciaal voor gebruik in mijnen en metingen van sterke radioactiviteit.
+
+        Bruikleen: Commissariat à l'Energie Atomique, Parijs
+    - id: l-2
+      title: Uraniummijn
+      timeline:
+        start: 1991
+        end: 1991
+      alignment: left
+      description: |
+        Uranium komt in verschillende ertsen in de aardbodem voor, zoals o.a. pekblende. Beroemde vindplaatsen zijn Tsjecho-Slowakije, Canada en de Belgische Congo. Ook in de Verenigde Staten, Frankrijk, de Sovjet Unie, Zuid Afrika en Australië zijn tegenwoordig uraniummijnen.
+        Door zijn radioactiviteit verraadt het erts zijn aanwezigheid; zelfs vanuit een vliegtuig kan het worden opgespoord.
+
+        In deze namaak-uraniummijn ziet men dat deze ertsen lichtgevend zijn als zij met ultraviolet licht worden bestraald. Zichtbaar is tevens de ventilatie-inrichting, die nodig is om ophoping van radioactieve gassen (radon) te voorkomen. Voorts is mijngereedschap aanwezig.
+
+        Bruikleen: Commissariat à l'Energie Atomique, Parijs
+    - id: l-3
+      title: Voorbeelden van splijtstof elementen
+      timeline:
+        start: 2054
+        end: 2054
+      alignment: left
+      description: |
+        Meestal worden de splijtstofelementen beschermd door een omhulsel, dat weinig neutronen absorbeert, bijv. magnesium of aluminium. Verschillende uitvoeringen worden getoond.
+        - Splijtstofelement uit de reactor te Marcoule.
+        - 12 jaar ontwikkeling van splijtstofelementen.
+        - Amerikaanse ontwerpen voor splijtstofelementen
+        - Splijtstofelement, zoals in de Bassin-reactor op deze tentoonstelling wordt gebruikt.
+
+        Bruiklenen: Commissariat à l'Energie Atomique, Parijs; ICI, Metals Division, Londen; Sylvania Electric Corp. U.S.A.; Babcock & Wilcox Corp., New York
+    - id: l-4
+      title: Van erts tot metaal
+      timeline:
+        start: 2054
+        end: 2054
+      alignment: right
+      description: |
+        _Ruw uraniumerts_ wordt door malen, wassen en zeven veredeld tot _geconcentreerd erts_. Hieruit wordt door een lange reeks chemische bewerkingen afgescheiden een _zuivere uraniumverbinding_. Door behandeling met calciumpoeder in een smeltkroes (thermietreactie) verkrijgt men het _natuurlijke uraniummetaal_, dat in vele kernreactortypen zonder meer kan worden gebruikt.
+
+        Indien men, zoals voor sommige reactortypen vereist is, verrijkt uranium wenst te maken, d.w.z. uranium met een verhoogd gehalte aan het splijtbare 235-isotoop, wordt in bovengenoemd proces een tussentrap ingeschakeld, waarbij gasvormig zuiver uraniumfluoride door een enorme diffusiefabriek wordt gepompt. Stap voor stap, door honderden poreuze wanden diffunderend, neemt het gehalte aan uranium-235 langzaam toe. Daarna volgt weer de thermietreactie, om het _verrijkt uraniummetaal_ te verkrijgen.
+
+        Bruikleen: Commisariat à l'Energie Atomique, Parijs
+    - id: l-4
+      title: Uitzicht op zaal P (Isotopen in de praktijk)
+      timeline:
+        start: 2151
+        end: 2151
+      alignment: right
+- id: m
+  title: Bibliotheek en leeszaal
+  description: Boeken en tijdschriften over het onderwerp van de tentoonstelling.
+  credit: "bruikleen: N.V. de Weduwe J. Ahrend & Zoon's Amsterdamse Handelsvereniging, Amsterdam"
+  parts:
+- id: n
+  title: Een werkende kernreactor
+  parts:
+- id: o
+  title: Modellen van kernreactoren
+  timeline:
+    start: 2240
+  description:
+  parts:
+    - id: o-1
+      alignment: right
+      timeline:
+        start: 2240
+        end: 2240
+      title: 9 type kernreactoren
+      description: |
+        1. Gasgekoelde Grafiet-reactor. Splijtstofelementen van natuurlijk uranium bevinden zich in een moderator van zeer zuiver grafiet, Deze moderator remt de bij de splijting van de uraniumkernen vrijgekomen snelle neutronen af tot de snelheid, vereist om de kettingreactie op gang te houden. De in de splijtstofelementen ontwikkelde warmte wordt afgevoerd naar warmtewisselaars door middel van gas onder hoge druk. De uit de reactorkern wegvliegende neutronen worden door een grafietreflector ten dele teruggekaatst.
+        2. Natriumgekoelde Grafiet-reactor. In de grafietmoderator (vertrager van snelle neutronen) zijn de splijtstofelementen van natuurlijk uranium geplaatst; de ontwikkelde warmte wordt afgevoerd naar de warmtewisselaars met behulp van vloeibaar natrium (metaal).
+        3. Bassin-reactor. Met het isotoop-235 verrijkte uranium-splijtstofelementen zijn geplaatst op de bodem van een ca. 8 meter diep bassin, gevuld met gewoon doch zeer zuiver water. Dit water heeft een 3-voudige functie: vertraging (modereren) van de snelle neutronen, afvoer van de ontwikkelde warmte en absorptie van de opgewekte radioactieve straling, waardoor het personeel veilig kan werken. Door zijn eenvoud en grote beschikbare ruimte voor experimenten is dit type reactor zeer geschikt voor wetenschappelijk onderzoek. De reactor, die op "Het Atoom" in werking te zien is, is een bassin-reactor.
+        4. Zwaar-water-reactor. De splijtstofelementen van natuurlijk uranium bevinden zich in zwaar-water. Dit zwaar-water dient zowel als moderator (vertrager) van de gevormde snelle neutronen, als ook om de ontwikkelde warmte af te voeren naar de warmtewisselaars. Dit type reactor is opgesteld te Kjeller in Noorwegen in het Instituut der Noors-Nederlandse samenwerking.
+        5. Kokend water reactor. De splijtstofelementen van natuurlijk uranium zijn geplaatst in zwaar-water. Dit dient om de snelle neutronen te vertragen. De ontwikkelde- warmte in de splijtstof brengt het zwaar-water aan het koken, de gevormde stoom kan óf direct de turbines van de turbo-generatoren aandrijven, óf zijn warmte afstaan aan een warmtewisselaar.
+        6. Hogedruk water reactor. De splijtstofelementen, bestaande uit uranium verrijkt met het isotoop-235, bevinden zich in zeer zuiver normaal water dat onder hoge druk gehouden wordt. Het water vervult de functie van vertrager van de snelle neutronen (moderator) en voert voorts de ontwikkelde warmte af naar de warmtewisselaars. Door de hoge druk gaat het water niet koken, hoewel het tot temperaturen van vele honderden graden Celsius verhit wordt.
+        7. Suspop-reactor. De splijtstof, bestaande uit zeer kleine deeltjes oxyde van uranium verrijkt met het isotoop-235, gesuspendeerd in gewoon, doch zeer zuiver water, wordt onder hoge druk rondgepompt door het reactorvat. Het water vertraagt de neutronen en wordt verhit door de vrijgemaakte splijtingsenergie in de vorm van warmte. De suspensie wordt gekoeld in de warmtewisselaars. Het berylliumoxyde en grafiet om het reactorvat reflecteren de wegvliegende neutronen ten dele, waardoor, ondanks de kleine afmetingen van het reactorvat, de reactie toch op gang blijft. De regeling van de intensiteit van de reactie vindt hier plaats door meer of minder uraniumoxyde toe te voegen aan de suspensie.
+        8. Snelle "broed"-reactor. De centrale kern van dit reactor-type bestaat uit nagenoeg zuiver uranium-233, uranium-235 of plutonium. Om deze kern bevindt zich een mantel van thorium of uranium-238. De snelle neutronen, gevormd in de centrale kern, worden in dit type reactor niet afgeremd door een moderator; de kern uit nagenoeg zuiver splijtbaar materiaal maakt dit overbodig. De uit de centrale kern wegvliegende neutronen zetten het thorium of uranium-238 van de mantel om in nieuwe splijtstof, namelijk uranium-233 of plutonium. Hierbij wordt meer nieuwe splijtstof gevormd dan in de centrale kern wordt verbruikt, vandaar de naam "broed" reactor, "snel", omdat met snelle neutronen worden gewerkt De "broed"-mantel is omgeven door grafiet, dat als reflector van ontsnappende neutronen dient. De warmte, ontwikkeld in de centrale kern en in de "broed"-mantel, wordt door vloeibaar natrium (metaal) afgevoerd naar warmtewisselaars.
+        9. Homogene energie reactor. Het eigenlijke reactorvat is omgeven door een "broed"-mantel. De splijtstof bestaat uit een uranium&shy;sulfaat&shy;oplossing in gewoon of zwaar-water. Dit water dient zowel voor de afvoer van de ontwikkelde warmte, alsook als vertrager (moderator) van de gevormde snelle neutronen. Neutronen, welke uit het reactorvat ontsnappen, worden in de "broed"-mantel weer gebruikt om het thorium om te zetten in uranium-233, evenals het 235-isotoop, een splijtbare substantie. Op deze wijze wordt meer nieuwe splijtstof gevormd dan in het reactievat wordt verbruikt. Daarom noemt men dit type een "broed"-reactor, met de toevoeging "langzaam", omdat het "broeden" met langzame (vertraagde) neutronen plaats heeft.
+      credit:
+    - id: o-2
+      title: Reactor van het Brookhaven National Laboratory U.S.A.
+      timeline:
+        start: 2525
+        end: 2525
+      alignment: right
+      description: |
+        Model op ware grootte van een kernreactor, waarin natuurlijk (niet verrijkt) Uranium als splijtstof wordt gebruikt en grafiet als moderator om de neutronen te vertragen tot de snelheid waarbij ze nieuwe kernsplijtingen kunnen veroorzaken.
+
+        De ontstane warmte, 30.000 kW, wordt door lucht afgevoerd en verdwijnt door de schoorsteen. Het doel van deze reactor is namelijk niet energieproductie, maar het maken van kunstmatige radioactieve isotopen.
+
+        Hiertoe worden de te behandelen preparaten door zijdelingse openingen tot in het hart van de reactor gebracht.
+
+        De openingen vóórin dienen voor het laden met uraniumstaven.
+        Van de linkerzijde ziet men het inwendige van de reactor met de opgestapelde grafietblokken en de daartussen liggende uraniumstaven.
+
+        De regelstaaf links kan naar binnen geschoven worden. Het materiaal, waarvan hij gemaakt is, neemt dan zoveel neutronen weg, dat de reactie wordt verminderd, eventueel tot stilstand komt.
+
+        Bruikleen: United States Information Service, 's-Gravenhage
+    - id: o-16
+      title: Master Slave Manipulators ("Magic Hands")
+      timeline:
+        start: 2525
+        end: 2525
+      alignment: left
+      description: |
+        Met "magic hands", mechanische wonderhanden, kan veilig achter beschermende muren gewerkt worden. Met de grootste precisie volgen de metalen handen elke beweging van de menselijke handen.
+
+        Bruikleen: United States Information Service, 's-Gravenhage
+- id: p
+  timeline:
+    start: 2712
+  title: Isotopen in de praktijk
+  parts:
+    - id: p-0
+      timeline:
+        start: 2712
+        end: 2712
+      title: "Isotopen: machtige bontgenoten"
+      description: |
+        De stoffen waarmee in de laboratoria voor de kernphysica wordt gewerkt zijn doorgaans sterk radioactief. Dit vereist voorzorgsmaatregelen. De invloed van de radioactieve materialen op levende en dode stoffen werd diepgaand onderzocht. Hierdoor werd het mogelijk beschermende maatregelen te ontwikkelen, die het werken met radioactieve stoffen even veilig maken als werkzaamheden in chemische en andere industrieën.
+
+        Vóór de komst van de grote kernphysische installaties, versnellers en reactoren, waren radioactief stralende preparaten uiterst zeldzaam. De mogelijkheden waren reeds onderkend, de toepassingen echter bleven noodgedwongen beperkt.
+
+        Met de komst van de kernreactoren werd het mogelijk radioactieve isotopen in iedere gewenste hoeveelheid te produceren. Geheel nieuwe gebieden in wetenschap en techniek konden toen ontsloten worden: in de geneeskunde, de landbouw en de industrie zijn de isotopen onmisbare helpers van de werkende mens geworden.
+        ## Radioactieve isotopen in de industrie
+        In de meest uiteenlopende industrieën wordt met de straling van radioactieve isotopen reeds onderzoek verricht en in verschillende gevallen wordt door gebruikmaken van radioactieve straling productverbetering bereikt:
+        - onderzoek van de slijtage van tandwielen, autobanden, zuigers en cilinders;
+        - meten van de dikte van papier, plastics, e.a., aan de lopende band;
+        - controle van gietstukken en lasnaden;
+        - meten van de vulhoogte van geheel gesloten tanks;
+        - controle van de loop van vloeistoffen in gesloten pijpleidingen.
+    - id: p-1
+      title: "Zicht op zaal R (Electronica)"
+      timeline:
+        start: 2794
+        end: 2794
+      alignment: right
+- id: q
+  title: Buitenlandse inzendingen
+  description: Een tentoonstelling als deze mag niet voorbij gaan aan het vele, dat de atoomenergie-commissies in diverse landen hebben gedaan of op hun programma hebben staan. Daarom zijn de desbetreffende instanties in de Verenigde Staten, Engeland, Frankrijk, België, Noorwegen en Nederland uitgenodigd om in nationale stands op hun eigen wijze een overzicht te geven van de vorderingen op dit gebied in hun landen.
+- id: r
+  timeline:
+    start: 2886
+  title: Electronica, een wonderland
+  parts:
+    - id: r-0
+      title: "Het electron in dienst van wetenschap en techniek"
+      timeline:
+        start: 2886
+        end: 2886
+      description: |
+        Het electron, dat zulk een belangrijk onderdeel vormt van het atoom, bewijst zélf de wetenschap en techniek van vandaag grote diensten. In beweging kan het electromagnetische golven verwekken, welke zich door de ruimte voortplanten. Deze golven hebben, afhankelijk van hun golflengte, welke van verscheidene kilometers tot een biljoenste van een centimeter kan bedragen, zeer verschillende eigenschappen.
+
+        De mens heeft deze golven dienstbaar weten te maken aan velerlei doeleinden, waarvan de voornaamste in een spectrum zijn aangegeven. De beheersing van de beweging van electronen in geleiders, halfgeleiders, in gassen en in het luchtledige, heeft geleid tot de ontwikkeling van de electrotechniek en de electronica, van radiobuizen, röntgenbuizen, kathodestraalbuizen, fotocellen en transistoren. Hierdoor werden mogelijk de electronische rekenmachine, zowel als de electronenmicroscoop, het röntgenonderzoek en de televisie, de radio-omroep en de radar, en duizend andere voor de mensheid nuttige toepassingen.
+    - id: r-4
+      title: Radar
+      timeline:
+        start: 2886
+        end: 2886
+      alignment: left
+      description: |
+        Prototype van de 3 cm-havenradarinstallaties van de toegang tot het Noordzeekanaal bij IJmuiden en de Nieuwe Rotterdamse Waterweg.
+
+        Op het radarscherm wordt de omgeving van de tentoonstelling afgebeeld.
+
+        Bruikleen: Nederlandsch Radar Proefstation, Noordwijk aan Zee
+    - id: r-1
+      title: Electronische rekenmachine
+      timeline:
+        start: 2886
+        end: 2886
+      alignment: right
+      description: |
+        Vele ontwikkelingen op kernenergiegebied waren niet mogelijk geweest zonder de electronische rekenmachine, die op zijn beurt weer veel te danken heeft aan de stimulansen, welke hij kreeg uit zijn toepassingsgebieden.
+
+        Een I.B.M. 650 rekenmachine wordt in bedrijf getoond. Thans is dit reeds een kleine en - naar verhouding - langzame rekenmachine, vergeleken met zijn grote broers, maar desondanks een instrument, dat het werk van honderden rekenaars kan overnemen.
+
+        Ook wordt gedemonstreerd een "Ramac geheugen" voor de 650 miljoenen getallen kunnen hierin worden opgeborgen, maar binnen een seconde kan uit ieder gewenst geheugenvakje het ingeschreven getal worden teruggelezen, resp. er in worden opgetekend.
+
+        Werkelijke berekeningen zullen worden uitgevoerd met de 650, afgewisseld met demonstraties van de mogelijkheden en met wedstrijden van de machine tegen de mens, waarbij de laatste steeds verliest. En toch, de mens commandeert de rekenmachine, draagt hem alle details van de berekeningen op, zonder die instructies kan de machine niets.
+
+        Bruikleen: Internationale Bedrijfsmachine Maatschappij, Amsterdam
+    - id: r-1
+      title: De mens vliegt (onderdeel van W)
+      timeline:
+        start: 3104
+        end: 3104
+      alignment: left
+      description: |
+        Altijd is de mens gefascineerd geweest door de droom zich vrij in het luchtruim te kunnen bewegen. Sinds de oudste historie zijn ons pogingen bekend om deze droom te verwezenlijken en daarvan worden in deze afdeling enkele voorbeelden getoond. Dit zijn o.a. een Mexicaanse feestballon en de ballon van Montgolfier, Leonardo da Vinci's ontwerpen voor een vliegende mens en natuurgetrouwe copieën van het zweefvliegtuig van Lilienthal en van het eerste, door motorkracht voortbewogen, vliegtuig, waarmee de gebroeders Wright in 1903 erin slaagden los van de grond te komen.
+
+        Buiten de hal wordt deze serie voortgezet met de beroemde Fokker F VIIa, met welk type vliegtuig in 1927 de eerste retourvlucht naar het toenmalige Nederlands-Indië werd gemaakt, terwijl de bezoeker, als hij de tentoonstelling heeft verlaten, slechts om zich heen behoeft te zien op de Luchthaven Schiphol, om met eigen ogen te ervaren tot welke hoogte de vliegtuigtechniek zich in nauwelijks vijftig jaar heeft ontwikkeld.
+- id: s
+  title: De Keuken van de Toekomst
+  description: |
+    Wat is de afstand, die de huisvrouw per dag aflegt?
+    Hoeveel malen per dag moet de huisvrouw zich bukken?
+    In "de Keuken van de Toekomst" behoeft deze vraag niet meer te worden gesteld. Immers, bukken komt daar niet meer voor en gelopen zal er practisch niet meer worden.
+    Dit is wat te Detroit de ingenieurs van het Technical Center van General Motors tot stand brachten in opdracht van de Frigidaire Division. Een aantal vernuftige apparaten, bediend met behulp van drukknoppen, zal het leven van de huisvrouw veraangenamen. Kastjes, die omhoogkomen, een recepten-automaat, die à la minute het gewenste recept te voorschijn tovert, een gecombineerd telefoon-televisie apparaat, een automatische vaatwasmachine, enz., enz., dit alles is een demonstratie van de mogelijkheden der hedendaagse techniek, die zeker niet alleen de vrouwelijke bezoekers zal interesseren.
+  credits: "Bruikleen: General Motors, U.S.A., Frigidaire Division"
+  parts:
+- id: t
+  title: Jules Verne's visioenen
+  timeline:
+    start: 3232
+  parts:
+    - id: t-0
+      title: Jules Verne's visioenen
+      timeline:
+        start: 3232
+        end: 3232
+      description: |
+          Jules Verne's held, kapitein Nemo, leefde met zijn bemanning voorgoed in de onderzeeër "Nautilus": nimmer behoefde zijn schip te bunkeren.
+
+          Heeft hij ooit vermoed, dat 80 jaar later een kernreactor een moderne "Nautilus" tienduizenden mijlen laat varen zonder zijn bunkervoorraad aan te vullen?
+
+          Wat kapitein Nemo zag, kunt U hier zien, ook de zeeschelp "Nautilus", waaraan Nemo's schip zijn naam ontleende. Bovendien ziet U het model van de Amerikaanse duikboot "Nautilus", die dit Jules Verne's visioen tot werkelijkheid bracht.
+- id: u
+  timeline:
+    start: 3434
+  title: Demonstratie-podium
+  parts:
+    - id: u-0
+      title: Electronische 5-kamp
+      timeline:
+        start: 3434
+        end: 3434
+      alignment: left
+      description: |
+        Bezoekers zullen hier elkaar de eerste plaats betwisten en feilloos zal, langs electronische weg, de winnaar worden aangewezen.
+
+        Bruikleen: N.V. Philips, Eindhoven
+- id: v
+  title: Levende onderzeeërs
+  description:
+  parts:
+- id: w
+  title: Een mensenleeftijd luchtvaarthistorie
+  timeline:
+    start: 3599
+  parts:
+    - id: w-0
+      title: De wereld van morgen is dichtbij!
+      timeline:
+        start: 3599
+        end: 3599
+      description: |
+        In 1903 maakten de gebroeders Wright in Amerika de eerste vlucht met een vliegmachine. Niemand schonk er ernstig aandacht aan, omdat niemand toen nog in de betekenis van de luchtvaart kon geloven. Nu, nauwelijks vijftig jaar later, is de gehele wereld omspannen met een dicht net van luchtvaartwegen. Zie naar buiten! Zie Schiphol, zie de reusachtige vliegtuigen van thans! De droom van 1903 was geen dwaze fantasie!
+
+        In één generatie maakte de wereld deze sprong. Het is aan ons, de generatie, van 1957, de toekomst van de wereld van morgen te bepalen.
+- id: x
+  timeline:
+    start: 3720
+  title: De wenteling der tijden
+  description:
+  parts:
+    - id: x-1
+      title: Wand I
+      timeline:
+        start: 3720
+        end: 3720
+      alignment: left
+      description: |
+        Zwervend over de aarde, dromend en denkend bij zijn kudden onder het licht van zon, maan en sterren, oefende de primitieve mens zich in de onveranderlijke beginselen van de wetenschap: waarnemen, overdenken, dienstbaar maken.
+
+        Zon en sterren wezen hem de weg door de eindeloze vlakten; de wisselende schijngestalten der maan werden zijn leidraad door de tijd.
+
+        De vingers van zijn handen hielpen hem over het primitieve een-twee-veel naar tellen en het tientallig stelsel. Met kerven in een stok maakte hij zijn eerste rekenoefeningen.
+
+        Toen aan de Nijl, vijftig eeuwen geleden, een geordende samenleving groeide, was de rijke zwarte aarde niet meer slechts verblijfplaats van een dag of van een seizoen, maar bezit: meetbaar en berekenbaar. In Egypte ontwikkelden zich meetkunde en driehoeksmeting, waarbij de maten van het menselijk lichaam: duim, handpalm, arm, maateenheden werden, die zich tot heden gehandhaafd hebben.
+      credit:
+    - id: x-3
+      title: Wand III
+      timeline:
+        start: 3893
+        end: 3893
+      alignment: right
+      description: |
+        De wetenschappelijke en culturele erfenis van Griekenland en het Hellenisme werd niet in zijn geheel rechtstreeks aan onze westeuropese voorouders doorgegeven. Veel kwam tot ons via de lslamietische wereld, waar, na de ondergang van Rome, de wetenschap tot hoge bloei kwam.
+
+        Het astrolabium, waarmede de stand van de sterren aan de hemel gemeten werd, is een arabische vinding. Bij Bagdad verrezen grote astronomische bouwwerken, waarin de loop der hemel lichamen werd opgetekend. Via de Arabieren kwam het cijferschrift met 10 cijfers, zoals wij dit kennen en dagelijks gebruiken, uit Indië naar Europa. Nu pas kon de rekenkunde, bevrijd van het moeizaam gezwoeg met Romeinse cijfers, grotere vlucht nemen. De kooplieden uit Oost en West voeren er wel bij.
+
+        Stormachtig groeide de kennis van de natuur en haar wetten in Europa in de 16e en 17e eeuw. Copernicus veroorzaakte een omwenteling in het wereldbeeld door niet de aarde, maar de zon in het middelpunt te stellen. Kepler berekende de banen der planeten.
+
+        Galileo Galilei, veelzijdig denker en geleerde, staat hier als eerste figuur vooraan in de geschiedenis van de Europese wetenschap. Met zijn leven stond hij in voor de Copernicaanse theorie. Hij was de eerste die ontdekte dat de Melkweg uit sterren bestaat; hij was de eerste die de wetten van de valbeweging en van de slinger in mathematische vorm uitdrukte en hiermede de grondslag legde én voor de moderne mechanica én voor de empirisch-mathematische methode.
+      credit:
+- id: y
+  title: Bioscoop- en lezingenzaal
+  description: |
+    Een groot aantal films uit binnen- en buitenland over het onderwerp der tentoonstelling wordt vertoond.
+
+    Enkele malen per dag zullen deze filmvoorstellingen met populair-wetenschappelijke lezingen en demonstraties over electriciteit en electronica, afwisselen.
+  parts:
+- id: z
+  title: Uitgang
+  timeline:
+    start: 4500
+  parts:
+    - id: literature
+      title: Further reading
+      timeline:
+        start: 4500
+        end: 4500
+      description: |
+        ## Primary sources
+        - [Tentoonstelling 'Het Atoom' (1957)](https://www.youtube.com/watch?v=TEE-97sGNM4), Nederlands Instituut voor Beeld en Geluid.
+        - [259 Inventaris van het Archief van de Stichting Internationale Tentoonstelling Het Atoom](https://archief.amsterdam/inventarissen/details/259/) (1955-59), Stadsarchief Amsterdam.
+        - Catalogus Het Atoom (1957)
+        - [Verslag van de Stichting Internationale Tentoonstelling Het Atoom Amsterdam](https://archief.amsterdam/inventarissen/file/a3e1dab62e146bb7dc697412de54a781) (1958)
+
+        ## Secondary sources
+        - '[Wegwijzer voor Het Atoom](https://resolver.kb.nl/resolve?urn=ABCDDD:010831533:mpeg21:p013)' (28-06-1957), in: _Het Parool_, Amsterdam.
+        - Jacob Berend Bakema (1957) 'Enkele opmerkingen naar aanleiding van Het Atoom', in: _Forum: maandblad voor architectuur en gebonden kunsten_, (Vol. 12, No. 11 november 1957).
+        - G.P.J. Verbong & J.A.C. Lagaaij (2000) '[De belofte van kernenergie](https://www.dbnl.org/tekst/lint011tech02_01/lint011tech02_01_0016.php)', in: A.A.A. de la Bruhèze, H.W. Lintsen, Arie Rip, J.W. Schot (eds.) _Techniek in Nederland in de twintigste eeuw. Deel 2 Delfstoffen, energie, chemie_, Zutphen: Walburg Pers.
+        - Hugo van Dam & Frida de Jong (2003) _Geboeid door straling en strategie: geschiedenis van het Interfacultair Reactor Instituut te Delft_, Zutphen: Walburg Pers.
+        - Dick van Lente (2008) 'A Tamed Shrew? Images Of The Atomic Age In Dutch Popular Culture, 1945-1957', in: Mogens Rüdiger (ed.), _The Culture of Energy_, Newcastle, UK: Cambridge Scholars Pub.
+        - Irene Cieraad (2009) 'The Radiant American Kitchen. Domesticating Dutch Nuclear Energy', in: R Oldenziel, K Zachmann (eds.) _Cold War Kitchen: Americanization, Technology, and European Users_, Cambridge, Mass.: MIT Press.
+        - Dick van Lente (2012) 'Nuclear Power, World Politics, and a Small Nation: Narratives and Counternarratives in the Netherlands', in: Dick van Lente (ed.) _The Nuclear Age in Popular Media_, New York: Palgrave Macmillan.
+        - Frederike Huygen (2015) _Wim Crouwel. Modernist_, Eindhoven: Lecturis.
+        - E.D. Roodenburg (2016). [Met niet begrijpend ontzag](http://hdl.handle.net/2105/34526), Thesis History of Society, Erasmus University.
+    - id: credits
+      title: Credits
+      timeline:
+        start: 4500
+        end: 4500
+      description: |
+        This website has been developed in conjunction with the [Atomic Reactions](https://www.tudelft.nl/library/over-de-library/tu-delft-library-presenteert/atomic-reactions) programme at TU Delft Library, from March 7 until June 3 2022.
+
+        Menu titles and letters are based on the original exhibition plan. Grey menu titles have been omitted from the tour due to a lack of photos (in the series of Hein de Bouter) and/or information. Part N is skipped because the reactor is already visible from the walkway (Part I). Parts T and U have been swapped to match the route of the animation. The Fokker aeroplane standing outside (between parts R and T) is part of W (History of Aviation).
+
+        A selection of Hein de Bouter's photos of the exhibition were published in the Dutch architecture magazine _Forum_ (November 11, 1957). In total 37 glass negatives have been scanned by the Maria Austria Institute for this project, of which 26 have been published here. The original glass negative of Part K (as published in Forum) could not be located.
+
+        - Concept and production: Jules Schoonman / [Academic Heritage Team](https://heritage.tudelft.nl)
+        - 3D-model: Sebastian von Rosen
+        - Animation: Roland van Roijen / [NewMedia Centre](https://newmediacentre.tudelft.nl/)
+        - App: [Harm van de Ven](http://harmvandeven.nl/)
+        - Graphic design: [Vanessa van Dam](https://www.vanessavandam.nl)
+        - Photos: Hein de Bouter / [Maria Austria Instituut](https://www.maibeeldbank.nl/fotograaf/11)
+        - Archival material: 259 Stichting Het Atoom / [Stadsarchief Amsterdam](https://archief.amsterdam/inventarissen/details/259/)
+        - Technical assistance: Kevin Siemonsma
+        - Additional research: Janne Voskuijl
+
+        Inspired by: [What the Tulsa Race Massacre Destroyed](https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html), New York Times (May 24, 2021).
